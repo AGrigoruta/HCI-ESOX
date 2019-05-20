@@ -1,0 +1,14 @@
+:root {
+    --main-accent-color: #E6538E;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+textarea {
+    font-family: 'Audiowide', cursive;
+    box-sizing: border-box;
+    border: none;
+    resize: none;
+}

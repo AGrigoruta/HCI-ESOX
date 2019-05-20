@@ -1,0 +1,147 @@
+.befunge {
+    margin: 15px 0px;
+    padding: 5px 0px;
+    width: 100%;
+}
+
+.befunge > div > div {
+    display: inline-grid;
+    grid-template-columns: 60% 40%;
+    grid-row-gap: 5px;
+    font-family: "Roboto Mono", monospace;
+    width: 100%;
+}
+
+.left {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    border-right: 1px dashed var(--main-accent-color);
+}
+
+.editor {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 250px;
+}
+
+.program {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-top: 5px;
+}
+
+.program span {
+    display: inline-block;
+    width: 1.3em;
+    height: 100%;
+    text-align: center;
+    border: 1px solid var(--main-accent-color);
+}
+
+.program span.current {
+    background-color: black;
+    color: white;
+}
+
+.right {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: inline-grid;
+    grid-template-columns: 85% 15%;
+}
+
+.controls {
+    display: grid;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.stats {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.info {
+    font-size: 16px;
+}
+
+.info > div:first-child {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.stack {
+    display: block;
+    overflow-y: auto;
+    height: 250px;
+}
+
+.output {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    border-top: 1px dashed var(--main-accent-color);
+    padding: 5px;
+}
+
+.output h3 {
+    margin-top: 0xp;
+}
+
+/** textarea counter **/
+.tln-active, .tln-wrapper, .tln-line {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    vertical-align: middle;
+    list-style: none;
+}
+
+.tln-active {
+    display: inline-block;
+    padding: 0 10px;
+    width: calc(100% - 48px);
+    height: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Roboto Mono", monospace;
+    word-break: break-all;
+    border-left: 1px dashed #E6538E;
+    resize: none;
+    overflow-wrap: normal;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+.tln-wrapper {
+    width: 48px;
+    padding: 1px 5px 35px;
+    height: 100%;
+    word-break: break-all;
+    overflow: hidden;
+    display: inline-block;
+    counter-reset: line;
+}
+
+.tln-line {
+    width: 100%;
+    display: block;
+    text-align: right;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.tln-line::before {
+    counter-increment: line;
+    content: counter(line);
+    font-size: 16px;
+    user-select: none;
+}
