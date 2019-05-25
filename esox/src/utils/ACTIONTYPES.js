@@ -1,0 +1,6 @@
+export default class ACTIONTYPES {
+    static DISCOVER_COURSES_LOADED = 'DISCOVER_COURSES_LOADED';
+    static TAB_CHANGED = 'TAB_CHANGED';
+    static USER_LOGGED_IN = 'USER_LOGGED_IN';
+    static USER_LOGGED_OUT = 'USER_LOGGED_OUT';
+}
