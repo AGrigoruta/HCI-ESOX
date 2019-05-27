@@ -5,7 +5,7 @@ import HeaderReducer from '../reducers/HeaderReducer';
 
 // "root reducer"
 export default combineReducers({
-    router: routerReducer,
     discover: DiscoverReducer,
-    header: HeaderReducer
+    header: HeaderReducer,
+    router: routerReducer
 });

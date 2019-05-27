@@ -1,7 +1,16 @@
 import ACTIONTYPES from '../utils/ACTIONTYPES';
 
 const defaultState = {
-    tabs: ['Discover', 'Courses', 'Community'],
+    tabs: [{
+        name: 'Discover',
+        path: '/discover'
+    }, {
+        name: 'Courses',
+        path: '/courses'
+    }, {
+        name: 'Community',
+        path: '/community'
+    }],
     selectedTab: 'Discover',
     loggedIn: false,
     user: null,

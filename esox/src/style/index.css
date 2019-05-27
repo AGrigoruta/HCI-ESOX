@@ -162,7 +162,8 @@ h1 {
 .header__wrapper {
     display: flex;
     justify-content: space-between;
-    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
 
 .header__navigation {
@@ -210,6 +211,7 @@ h1 {
     cursor: pointer;
     transition: all .15s;
     color: white;
+    font-size: 0.8rem;
 }
 
 .esox__button:active {
@@ -222,4 +224,52 @@ h1 {
 
 .header__login span {
     margin-left: 0.5rem;
+}
+
+.ui.button__github.button {
+    background-color: #24292e;
+    color: #f7f7f7;
+}
+
+.ui.button__github.button:hover {
+    background-color: #1c1c1d;
+}
+
+.ui.button__github.button:active {
+    background-color: #0f1113;
+}
+
+.ui.esox__login-button.button {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.login-form__title {
+    text-align: left;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.header__user-details {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.header__user-name {
+    font-size: 1.5rem;
+    padding-right: 1rem;
+}
+
+.header__user-image {
+    border: 1px solid transparent;
+    border-radius: 40px;
+}
+
+.ui.top.right.pointing.dropdown>.menu {
+    right: auto;
+}
+
+.ui.header__user-dropdown .menu .active.item {
+    font-weight: 300;
 }
