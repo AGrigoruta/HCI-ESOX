@@ -60,6 +60,8 @@ class HeaderComponent extends React.Component {
             this.props.history.push('/user');
         } else if (value === 'sign-out') {
             this.props.logout()
+            this.props.changeTab('Discover');
+            this.props.history.push('/discover');
         }
     }
 

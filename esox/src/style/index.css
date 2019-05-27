@@ -273,3 +273,52 @@ h1 {
 .ui.header__user-dropdown .menu .active.item {
     font-weight: 300;
 }
+
+.discover__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    height: calc(100vh - 6.2rem);
+}
+
+.discover__sidebar {
+    flex-grow: 3;
+    font-size: 1.5rem;
+    min-width: 18rem;
+    -webkit-box-shadow: 6px 4px 14px -12px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 4px 14px -12px rgba(0,0,0,0.75);
+    box-shadow: 6px 4px 14px -12px rgba(0,0,0,0.75);
+}
+
+.discover__main {
+    flex-grow: 14;
+    padding: 0 2rem;
+    overflow: auto;
+}
+
+.ui.list>.item.discover__filter {
+    padding-left: 1rem;
+}
+
+.ui.list>.item.discover__filter > div {
+    margin-bottom: 0.3rem;
+}
+
+.ui.discover__filter_divider {
+    color: #e67e22;
+}
+
+.filter__underline {
+    height: 3px;
+    background-color: #e67e22;
+}
+
+.filter__list {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.discover__card-picture {
+    width: 100%;
+    height: 258px;
+}
