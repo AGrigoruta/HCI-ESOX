@@ -295,6 +295,7 @@ h1 {
     -webkit-box-shadow: -6px 4px 14px -12px rgba(0,0,0,0.75);
     -moz-box-shadow: -6px 4px 14px -12px rgba(0,0,0,0.75);
     box-shadow: -6px 4px 14px -12px rgba(0,0,0,0.75);
+    padding: 1rem;
 }
 
 .esox__main {
@@ -465,4 +466,21 @@ h1 {
 
 .course__questions .description {
     overflow-wrap: break-word;
+}
+
+.ui.card.card.achievement__card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.achievement__card_image {
+    min-width: 72px;
+    max-width: 72px;
+    height: 72px;
+}
+
+.achievement__card_description {
+    font-size: 1rem;
+    padding-left: 0.5rem;
 }

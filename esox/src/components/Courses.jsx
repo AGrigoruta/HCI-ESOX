@@ -1,7 +1,6 @@
 import React from 'react';
 import { List, Divider, Button, Card } from 'semantic-ui-react';
-// import { COURSES } from '../utils/COURSES';
-
+import Image from './Image';
 
 class CoursesComponent extends React.Component {
     constructor(props) {
@@ -150,7 +149,7 @@ class CoursesComponent extends React.Component {
                                                 </Card.Content>
                                             </Card>
                                         ))}
-                                </Card.Group>) : (
+                                    </Card.Group>) : (
                                     <div className="course__questions-none">
                                         There are no active questions for this course!
                                     </div>)}
@@ -159,7 +158,20 @@ class CoursesComponent extends React.Component {
                     )}
                 </section>
                 <aside className="esox__sidebar right">
-                    <div>Achievements will be here</div>
+                    <Card.Group>
+                        {this.state.selectedCourse ? (
+                            this.state.selectedCourse.achievements.map(item => (
+                                <Card key={JSON.stringify(item)} className="achievement__card" fluid color={!this.props.header.loggedIn || item.locked ? 'red' : 'green'}>
+                                    <div className="achievement__card_image">
+                                        {this.props.header.loggedIn === false ? <Image imageIsRelative={false} imageSource='/lock.png' /> : <Image imageIsRelative={false} imageSource={item.locked ? '/lock.png' : item.picture} />}
+                                    </div>
+                                    <div className="achievement__card_description">
+                                        {item.name}
+                                    </div>
+                                </Card>
+                                ))    
+                        ) : ''}
+                    </Card.Group>
                 </aside>
             </div>
         );

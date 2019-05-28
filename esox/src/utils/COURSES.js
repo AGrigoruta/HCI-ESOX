@@ -10,8 +10,36 @@ export const COURSES = [{
     difficulty: 'Beginner',
     friendsNumber: 6,
     achievements: [{
-        name: 'test',
-        picture: 'http://www.lolcode.org/img/logo.png',
+        name: 'Import one library',
+        picture: '/email.png',
+        locked: false
+    }, {
+        name: 'Print something',
+        picture: '/printer.png',
+        locked: false
+    }, {
+        name: 'Finish your first program',
+        picture: '/banner.png',
+        locked: false
+    }, {
+        name: 'Dive in for 1 hour in this course',
+        picture: '/one.png',
+        locked: false
+    }, {
+        name: 'Spend 10 hours in this course',
+        picture: '/ten.png',
+        locked: false
+    }, {
+        name: 'Finish half of the course',
+        picture: '/percent.png',
+        locked: true
+    }, {
+        name: 'Invest 50 hours in this course',
+        picture: '/fifty.png',
+        locked: true
+    }, {
+        name: 'Lolcode Newbie',
+        picture: '/trophy.png',
         locked: true
     }],
     activeQuestions: [{
@@ -30,8 +58,36 @@ export const COURSES = [{
     difficulty: 'Beginner',
     friendsNumber: 10,
     achievements: [{
-        name: 'test',
-        picture: 'http://www.lolcode.org/img/logo.png',
+        name: 'Import one library',
+        picture: '/email.png',
+        locked: false
+    }, {
+        name: 'Print something',
+        picture: '/printer.png',
+        locked: false
+    }, {
+        name: 'Finish your first program',
+        picture: '/banner.png',
+        locked: true
+    }, {
+        name: 'Dive in for 1 hour in this course',
+        picture: '/one.png',
+        locked: false
+    }, {
+        name: 'Spend 10 hours in this course',
+        picture: '/ten.png',
+        locked: true
+    }, {
+        name: 'Finish half of the course',
+        picture: '/percent.png',
+        locked: true
+    }, {
+        name: 'Invest 50 hours in this course',
+        picture: '/fifty.png',
+        locked: true
+    }, {
+        name: 'Brainfuck Newbie',
+        picture: '/trophy.png',
         locked: true
     }],
     activeQuestions: [{
@@ -50,8 +106,36 @@ export const COURSES = [{
     difficulty: 'Beginner',
     friendsNumber: 4,
     achievements: [{
-        name: 'test',
-        picture: 'http://www.lolcode.org/img/logo.png',
+        name: 'Import one library',
+        picture: '/email.png',
+        locked: false
+    }, {
+        name: 'Print something',
+        picture: '/printer.png',
+        locked: false
+    }, {
+        name: 'Finish your first program',
+        picture: '/banner.png',
+        locked: false
+    }, {
+        name: 'Dive in for 1 hour in this course',
+        picture: '/one.png',
+        locked: false
+    }, {
+        name: 'Spend 10 hours in this course',
+        picture: '/ten.png',
+        locked: false
+    }, {
+        name: 'Finish half of the course',
+        picture: '/percent.png',
+        locked: false
+    }, {
+        name: 'Invest 50 hours in this course',
+        picture: '/fifty.png',
+        locked: true
+    }, {
+        name: 'Piet Newbie',
+        picture: '/trophy.png',
         locked: true
     }],
     activeQuestions: [{
@@ -70,8 +154,36 @@ export const COURSES = [{
     difficulty: 'Beginner',
     friendsNumber: 12,
     achievements: [{
-        name: 'test',
-        picture: 'http://www.lolcode.org/img/logo.png',
+        name: 'Import one library',
+        picture: '/email.png',
+        locked: true
+    }, {
+        name: 'Print something',
+        picture: '/printer.png',
+        locked: true
+    }, {
+        name: 'Finish your first program',
+        picture: '/banner.png',
+        locked: true
+    }, {
+        name: 'Dive in for 1 hour in this course',
+        picture: '/one.png',
+        locked: true
+    }, {
+        name: 'Spend 10 hours in this course',
+        picture: '/ten.png',
+        locked: true
+    }, {
+        name: 'Finish half of the course',
+        picture: '/percent.png',
+        locked: true
+    }, {
+        name: 'Invest 50 hours in this course',
+        picture: '/fifty.png',
+        locked: true
+    }, {
+        name: 'Befunge Newbie',
+        picture: '/trophy.png',
         locked: true
     }],
     activeQuestions: [{
@@ -96,8 +208,36 @@ export const COURSES = [{
     difficulty: 'Intermediate',
     friendsNumber: 7,
     achievements: [{
-        name: 'test',
-        picture: 'http://www.lolcode.org/img/logo.png',
+        name: 'Import one library',
+        picture: '/email.png',
+        locked: true
+    }, {
+        name: 'Print something',
+        picture: '/printer.png',
+        locked: true
+    }, {
+        name: 'Finish your first program',
+        picture: '/banner.png',
+        locked: true
+    }, {
+        name: 'Dive in for 1 hour in this course',
+        picture: '/one.png',
+        locked: true
+    }, {
+        name: 'Spend 10 hours in this course',
+        picture: '/ten.png',
+        locked: true
+    }, {
+        name: 'Finish half of the course',
+        picture: '/percent.png',
+        locked: true
+    }, {
+        name: 'Invest 50 hours in this course',
+        picture: '/fifty.png',
+        locked: true
+    }, {
+        name: 'Lolcode Pro',
+        picture: '/trophy.png',
         locked: true
     }],
     activeQuestions: [{
@@ -119,8 +259,36 @@ export const COURSES = [{
     difficulty: 'Intermediate',
     friendsNumber: 8,
     achievements: [{
-        name: 'test',
-        picture: 'http://www.lolcode.org/img/logo.png',
+        name: 'Import one library',
+        picture: '/email.png',
+        locked: true
+    }, {
+        name: 'Print something',
+        picture: '/printer.png',
+        locked: true
+    }, {
+        name: 'Finish your first program',
+        picture: '/banner.png',
+        locked: true
+    }, {
+        name: 'Dive in for 1 hour in this course',
+        picture: '/one.png',
+        locked: true
+    }, {
+        name: 'Spend 10 hours in this course',
+        picture: '/ten.png',
+        locked: true
+    }, {
+        name: 'Finish half of the course',
+        picture: '/percent.png',
+        locked: true
+    }, {
+        name: 'Invest 50 hours in this course',
+        picture: '/fifty.png',
+        locked: true
+    }, {
+        name: 'Piet Pro',
+        picture: '/trophy.png',
         locked: true
     }],
     activeQuestions: []
@@ -136,8 +304,36 @@ export const COURSES = [{
     difficulty: 'Intermediate',
     friendsNumber: 1,
     achievements: [{
-        name: 'test',
-        picture: 'http://www.lolcode.org/img/logo.png',
+        name: 'Import one library',
+        picture: '/email.png',
+        locked: true
+    }, {
+        name: 'Print something',
+        picture: '/printer.png',
+        locked: true
+    }, {
+        name: 'Finish your first program',
+        picture: '/banner.png',
+        locked: true
+    }, {
+        name: 'Dive in for 1 hour in this course',
+        picture: '/one.png',
+        locked: true
+    }, {
+        name: 'Spend 10 hours in this course',
+        picture: '/ten.png',
+        locked: true
+    }, {
+        name: 'Finish half of the course',
+        picture: '/percent.png',
+        locked: true
+    }, {
+        name: 'Invest 50 hours in this course',
+        picture: '/fifty.png',
+        locked: true
+    }, {
+        name: 'Befunge Pro',
+        picture: '/trophy.png',
         locked: true
     }],
     activeQuestions: []
@@ -153,8 +349,36 @@ export const COURSES = [{
     difficulty: 'Advanced',
     friendsNumber: 3,
     achievements: [{
-        name: 'test',
-        picture: 'http://www.lolcode.org/img/logo.png',
+        name: 'Import one library',
+        picture: '/email.png',
+        locked: true
+    }, {
+        name: 'Print something',
+        picture: '/printer.png',
+        locked: true
+    }, {
+        name: 'Finish your first program',
+        picture: '/banner.png',
+        locked: true
+    }, {
+        name: 'Dive in for 1 hour in this course',
+        picture: '/one.png',
+        locked: true
+    }, {
+        name: 'Spend 10 hours in this course',
+        picture: '/ten.png',
+        locked: true
+    }, {
+        name: 'Finish half of the course',
+        picture: '/percent.png',
+        locked: true
+    }, {
+        name: 'Invest 50 hours in this course',
+        picture: '/fifty.png',
+        locked: true
+    }, {
+        name: 'Befunge Master',
+        picture: '/trophy.png',
         locked: true
     }],
     activeQuestions: []
@@ -170,8 +394,36 @@ export const COURSES = [{
     difficulty: 'Advanced',
     friendsNumber: 2,
     achievements: [{
-        name: 'test',
-        picture: 'http://www.lolcode.org/img/logo.png',
+        name: 'Import one library',
+        picture: '/email.png',
+        locked: true
+    }, {
+        name: 'Print something',
+        picture: '/printer.png',
+        locked: true
+    }, {
+        name: 'Finish your first program',
+        picture: '/banner.png',
+        locked: true
+    }, {
+        name: 'Dive in for 1 hour in this course',
+        picture: '/one.png',
+        locked: true
+    }, {
+        name: 'Spend 10 hours in this course',
+        picture: '/ten.png',
+        locked: true
+    }, {
+        name: 'Finish half of the course',
+        picture: '/percent.png',
+        locked: true
+    }, {
+        name: 'Invest 50 hours in this course',
+        picture: '/fifty.png',
+        locked: true
+    }, {
+        name: 'Piet Master',
+        picture: '/trophy.png',
         locked: true
     }],
     activeQuestions: []
@@ -187,8 +439,36 @@ export const COURSES = [{
     difficulty: 'Beginner',
     friendsNumber: 9,
     achievements: [{
-        name: 'test',
-        picture: 'http://www.lolcode.org/img/logo.png',
+        name: 'Import one library',
+        picture: '/email.png',
+        locked: true
+    }, {
+        name: 'Print something',
+        picture: '/printer.png',
+        locked: true
+    }, {
+        name: 'Finish your first program',
+        picture: '/banner.png',
+        locked: true
+    }, {
+        name: 'Dive in for 1 hour in this course',
+        picture: '/one.png',
+        locked: true
+    }, {
+        name: 'Spend 10 hours in this course',
+        picture: '/ten.png',
+        locked: true
+    }, {
+        name: 'Finish half of the course',
+        picture: '/percent.png',
+        locked: true
+    }, {
+        name: 'Invest 50 hours in this course',
+        picture: '/fifty.png',
+        locked: true
+    }, {
+        name: 'Shakespeare Newbie',
+        picture: '/trophy.png',
         locked: true
     }],
     activeQuestions: []
@@ -204,8 +484,36 @@ export const COURSES = [{
     difficulty: 'Beginner',
     friendsNumber: 16,
     achievements: [{
-        name: 'test',
-        picture: 'http://www.lolcode.org/img/logo.png',
+        name: 'Import one library',
+        picture: '/email.png',
+        locked: false
+    }, {
+        name: 'Print something',
+        picture: '/printer.png',
+        locked: false
+    }, {
+        name: 'Finish your first program',
+        picture: '/banner.png',
+        locked: false
+    }, {
+        name: 'Dive in for 1 hour in this course',
+        picture: '/one.png',
+        locked: false
+    }, {
+        name: 'Spend 10 hours in this course',
+        picture: '/ten.png',
+        locked: false
+    }, {
+        name: 'Finish half of the course',
+        picture: '/percent.png',
+        locked: false
+    }, {
+        name: 'Invest 50 hours in this course',
+        picture: '/fifty.png',
+        locked: true
+    }, {
+        name: 'Pikachu Newbie',
+        picture: '/trophy.png',
         locked: true
     }],
     activeQuestions: []
@@ -221,8 +529,36 @@ export const COURSES = [{
     difficulty: 'Beginner',
     friendsNumber: 0,
     achievements: [{
-        name: 'test',
-        picture: 'http://www.lolcode.org/img/logo.png',
+        name: 'Import one library',
+        picture: '/email.png',
+        locked: true
+    }, {
+        name: 'Print something',
+        picture: '/printer.png',
+        locked: true
+    }, {
+        name: 'Finish your first program',
+        picture: '/banner.png',
+        locked: true
+    }, {
+        name: 'Dive in for 1 hour in this course',
+        picture: '/one.png',
+        locked: true
+    }, {
+        name: 'Spend 10 hours in this course',
+        picture: '/ten.png',
+        locked: true
+    }, {
+        name: 'Finish half of the course',
+        picture: '/percent.png',
+        locked: true
+    }, {
+        name: 'Invest 50 hours in this course',
+        picture: '/fifty.png',
+        locked: true
+    }, {
+        name: 'Malbolge Newbie',
+        picture: '/trophy.png',
         locked: true
     }],
     activeQuestions: []
