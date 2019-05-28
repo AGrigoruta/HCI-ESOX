@@ -3,7 +3,8 @@ import ACTIONTYPES from '../utils/ACTIONTYPES';
 const defaultState = {
     selectedFilter: 'All',
     allFilters: ['All', 'Minimalistic', 'Colors', 'Fun', 'Beginner', 'Intermediate', 'Advanced'],
-    selectedCourse: null
+    selectedCourse: null,
+    currentFriends: []
 };
 
 export default function DiscoverReducer(state = defaultState, action) {
@@ -17,6 +18,11 @@ export default function DiscoverReducer(state = defaultState, action) {
             return {
                 ...state,
                 selectedCourse: action.data
+            };
+        case ACTIONTYPES.FRIENDS_POPULATED:
+            return {
+                ...state,
+                currentFriends: action.data
             };
         default:
             return state;

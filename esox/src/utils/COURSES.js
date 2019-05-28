@@ -48,7 +48,7 @@ export const COURSES = [{
     progress: 75,
     category: 'Colors',
     difficulty: 'Beginner',
-    friendsNumber: 6,
+    friendsNumber: 4,
     achievements: [{
         name: 'test',
         picture: 'http://www.lolcode.org/img/logo.png',
@@ -68,7 +68,7 @@ export const COURSES = [{
     progress: 0,
     category: 'Minimalistic',
     difficulty: 'Beginner',
-    friendsNumber: 6,
+    friendsNumber: 12,
     achievements: [{
         name: 'test',
         picture: 'http://www.lolcode.org/img/logo.png',
@@ -88,7 +88,7 @@ export const COURSES = [{
     progress: 0,
     category: 'Fun',
     difficulty: 'Intermediate',
-    friendsNumber: 6,
+    friendsNumber: 7,
     achievements: [{
         name: 'test',
         picture: 'http://www.lolcode.org/img/logo.png',
@@ -108,7 +108,7 @@ export const COURSES = [{
     progress: 0,
     category: 'Colors',
     difficulty: 'Intermediate',
-    friendsNumber: 6,
+    friendsNumber: 8,
     achievements: [{
         name: 'test',
         picture: 'http://www.lolcode.org/img/logo.png',
@@ -121,14 +121,14 @@ export const COURSES = [{
 }, {
     id: 7,
     name: 'Befunge Intermediate Course',
-    description: 'It\'s all about physics in this one. You mastered the basics of them in the previous course, but put your seatbelt one for this one, because we\'re about to speed up',
+    description: 'It\'s all about physics in this one. You mastered the basics of them in the previous course, but put your seatbelt on for this one, because we\'re about to speed up',
     picture: 'http://www.roland-illig.de/hanoi.befunge.png',
     started: false,
     hoursInvested: 0,
     progress: 0,
     category: 'Minimalistic',
     difficulty: 'Intermediate',
-    friendsNumber: 6,
+    friendsNumber: 1,
     achievements: [{
         name: 'test',
         picture: 'http://www.lolcode.org/img/logo.png',
@@ -148,7 +148,7 @@ export const COURSES = [{
     progress: 0,
     category: 'Minimalistic',
     difficulty: 'Advanced',
-    friendsNumber: 6,
+    friendsNumber: 3,
     achievements: [{
         name: 'test',
         picture: 'http://www.lolcode.org/img/logo.png',
@@ -168,7 +168,7 @@ export const COURSES = [{
     progress: 0,
     category: 'Colors',
     difficulty: 'Advanced',
-    friendsNumber: 6,
+    friendsNumber: 2,
     achievements: [{
         name: 'test',
         picture: 'http://www.lolcode.org/img/logo.png',
@@ -188,7 +188,7 @@ export const COURSES = [{
     progress: 0,
     category: 'Fun',
     difficulty: 'Beginner',
-    friendsNumber: 6,
+    friendsNumber: 9,
     achievements: [{
         name: 'test',
         picture: 'http://www.lolcode.org/img/logo.png',
@@ -208,7 +208,7 @@ export const COURSES = [{
     progress: 95,
     category: 'Fun',
     difficulty: 'Beginner',
-    friendsNumber: 6,
+    friendsNumber: 16,
     achievements: [{
         name: 'test',
         picture: 'http://www.lolcode.org/img/logo.png',
@@ -228,7 +228,7 @@ export const COURSES = [{
     progress: 0,
     category: 'Minimalistic',
     difficulty: 'Beginner',
-    friendsNumber: 6,
+    friendsNumber: 0,
     achievements: [{
         name: 'test',
         picture: 'http://www.lolcode.org/img/logo.png',
