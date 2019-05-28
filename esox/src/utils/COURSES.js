@@ -15,8 +15,8 @@ export const COURSES = [{
         locked: true
     }],
     activeQuestions: [{
-        title: 'Can I test?',
-        description: 'Help, please, how do I test?'
+        title: 'Which LOLCODE interpreter to use?',
+        description: ' What I am asking, is which LOLCODE interpreter should I pick based on these criteria: 1) Works well and is up- to - date 2) Ease of install - I\'ve looked before and couldn\'t find one which I found easy to install. Please feel free to give your suggestions and opinions, I haven\'t looked in a number of months and am curious as to what people think, and I look forward to learning it.'
     }]
 }, {
     id: 2,
@@ -35,8 +35,8 @@ export const COURSES = [{
         locked: true
     }],
     activeQuestions: [{
-        title: 'Can I test?',
-        description: 'Help, please, how do I test?'
+        title: 'Print characters in brainfuck',
+        description: 'I am new to this language and i am building brainfuck interpreter in scala i am facing one problem what should i print if the value at memory index is greater than 127 ? what a real brainfuck interpreter print if value is greater than 127? for eg memory[index]= 178 when "."(print command) is called what should a brainfuck iterpreter print?my compiled some codes on ideone.com but it showing runtime error .for follwing code: +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ [+.< -]'
     }]
 }, {
     id: 3,
@@ -55,8 +55,8 @@ export const COURSES = [{
         locked: true
     }],
     activeQuestions: [{
-        title: 'Can I test?',
-        description: 'Help, please, how do I test?'
+        title: 'How do DP and CC change in Piet?',
+        description: 'According to the specification, Black colour blocks and the edges of the program restrict program flow. If the Piet interpreter attempts to move into a black block or off an edge, it is stopped and the CC is toggled. The interpreter then attempts to move from its current block again. If it fails a second time, the DP is moved clockwise one step. These attempts are repeated, with the CC and DP being changed between alternate attempts. If after eight attempts the interpreter cannot leave its current colour block, there is no way out and the program terminates. Unless I\'m reading it incorrectly, this is at odds with the behaviour of the Fibonacci sequence example here: http://www.dangermouse.net/esoteric/piet/fibbig1.gif (from: http://www.dangermouse.net/esoteric/piet/samples.html). Specifically, why does the DP turn left at(0, 3) ((0, 0) being(top, left)) when it hits the left edge ? At this point, both DP and CC are LEFT, so, by my reading, the sequence should then be: 1) Attempt(and fail) to leave the block by going off the edge at(0, 4), 2) Toggle CC to RIGHT, 3) Attempt(and fail) to leave the block by going off the edge at(0, 2), 4) Rotate DP to UP, 5) Attempt(and succeed) to leave the block at(1, 2) by entering the white block at(1, 1)The behaviour indicated by the trace seems to be that DP gets rotated all the way, leaving CC at LEFT. What have I misunderstood ?'
     }]
 }, {
     id: 4,
@@ -75,8 +75,14 @@ export const COURSES = [{
         locked: true
     }],
     activeQuestions: [{
-        title: 'Can I test?',
-        description: 'Help, please, how do I test?'
+        title: 'Generating a random number in Befunge',
+        description: 'I want to generate a random number in Befunge, from 0 to n, where n is an arbitrary number. How would I go about doing this?'
+    }, {
+        title: 'How to compile a program in Befunge-93?',
+        description: 'How do I save and compile a program in Befunge-93? What file extension do I need to save the file as (like fileName.what)? Then how do I compile it?'
+    }, {
+        title: 'What happens in Befunge if the execution reaches the limits of the program?',
+        description: 'I couldn\'t find an answer to this question...Is there a "periodic boundary condition"? I.e.does the execution continue on the opposite site? Or is it illegal that the execution leaves the program?'
     }]
 }, {
     id: 5,
@@ -95,8 +101,11 @@ export const COURSES = [{
         locked: true
     }],
     activeQuestions: [{
-        title: 'Can I test?',
-        description: 'Help, please, how do I test?'
+        title: 'LOLCODE String Parsing',
+        description: 'Suppose I have a string that takes the form "## ##" in stdin that I want to read in, e.g. "15 16". That\'s simple enough: I HAS A STRINGY; GIMMEH STRINGY; That grabs the whole line from stdin and stores it into the string—er, excuse me, YARN—called STRINGY. How would I go about extracting the two integers in the string? I want to be able to store 15 and 16 each as an integer(LULZ I MEANS NUMBR).'
+    }, {
+        title: 'What good is the NERFIN loop operation in LOLCODE?',
+        description: 'My gripe with the spec is the combination of: 1) the lack of a loop variable initializer; 2) the fact it\'s temporary and local to the loop; As I understand it, this means it has to start at 0. While that\'s mostly ok for most uses of UPPIN, it\'s totally off for most(my) intended uses of NERFIN.My most common uses of a decrementing loop variable in other languages are the "repeat n times (n not re-used)" idiom and string operations, which wouldn\'t be a good idea in LOLCODE anyway. Is it possible to use NERFIN to get a loop decrement from n to 1 or 0 in a way that\'s less verbose than the equivalents with UPPIN or the operationless forms of looping?'
     }]
 }, {
     id: 6,
@@ -114,10 +123,7 @@ export const COURSES = [{
         picture: 'http://www.lolcode.org/img/logo.png',
         locked: true
     }],
-    activeQuestions: [{
-        title: 'Can I test?',
-        description: 'Help, please, how do I test?'
-    }]
+    activeQuestions: []
 }, {
     id: 7,
     name: 'Befunge Intermediate Course',
@@ -134,10 +140,7 @@ export const COURSES = [{
         picture: 'http://www.lolcode.org/img/logo.png',
         locked: true
     }],
-    activeQuestions: [{
-        title: 'Can I test?',
-        description: 'Help, please, how do I test?'
-    }]
+    activeQuestions: []
 }, {
     id: 8,
     name: 'Befunge Advanced Course',
@@ -154,10 +157,7 @@ export const COURSES = [{
         picture: 'http://www.lolcode.org/img/logo.png',
         locked: true
     }],
-    activeQuestions: [{
-        title: 'Can I test?',
-        description: 'Help, please, how do I test?'
-    }]
+    activeQuestions: []
 }, {
     id: 9,
     name: 'Piet Advanced Course',
@@ -174,10 +174,7 @@ export const COURSES = [{
         picture: 'http://www.lolcode.org/img/logo.png',
         locked: true
     }],
-    activeQuestions: [{
-        title: 'Can I test?',
-        description: 'Help, please, how do I test?'
-    }]
+    activeQuestions: []
 }, {
     id: 10,
     name: 'Shakespeare Beginner Course',
@@ -194,10 +191,7 @@ export const COURSES = [{
         picture: 'http://www.lolcode.org/img/logo.png',
         locked: true
     }],
-    activeQuestions: [{
-        title: 'Can I test?',
-        description: 'Help, please, how do I test?'
-    }]
+    activeQuestions: []
 }, {
     id: 11,
     name: 'Pikachu Beginner Course',
@@ -214,10 +208,7 @@ export const COURSES = [{
         picture: 'http://www.lolcode.org/img/logo.png',
         locked: true
     }],
-    activeQuestions: [{
-        title: 'Can I test?',
-        description: 'Help, please, how do I test?'
-    }]
+    activeQuestions: []
 }, {
     id: 12,
     name: 'Malbolge Beginner Course',
@@ -234,8 +225,5 @@ export const COURSES = [{
         picture: 'http://www.lolcode.org/img/logo.png',
         locked: true
     }],
-    activeQuestions: [{
-        title: 'Can I test?',
-        description: 'Help, please, how do I test?'
-    }]
+    activeQuestions: []
 }]

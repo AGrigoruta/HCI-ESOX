@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, Divider, Button } from 'semantic-ui-react';
+import { List, Divider, Button, Card } from 'semantic-ui-react';
 // import { COURSES } from '../utils/COURSES';
 
 
@@ -68,8 +68,11 @@ class CoursesComponent extends React.Component {
     }
 
     changeSelected = (item) => {
-        console.log(item);
         this.setState({selectedCourse: item});
+    }
+
+    selectQuestion = (item) => {
+        console.log(item);
     }
 
     render() {
@@ -135,10 +138,22 @@ class CoursesComponent extends React.Component {
                                 ) : (
                                         <div className="course__friends-loggedOut">Please log in to see your friends who take this course</div>
                                 )}
-                            
                             <div className="friends__divider"></div>
                             <div className="course__questions">
-                                Questions will be here
+                                {this.state.selectedCourse && this.state.selectedCourse.activeQuestions.length > 0 ? (
+                                    <Card.Group>
+                                        {this.state.selectedCourse.activeQuestions.map(item => (
+                                            <Card key={JSON.stringify(item)} onClick={() => this.selectQuestion(item)}>
+                                                <Card.Content>
+                                                    <Card.Header>{item.title}</Card.Header>
+                                                    <Card.Description>{item.description}</Card.Description>
+                                                </Card.Content>
+                                            </Card>
+                                        ))}
+                                </Card.Group>) : (
+                                    <div className="course__questions-none">
+                                        There are no active questions for this course!
+                                    </div>)}
                             </div>
                         </div>
                     )}

@@ -448,3 +448,21 @@ h1 {
     text-align: center;
     padding: 2rem 0;
 }
+
+.course__friends_wrapper {
+    overflow: auto;
+    display: flex;
+}
+
+.course__questions {
+    padding: 2rem 0;
+}
+
+.course__questions-none {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.course__questions .description {
+    overflow-wrap: break-word;
+}
