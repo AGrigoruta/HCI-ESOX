@@ -6,3 +6,10 @@ export function changeFilter(value) {
         data: value
     };
 }
+
+export function selectCourse(course) {
+    return {
+        type: ACTIONTYPES.COURSE_CHANGED,
+        data: course
+    };
+}

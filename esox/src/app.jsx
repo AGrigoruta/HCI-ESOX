@@ -7,17 +7,16 @@ import { connect } from 'react-redux';
 //page components
 import Discover from './containers/DiscoverContainer';
 import Header from './containers/HeaderContainer';
+import Courses from './containers/CoursesContainer';
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <main>
                 <Header />
                 <Route exact path="/" render={() => (<Redirect to="/discover" />)} />
                 <Route exact path="/discover" component={Discover} />
+                <Route exact path="/courses" component={Courses} />
             </main>
         );
     }

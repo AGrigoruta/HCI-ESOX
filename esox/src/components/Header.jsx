@@ -88,7 +88,7 @@ class HeaderComponent extends React.Component {
                         <Dropdown className="header__user-dropdown" 
                             trigger={<div className="header__user-details">
                                         <div className="header__user-name"><span>{this.props.header.user.name.first.toUpperCase()}</span></div>
-                                        <img className="header__user-image" src={this.props.header.user.picture.thumbnail}></img>
+                                        <img className="header__user-image" src={this.props.header.user.picture.thumbnail} alt="user thumbnail"></img>
                                     </div>} 
                             options={options}
                             pointing='top right'

@@ -11,7 +11,7 @@ const defaultState = {
         name: 'Community',
         path: '/community'
     }],
-    selectedTab: 'Discover',
+    selectedTab: null,
     loggedIn: false,
     user: null,
 };

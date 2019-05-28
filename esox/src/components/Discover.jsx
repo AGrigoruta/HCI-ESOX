@@ -6,22 +6,46 @@ import { COURSES } from '../utils/COURSES';
 class DiscoverComponent extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            data: Object.assign([], COURSES),
+        }
+    }
+
+    componentDidMount() {
+        this.props.changeTab('Discover');
+        this.changeFilter(this.props.discover.selectedFilter);
     }
 
     changeFilter = (item) => {
         this.props.changeFilter(item);
+        let newData = Object.assign([], COURSES);
+        if (item === 'Minimalistic' || item === 'Colors' || item === 'Fun') {
+            newData = COURSES.filter(card => card.category === item);
+        } else if (item === 'Beginner' || item === 'Intermediate' || item === 'Advanced') {
+            newData = COURSES.filter(card => card.difficulty === item);
+        }
+        this.setState({data: newData});
+    }
+
+    selectCourse = (item) => {
+        this.props.selectCourse(item);
+        this.props.changeTab('Courses');
+        this.props.history.push('/courses');
     }
 
     render() {
-        const renderCourses = () => {
+        const renderCourses = (data) => {
             return (
-                COURSES.map((item) => {
+                data.map((item) => {
                     return (
-                        <Card>
+                        <Card key={JSON.stringify(item)} onClick={() => this.selectCourse(item)}>
                             <Card.Content>
                                 <Image floated='left' className="discover__card-picture" src={item.picture} />
                                 <Card.Header>{item.name}</Card.Header>
                                 <Card.Description>{item.description}</Card.Description>
+                                {this.props.header.loggedIn ? (<div className="progress-container">
+                                    <div style={{width: `${item.progress}%`}} className="step"></div>
+                                </div>) : ''}
                             </Card.Content>
                         </Card>
                     )
@@ -29,8 +53,8 @@ class DiscoverComponent extends React.Component {
             )
         }
         return (
-            <div className="discover__wrapper">
-                <aside className="discover__sidebar">
+            <div className="esox-content__wrapper">
+                <aside className="esox__sidebar">
                     <List className="filter__list">
                         <List.Item className="discover__filter" key={JSON.stringify(this.props.discover.allFilters[0])}>
                             <div onClick={() => this.changeFilter(this.props.discover.allFilters[0])}>{this.props.discover.allFilters[0]}</div>
@@ -54,9 +78,9 @@ class DiscoverComponent extends React.Component {
                             </List.Item>))}
                     </List>
                 </aside>
-                <section className="discover__main">
+                <section className="esox__main">
                     <Card.Group>
-                        {renderCourses()}
+                        {renderCourses(this.state.data)}
                     </Card.Group>
                 </section>
             </div>

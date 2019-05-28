@@ -274,29 +274,36 @@ h1 {
     font-weight: 300;
 }
 
-.discover__wrapper {
+.esox-content__wrapper {
     display: flex;
     justify-content: flex-start;
     height: calc(100vh - 6.2rem);
 }
 
-.discover__sidebar {
+.esox__sidebar {
     flex-grow: 3;
+    overflow: auto;
     font-size: 1.5rem;
     min-width: 18rem;
+    max-width: 18rem;
     -webkit-box-shadow: 6px 4px 14px -12px rgba(0,0,0,0.75);
     -moz-box-shadow: 6px 4px 14px -12px rgba(0,0,0,0.75);
     box-shadow: 6px 4px 14px -12px rgba(0,0,0,0.75);
 }
 
-.discover__main {
+.esox__main {
     flex-grow: 14;
-    padding: 0 2rem;
+    padding: 0.4rem 2rem;
     overflow: auto;
 }
 
 .ui.list>.item.discover__filter {
     padding-left: 1rem;
+}
+
+.ui.list>.item.discover__filter:hover {
+    color: #e67e22;
+    cursor: pointer;
 }
 
 .ui.list>.item.discover__filter > div {
@@ -321,4 +328,20 @@ h1 {
 .discover__card-picture {
     width: 100%;
     height: 258px;
+}
+
+.progress-container {
+    background: rgba(#2575fc, 0.2);
+    height: 6px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+}
+.step {
+    background-color: #2575fc;
+    height: 6px;
+    width: 0;
+    border-radius: 0 0 0 5px;
 }
