@@ -9,6 +9,8 @@ import Discover from './containers/DiscoverContainer';
 import Header from './containers/HeaderContainer';
 import Courses from './containers/CoursesContainer';
 import Community from './containers/CommunityContainer';
+import TutorialBefunge from './components/TutorialBefunge';
+import TutorialPiet from './components/TutorialPiet';
 
 class App extends React.Component {
     render() {
@@ -19,6 +21,8 @@ class App extends React.Component {
                 <Route exact path="/discover" component={Discover} />
                 <Route exact path="/courses" component={Courses} />
                 <Route exact path="/community" component={Community} />
+                <Route exact path="/tutorialBefunge" component={TutorialBefunge} />
+                <Route exact path="/tutorialPiet" component={TutorialPiet} />
             </main>
         );
     }

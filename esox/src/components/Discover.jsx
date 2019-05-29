@@ -79,6 +79,11 @@ class DiscoverComponent extends React.Component {
                     </List>
                 </aside>
                 <section className="esox__main">
+                    <div className="befunge"></div>
+                    <div className="befunge"></div>
+                    <div className="befunge"></div>
+                    <div className="befunge"></div>
+                    <div className="befunge"></div>
                     <Card.Group>
                         {renderCourses(this.state.data)}
                     </Card.Group>
