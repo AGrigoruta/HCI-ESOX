@@ -18,7 +18,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var ColourPicker = function ColourPicker(props) {
     return _react2.default.createElement(
         'table',
-        { style: { gridColumn: 'cpicker', gridRow: '1 / 4' } },
+        { className: 'colorPicker' },
         _react2.default.createElement(
             'tbody',
             null,
@@ -104,23 +104,17 @@ exports.WHITE = WHITE;
 exports.BLACK = BLACK;
 
 },{}],3:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
-
-var _colourPicker = require('./colourPicker.js');
-
-var _colourPicker2 = _interopRequireDefault(_colourPicker);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -140,7 +134,7 @@ var Controls = function (_React$Component) {
     }
 
     _createClass(Controls, [{
-        key: 'componentWillReceiveProps',
+        key: "componentWillReceiveProps",
 
         // manually update input values when dims are changed from appState (eg. when image file
         // is imported)
@@ -154,89 +148,106 @@ var Controls = function (_React$Component) {
             }
         }
     }, {
-        key: 'render',
+        key: "render",
         value: function render() {
             var _this2 = this;
 
             return [_react2.default.createElement(
-                'div',
-                {
-                    key: 'controls-row-1',
-                    className: 'btn-toolbar',
-                    role: 'toolbar',
-                    style: { gridColumn: 'controls1' } },
-                _react2.default.createElement(ImportExportMenu, this.props),
-                _react2.default.createElement(PaintModeSwitch, this.props)
-            ), _react2.default.createElement(
-                'div',
-                {
-                    key: 'controls-row-2',
-                    style: {
-                        gridColumn: 'controls2',
-                        display: 'flex',
-                        justifyContent: 'space-between'
-                    } },
+                "div",
+                { className: "controls-area", key: "controls-area" },
                 _react2.default.createElement(
-                    'label',
-                    { htmlFor: 'height', style: { margin: 'auto 0' } },
-                    'Height'
+                    "div",
+                    { key: "controls-row1-col1", className: "controls-row1-col1" },
+                    _react2.default.createElement(
+                        "label",
+                        { htmlFor: "height", style: { margin: 'auto 0' } },
+                        "Height"
+                    ),
+                    _react2.default.createElement("input", {
+                        ref: function ref(input) {
+                            return _this2.height = input;
+                        },
+                        type: "number",
+                        name: "height",
+                        className: "form-control",
+                        style: {
+                            width: '5em',
+                            display: 'inline-block'
+                        },
+                        required: true,
+                        defaultValue: this.props.height
+                    }),
+                    _react2.default.createElement(
+                        "label",
+                        { htmlFor: "width", style: { margin: 'auto 0 auto 5px' } },
+                        "Width"
+                    ),
+                    _react2.default.createElement("input", {
+                        ref: function ref(input) {
+                            return _this2.width = input;
+                        },
+                        type: "number",
+                        name: "width",
+                        className: "form-control",
+                        style: {
+                            width: '5em',
+                            display: 'inline-block'
+                        },
+                        defaultValue: this.props.width,
+                        required: true
+                    }),
+                    _react2.default.createElement("input", {
+                        type: "button",
+                        className: "btn btn-warning",
+                        value: "Resize / Clear",
+                        disabled: this.props.isInterpreting ? 'disabled' : '',
+                        onClick: function onClick() {
+                            return _this2.props.resize({
+                                height: parseInt(_this2.height.value),
+                                width: parseInt(_this2.width.value)
+                            });
+                        }
+                    })
                 ),
-                _react2.default.createElement('input', {
-                    ref: function ref(input) {
-                        return _this2.height = input;
-                    },
-                    type: 'number',
-                    name: 'height',
-                    className: 'form-control',
-                    style: {
-                        width: '5em',
-                        display: 'inline-block'
-                    },
-                    required: true,
-                    defaultValue: this.props.height
-                }),
                 _react2.default.createElement(
-                    'label',
-                    { htmlFor: 'width', style: { margin: 'auto 0 auto 5px' } },
-                    'Width'
+                    "div",
+                    { key: "controls-row1-col2", className: "controls-row1-col2" },
+                    _react2.default.createElement(ImportExportMenu, this.props)
                 ),
-                _react2.default.createElement('input', {
-                    ref: function ref(input) {
-                        return _this2.width = input;
-                    },
-                    type: 'number',
-                    name: 'width',
-                    className: 'form-control',
-                    style: {
-                        width: '5em',
-                        display: 'inline-block'
-                    },
-                    defaultValue: this.props.width,
-                    required: true
-                }),
-                _react2.default.createElement('input', {
-                    type: 'button',
-                    className: 'btn btn-warning',
-                    value: 'Resize / Clear',
-                    disabled: this.props.isInterpreting ? 'disabled' : '',
-                    onClick: function onClick() {
-                        return _this2.props.resize({
-                            height: parseInt(_this2.height.value),
-                            width: parseInt(_this2.width.value)
-                        });
-                    }
-                })
-            ), _react2.default.createElement(
-                'div',
-                { key: 'controls-row-3', style: { gridColumn: 'controls3' } },
-                _react2.default.createElement(BSDisplaySwitch, this.props),
-                '\u2003',
                 _react2.default.createElement(
-                    'b',
-                    null,
-                    this.props.cellInFocus && this.props.blockSizes[this.props.cellInFocus[0]][this.props.cellInFocus[1]] + ' pixels in block'
+                    "div",
+                    { key: "controls-row2-col1", className: "controls-row2-col1" },
+                    _react2.default.createElement(
+                        "div",
+                        null,
+                        _react2.default.createElement(BSDisplaySwitch, this.props)
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        null,
+                        _react2.default.createElement(
+                            "strong",
+                            null,
+                            "Speed ",
+                            this.props.debug.runSpeed
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "div",
+                        null,
+                        _react2.default.createElement(
+                            "strong",
+                            null,
+                            this.props.cellInFocus && this.props.blockSizes[this.props.cellInFocus[0]][this.props.cellInFocus[1]] + ' pixels in block'
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { key: "controls-row2-col2", className: "controls-row2-col2" },
+                    _react2.default.createElement(PaintModeSwitch, this.props)
                 )
-            ), _react2.default.createElement(_colourPicker2.default, _extends({ key: 'colour-picker' }, this.props))];
+            )];
         }
     }]);
 
@@ -247,72 +258,72 @@ var ImportExportMenu = function ImportExportMenu(_ref) {
     var isInterpreting = _ref.isInterpreting,
         importImg = _ref.importImg,
         exportPng = _ref.exportPng;
-    return [_react2.default.createElement('input', {
-        key: 'import-btn',
-        type: 'button',
-        className: 'btn btn-primary',
-        value: 'Import',
+    return [_react2.default.createElement("input", {
+        key: "import-btn",
+        type: "button",
+        className: "btn btn-primary",
+        value: "Import",
         disabled: isInterpreting ? 'disabled' : '',
         onClick: function onClick() {
             return document.getElementById('fileChooser').click();
         }
-    }), _react2.default.createElement('input', {
-        key: 'hidden-file-input',
-        id: 'fileChooser',
-        type: 'file',
-        accept: 'image/png, image/bmp, image/jpeg',
+    }), _react2.default.createElement("input", {
+        key: "hidden-file-input",
+        id: "fileChooser",
+        type: "file",
+        accept: "image/png, image/bmp, image/jpeg",
         style: { display: 'none' },
         onChange: function onChange(event) {
             importImg(event.target.files[0]);
             event.target.value = '';
         }
     }), _react2.default.createElement(
-        'div',
-        { key: 'export-btn', className: 'btn-group' },
+        "div",
+        { key: "export-btn", className: "btn-group" },
         _react2.default.createElement(
-            'button',
+            "button",
             {
-                type: 'button',
-                className: 'btn btn-info',
+                type: "button",
+                className: "btn btn-info",
                 onClick: function onClick() {
                     exportPng(parseInt(document.getElementById('scale').value));
                 } },
-            'Export to PNG'
+            "Export to PNG"
         ),
         _react2.default.createElement(
-            'button',
+            "button",
             {
-                type: 'button',
-                className: 'btn btn-info dropdown-toggle',
-                'data-toggle': 'dropdown',
-                'aria-haspopup': 'true',
-                'aria-expanded': 'false' },
-            _react2.default.createElement('span', { className: 'caret' }),
+                type: "button",
+                className: "btn btn-info dropdown-toggle",
+                "data-toggle": "dropdown",
+                "aria-haspopup": "true",
+                "aria-expanded": "false" },
+            _react2.default.createElement("span", { className: "caret" }),
             _react2.default.createElement(
-                'span',
-                { className: 'sr-only' },
-                'Toggle Dropdown'
+                "span",
+                { className: "sr-only" },
+                "Toggle Dropdown"
             )
         ),
         _react2.default.createElement(
-            'ul',
-            { className: 'dropdown-menu' },
+            "ul",
+            { className: "dropdown-menu" },
             _react2.default.createElement(
-                'li',
+                "li",
                 null,
                 _react2.default.createElement(
-                    'div',
-                    { className: 'form-group', style: { marginLeft: '1vw', marginBottom: '0' } },
+                    "div",
+                    { className: "form-group", style: { marginLeft: '1vw', marginBottom: '0' } },
                     _react2.default.createElement(
-                        'label',
-                        { className: 'control-label', htmlFor: 'scale' },
-                        'Scale'
+                        "label",
+                        { className: "control-label", htmlFor: "scale" },
+                        "Scale"
                     ),
-                    _react2.default.createElement('input', {
-                        id: 'scale',
-                        type: 'number',
-                        name: 'scale',
-                        className: 'form-control',
+                    _react2.default.createElement("input", {
+                        id: "scale",
+                        type: "number",
+                        name: "scale",
+                        className: "form-control",
                         style: { width: '5em', marginLeft: '4px', display: 'inline-block' },
                         defaultValue: 1,
                         required: true
@@ -327,31 +338,31 @@ var PaintModeSwitch = function PaintModeSwitch(_ref2) {
     var paintMode = _ref2.paintMode,
         selectPaintMode = _ref2.selectPaintMode;
     return _react2.default.createElement(
-        'div',
-        { className: 'btn-group', role: 'group', style: { float: 'right' } },
+        "div",
+        { className: "btn-group", role: "group" },
         _react2.default.createElement(
-            'button',
+            "button",
             {
-                type: 'button',
-                title: 'Brush mode (fill single pixel)',
+                type: "button",
+                title: "Brush mode (fill single pixel)",
                 className: 'btn btn-default' + (paintMode == 'BRUSH' ? 'active' : ''),
                 style: { padding: '2px 12px' },
                 onClick: function onClick() {
                     return selectPaintMode('BRUSH');
                 } },
-            _react2.default.createElement('i', { className: 'fi-pencil', style: { fontSize: '14pt' } })
+            _react2.default.createElement("i", { className: "fi-pencil", style: { fontSize: '14pt' } })
         ),
         _react2.default.createElement(
-            'button',
+            "button",
             {
-                type: 'button',
-                title: 'Bucket mode (fill block of pixels)',
+                type: "button",
+                title: "Bucket mode (fill block of pixels)",
                 className: 'btn btn-default' + (paintMode == 'BUCKET' ? 'active' : ''),
                 style: { padding: '2px 12px' },
                 onClick: function onClick() {
                     return selectPaintMode('BUCKET');
                 } },
-            _react2.default.createElement('i', { className: 'fi-paint-bucket', style: { fontSize: '14pt' } })
+            _react2.default.createElement("i", { className: "fi-paint-bucket", style: { fontSize: '14pt' } })
         )
     );
 };
@@ -359,16 +370,16 @@ var PaintModeSwitch = function PaintModeSwitch(_ref2) {
 var BSDisplaySwitch = function BSDisplaySwitch(_ref3) {
     var displayBS = _ref3.displayBS,
         toggleDisplayBS = _ref3.toggleDisplayBS;
-    return displayBS ? _react2.default.createElement('i', {
-        className: 'glyphicon glyphicon-eye-open',
-        title: 'Show block sizes',
+    return displayBS ? _react2.default.createElement("i", {
+        className: "glyphicon glyphicon-eye-open",
+        title: "Show block sizes",
         style: { fontSize: '16px' },
         onClick: function onClick() {
             return toggleDisplayBS();
         }
-    }) : _react2.default.createElement('i', {
-        className: 'glyphicon glyphicon-eye-close',
-        title: 'Show block sizes',
+    }) : _react2.default.createElement("i", {
+        className: "glyphicon glyphicon-eye-close",
+        title: "Show block sizes",
         style: { fontSize: '16px' },
         onClick: function onClick() {
             return toggleDisplayBS();
@@ -378,7 +389,7 @@ var BSDisplaySwitch = function BSDisplaySwitch(_ref3) {
 
 exports.default = Controls;
 
-},{"./colourPicker.js":1,"react":351}],4:[function(require,module,exports){
+},{"react":351}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -448,77 +459,19 @@ var Debugger = function (_React$Component) {
     function Debugger() {
         _classCallCheck(this, Debugger);
 
-        var _this = _possibleConstructorReturn(this, (Debugger.__proto__ || Object.getPrototypeOf(Debugger)).call(this));
-
-        _this.startPos = 0; // save the starting position of the debugger, for when it is dragged
-        return _this;
+        return _possibleConstructorReturn(this, (Debugger.__proto__ || Object.getPrototypeOf(Debugger)).call(this));
     }
 
     _createClass(Debugger, [{
         key: 'render',
         value: function render() {
-            var _this2 = this;
-
             return _react2.default.createElement(
                 'div',
-                {
-                    id: 'debugger',
-                    style: {
-                        gridColumn: 'debug',
-                        gridRow: '1 / 5',
-                        alignSelf: 'start',
-                        marginTop: '0',
-                        width: '225px',
-                        border: '1px solid #ddd',
-                        borderRadius: '5px',
-                        background: 'white',
-                        pointerEvents: 'auto'
-                    } },
-                _react2.default.createElement(
-                    'div',
-                    {
-                        draggable: 'true',
-                        style: {
-                            height: '25px',
-                            padding: '0 5px 5px',
-                            borderBottom: '1px solid #ddd',
-                            borderRadius: '5px 5px 0 0',
-                            backgroundColor: '#eee',
-                            cursor: 'ns-resize'
-                        },
-                        onDragStart: function onDragStart(event) {
-                            event.dataTransfer.setData('text/plain', '');
-                            _this2.startPos = event.screenY;
-                        },
-                        onDragEnd: function onDragEnd(event) {
-                            var style = document.getElementById('debugger').style;
-                            style.marginTop = 'calc(' + style.marginTop + ' + ' + event.screenY + 'px - ' + _this2.startPos + 'px )';
-                        } },
-                    _react2.default.createElement(
-                        'button',
-                        {
-                            type: 'button',
-                            className: 'close',
-                            'aria-label': 'Close',
-                            onClick: function onClick() {
-                                return _this2.props.toggleDebugger();
-                            } },
-                        _react2.default.createElement(
-                            'span',
-                            { 'aria-hidden': 'true' },
-                            '\xD7'
-                        )
-                    )
-                ),
-                _react2.default.createElement(
-                    'div',
-                    { style: { padding: '5px' } },
-                    _react2.default.createElement(Commands, _extends({}, this.props, this.props.debug)),
-                    _react2.default.createElement(DebugControls, _extends({}, this.props, this.props.debug)),
-                    _react2.default.createElement(Pointers, this.props.debug),
-                    _react2.default.createElement(Stack, this.props.debug),
-                    _react2.default.createElement(IO, _extends({}, this.props, this.props.debug))
-                )
+                { id: 'debugger' },
+                _react2.default.createElement(Commands, _extends({}, this.props, this.props.debug)),
+                _react2.default.createElement(Pointers, this.props.debug),
+                _react2.default.createElement(Stack, this.props.debug),
+                _react2.default.createElement(IO, _extends({}, this.props, this.props.debug))
             );
         }
     }]);
@@ -534,19 +487,8 @@ var Commands = function Commands(_ref) {
     return [_react2.default.createElement(
         'div',
         {
-            key: 'command-list',
-            style: {
-                margin: '5px auto 10px',
-                padding: '5px',
-                width: '100%',
-                height: '40vh',
-                resize: 'vertical',
-                overflow: 'auto',
-                fontFamily: 'monospace',
-                fontSize: '11pt',
-                backgroundColor: '#f5f5f5',
-                border: '1px solid #ccc'
-            } },
+            className: 'command-list',
+            key: 'command-list' },
         commandList.map(function (command, i) {
             return _react2.default.createElement(
                 'div',
@@ -571,6 +513,7 @@ var Commands = function Commands(_ref) {
     ), isInterpreting && currCommand && _react2.default.createElement(
         'div',
         {
+            className: 'current-command',
             key: 'current-command',
             style: {
                 margin: '-5px 0 10px',
@@ -589,141 +532,10 @@ var Commands = function Commands(_ref) {
     )];
 };
 
-// run/step/continue/stop/pause + set BP control buttons
-var DebugControls = function DebugControls(_ref2) {
-    var start = _ref2.start,
-        pause = _ref2.pause,
-        step = _ref2.step,
-        cont = _ref2.cont,
-        stop = _ref2.stop,
-        runSpeed = _ref2.runSpeed,
-        isInterpreting = _ref2.isInterpreting,
-        setRunSpeed = _ref2.setRunSpeed,
-        paintMode = _ref2.paintMode,
-        toggleSetBP = _ref2.toggleSetBP;
-    return _react2.default.createElement(
-        'div',
-        { className: 'btn-toolbar', role: 'toolbar', style: { margin: '0 0 1vh' } },
-        _react2.default.createElement(
-            'div',
-            { className: 'btn-group btn-group-sm', style: { width: '52px', margin: '0' } },
-            _react2.default.createElement(
-                'button',
-                {
-                    type: 'button',
-                    className: 'btn btn-success',
-                    title: 'Run from the beginning',
-                    onClick: function onClick() {
-                        return start();
-                    } },
-                _react2.default.createElement('i', { className: 'glyphicon glyphicon-play' })
-            ),
-            _react2.default.createElement(
-                'button',
-                {
-                    type: 'button',
-                    className: 'btn btn-success dropdown-toggle',
-                    title: 'Set run speed',
-                    'data-toggle': 'dropdown',
-                    'aria-haspopup': 'true',
-                    'aria-expanded': 'false',
-                    style: { width: '18px', paddingLeft: '4px', paddingRight: '4px' } },
-                _react2.default.createElement('span', { className: 'caret' }),
-                _react2.default.createElement(
-                    'span',
-                    { className: 'sr-only' },
-                    'Toggle Dropdown'
-                )
-            ),
-            _react2.default.createElement(
-                'ul',
-                { className: 'dropdown-menu' },
-                _react2.default.createElement(
-                    'li',
-                    { style: { padding: '0 5px' } },
-                    _react2.default.createElement(
-                        'small',
-                        { style: { float: 'left' } },
-                        'Slower'
-                    ),
-                    _react2.default.createElement(
-                        'small',
-                        { style: { float: 'right' } },
-                        'Faster'
-                    ),
-                    _react2.default.createElement('input', {
-                        type: 'range',
-                        min: '0',
-                        max: '1000',
-                        step: '100',
-                        value: 1000 - runSpeed,
-                        onChange: function onChange(event) {
-                            return !isInterpreting && setRunSpeed(1000 - event.target.value);
-                        }
-                    })
-                )
-            )
-        ),
-        _react2.default.createElement(
-            'div',
-            {
-                className: 'btn-group btn-group-sm',
-                role: 'group',
-                style: { width: '136px', margin: '0 0 0 4px' } },
-            _react2.default.createElement(
-                'button',
-                { type: 'button', className: 'btn btn-warning', title: 'Pause', onClick: function onClick() {
-                        return pause();
-                    } },
-                _react2.default.createElement('i', { className: 'glyphicon glyphicon-pause' })
-            ),
-            _react2.default.createElement(
-                'button',
-                { type: 'button', className: 'btn btn-info', title: 'Step', onClick: function onClick() {
-                        return step();
-                    } },
-                _react2.default.createElement('i', { className: 'glyphicon glyphicon-step-forward' })
-            ),
-            _react2.default.createElement(
-                'button',
-                {
-                    type: 'button',
-                    className: 'btn btn-primary',
-                    title: 'Continue running from this point',
-                    onClick: function onClick() {
-                        return cont();
-                    } },
-                _react2.default.createElement('i', { className: 'glyphicon glyphicon-fast-forward' })
-            ),
-            _react2.default.createElement(
-                'button',
-                { type: 'button', className: 'btn btn-danger', title: 'Stop', onClick: function onClick() {
-                        return stop();
-                    } },
-                _react2.default.createElement('i', { className: 'glyphicon glyphicon-stop' })
-            )
-        ),
-        _react2.default.createElement('i', {
-            className: 'glyphicon glyphicon-map-marker',
-            title: 'Set breakpoints',
-            style: {
-                fontSize: '18px',
-                margin: '0 0 0 3px',
-                padding: '5px 0',
-                cursor: 'pointer',
-                color: paintMode == 'BP' ? 'red' : 'black'
-            },
-            onClick: function onClick() {
-                return toggleSetBP();
-            }
-        })
-    );
-};
-
 // IO visual containers
-var IO = function IO(_ref3) {
-    var output = _ref3.output,
-        isInterpreting = _ref3.isInterpreting;
+var IO = function IO(_ref2) {
+    var output = _ref2.output,
+        isInterpreting = _ref2.isInterpreting;
     return [_react2.default.createElement(
         'b',
         { key: 'input-label' },
@@ -733,13 +545,7 @@ var IO = function IO(_ref3) {
         id: 'in',
         placeholder: 'Enter input before running program',
         title: 'Tip: Whitespace before a numerical value is ignored',
-        readOnly: isInterpreting,
-        style: {
-            width: '100%',
-            maxWidth: '100%',
-            fontFamily: 'monospace',
-            fontSize: '12pt'
-        }
+        readOnly: isInterpreting
     }), _react2.default.createElement('br', { key: 'br-2' }), _react2.default.createElement(
         'b',
         { key: 'output-label' },
@@ -748,22 +554,16 @@ var IO = function IO(_ref3) {
         key: 'out',
         id: 'out',
         readOnly: true,
-        style: {
-            width: '100%',
-            maxWidth: '100%',
-            fontFamily: 'monospace',
-            fontSize: '12pt'
-        },
         value: output
     })];
 };
 
 // visual representation of stack
-var Stack = function Stack(_ref4) {
-    var stack = _ref4.stack;
+var Stack = function Stack(_ref3) {
+    var stack = _ref3.stack;
     return _react2.default.createElement(
         'table',
-        { style: { margin: 'auto auto 1vh', width: '100%' } },
+        { className: 'piet-stack' },
         _react2.default.createElement(
             'thead',
             null,
@@ -811,12 +611,12 @@ var Stack = function Stack(_ref4) {
 };
 
 // visual representation of program pointers
-var Pointers = function Pointers(_ref5) {
-    var DP = _ref5.DP,
-        CC = _ref5.CC;
+var Pointers = function Pointers(_ref4) {
+    var DP = _ref4.DP,
+        CC = _ref4.CC;
     return _react2.default.createElement(
         'div',
-        { style: { width: '100%', textAlign: 'center', fontWeight: 'bold' } },
+        { className: 'piet-pointers' },
         'DP:\xA0',
         _react2.default.createElement('i', { className: 'glyphicon glyphicon-arrow-' + ['right', 'down', 'left', 'up'][DP] }),
         '\u2003 CC:\xA0',
@@ -833,76 +633,211 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
 var _colours = require('./colours.js');
 
+var _colourPicker = require('./colourPicker.js');
+
+var _colourPicker2 = _interopRequireDefault(_colourPicker);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Grid = function Grid(props) {
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Grid = function (_React$Component) {
+    _inherits(Grid, _React$Component);
+
+    function Grid() {
+        _classCallCheck(this, Grid);
+
+        return _possibleConstructorReturn(this, (Grid.__proto__ || Object.getPrototypeOf(Grid)).apply(this, arguments));
+    }
+
+    _createClass(Grid, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return [_react2.default.createElement(
+                'div',
+                { className: 'work-area', key: 'work-area' },
+                _react2.default.createElement(
+                    'table',
+                    { key: 'piet-program', className: 'piet-program', onMouseOut: function onMouseOut() {
+                            return _this2.props.setCellInFocus(null);
+                        } },
+                    _react2.default.createElement(
+                        'tbody',
+                        null,
+                        this.props.grid.map(function (row, i) {
+                            return _react2.default.createElement(
+                                'tr',
+                                { key: 'row-' + i },
+                                row.map(function (cell, j) {
+                                    return _react2.default.createElement(
+                                        'td',
+                                        {
+                                            key: 'cell-' + i + '-' + j,
+                                            title: '(' + j + ',' + i + ')',
+                                            style: {
+                                                maxHeight: '30px',
+                                                maxWidth: '30px',
+                                                height: _this2.props.cellDim + 'px',
+                                                width: _this2.props.cellDim + 'px',
+                                                border: '1px solid black',
+                                                background: _this2.props.debug.breakpoints.includes(_this2.props.blocks[i][j]) ? 'repeating-linear-gradient(45deg, ' + _colours.colours[cell] + ', ' + _colours.colours[cell] + ' 2px, black 2px, black 4px)' : _colours.colours[cell],
+                                                color: 'white',
+                                                fontSize: '11px',
+                                                textShadow: '1px 1px 1px black',
+                                                textAlign: 'center',
+                                                cursor: {
+                                                    BRUSH: 'url(img/pencil.png) 5 30,auto',
+                                                    BUCKET: 'url(img/paint-bucket.png) 28 28,auto',
+                                                    BP: 'url(img/bp.png) 16 32,auto'
+                                                }[_this2.props.paintMode]
+                                            },
+                                            onMouseOver: function onMouseOver() {
+                                                return _this2.props.setCellInFocus(i, j);
+                                            },
+                                            onClick: function onClick() {
+                                                return _this2.props.handleCellClick(i, j);
+                                            } },
+                                        _this2.props.blocks[i][j] == _this2.props.debug.block ? '◉' : _this2.props.displayBS && _this2.props.blockSizes[i][j]
+                                    );
+                                })
+                            );
+                        })
+                    )
+                ),
+                _react2.default.createElement(_colourPicker2.default, _extends({ key: 'colour-picker' }, this.props)),
+                _react2.default.createElement(DebugControls, _extends({}, this.props, this.props.debug))
+            )];
+        }
+    }]);
+
+    return Grid;
+}(_react2.default.Component);
+
+;
+
+// run/step/continue/stop/pause + set BP control buttons
+var DebugControls = function DebugControls(_ref) {
+    var start = _ref.start,
+        pause = _ref.pause,
+        step = _ref.step,
+        cont = _ref.cont,
+        stop = _ref.stop,
+        setRunSpeed = _ref.setRunSpeed,
+        getRunSpeed = _ref.getRunSpeed,
+        paintMode = _ref.paintMode,
+        toggleSetBP = _ref.toggleSetBP;
     return _react2.default.createElement(
-        'table',
-        {
-            style: {
-                margin: '1vh 0 0 0',
-                tableLayout: 'fixed',
-                gridColumn: 'grid / span ' + (props.debug.debugIsVisible ? '3' : '4'),
-                alignSelf: 'start',
-                justifySelf: 'start'
-            },
-            onMouseOut: function onMouseOut() {
-                return props.setCellInFocus(null);
-            } },
+        'div',
+        _defineProperty({ className: 'btn-toolbar', role: 'toolbar' }, 'className', 'controls'),
         _react2.default.createElement(
-            'tbody',
-            null,
-            props.grid.map(function (row, i) {
-                return _react2.default.createElement(
-                    'tr',
-                    { key: 'row-' + i },
-                    row.map(function (cell, j) {
-                        return _react2.default.createElement(
-                            'td',
-                            {
-                                key: 'cell-' + i + '-' + j,
-                                title: '(' + j + ',' + i + ')',
-                                style: {
-                                    maxHeight: '30px',
-                                    maxWidth: '30px',
-                                    height: props.cellDim + 'px',
-                                    width: props.cellDim + 'px',
-                                    border: '1px solid black',
-                                    background: props.debug.breakpoints.includes(props.blocks[i][j]) ? 'repeating-linear-gradient(45deg, ' + _colours.colours[cell] + ', ' + _colours.colours[cell] + ' 2px, black 2px, black 4px)' : _colours.colours[cell],
-                                    color: 'white',
-                                    fontSize: '11px',
-                                    textShadow: '1px 1px 1px black',
-                                    textAlign: 'center',
-                                    cursor: {
-                                        BRUSH: 'url(img/pencil.png) 5 30,auto',
-                                        BUCKET: 'url(img/paint-bucket.png) 28 28,auto',
-                                        BP: 'url(img/bp.png) 16 32,auto'
-                                    }[props.paintMode]
-                                },
-                                onMouseOver: function onMouseOver() {
-                                    return props.setCellInFocus(i, j);
-                                },
-                                onClick: function onClick() {
-                                    return props.handleCellClick(i, j);
-                                } },
-                            props.blocks[i][j] == props.debug.block ? '◉' : props.displayBS && props.blockSizes[i][j]
-                        );
-                    })
-                );
-            })
-        )
+            'button',
+            {
+                type: 'button',
+                className: 'btn btn-success',
+                title: 'Run from the beginning',
+                onClick: function onClick() {
+                    return start();
+                } },
+            _react2.default.createElement('i', { className: 'glyphicon glyphicon-play' })
+        ),
+        _react2.default.createElement(
+            'button',
+            {
+                type: 'button',
+                className: 'btn btn-primary',
+                title: 'Increase delay',
+                onClick: function onClick() {
+                    var speed = getRunSpeed();
+                    if (speed + 100 <= 1000) {
+                        setRunSpeed(speed + 100);
+                    }
+                } },
+            _react2.default.createElement('i', { className: 'glyphicon glyphicon-plus' })
+        ),
+        _react2.default.createElement(
+            'button',
+            {
+                type: 'button',
+                className: 'btn btn-primary',
+                title: 'Decrease delay',
+                onClick: function onClick() {
+                    var speed = getRunSpeed();
+                    if (speed - 100 > 0) {
+                        setRunSpeed(speed - 100);
+                    }
+                } },
+            _react2.default.createElement('i', { className: 'glyphicon glyphicon-minus' })
+        ),
+        _react2.default.createElement(
+            'button',
+            { type: 'button', className: 'btn btn-warning', title: 'Pause', onClick: function onClick() {
+                    return pause();
+                } },
+            _react2.default.createElement('i', { className: 'glyphicon glyphicon-pause' })
+        ),
+        _react2.default.createElement(
+            'button',
+            { type: 'button', className: 'btn btn-info', title: 'Step', onClick: function onClick() {
+                    return step();
+                } },
+            _react2.default.createElement('i', { className: 'glyphicon glyphicon-step-forward' })
+        ),
+        _react2.default.createElement(
+            'button',
+            {
+                type: 'button',
+                className: 'btn btn-primary',
+                title: 'Continue running from this point',
+                onClick: function onClick() {
+                    return cont();
+                } },
+            _react2.default.createElement('i', { className: 'glyphicon glyphicon-fast-forward' })
+        ),
+        _react2.default.createElement(
+            'button',
+            { type: 'button', className: 'btn btn-danger', title: 'Stop', onClick: function onClick() {
+                    return stop();
+                } },
+            _react2.default.createElement('i', { className: 'glyphicon glyphicon-stop' })
+        ),
+        _react2.default.createElement('i', {
+            className: 'glyphicon glyphicon-map-marker',
+            title: 'Set breakpoints',
+            style: {
+                fontSize: '18px',
+                margin: '0 0 0 3px',
+                padding: '5px 0',
+                cursor: 'pointer',
+                color: paintMode == 'BP' ? 'red' : 'black'
+            },
+            onClick: function onClick() {
+                return toggleSetBP();
+            }
+        })
     );
 };
 
 exports.default = Grid;
 
-},{"./colours.js":2,"react":351}],7:[function(require,module,exports){
+},{"./colourPicker.js":1,"./colours.js":2,"react":351}],7:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -1241,18 +1176,8 @@ function getAppState() {
 
             return { blockMap: blockMap, blockSizes: blockSizes };
         }.bind(this),
-
-        // toggle debugger visibility
-        toggleDebugger: function () {
-            appState.debug.debugIsVisible = !appState.debug.debugIsVisible;
-
-            // update cell dimensions ******
-
-            appState.notify();
-        }.bind(this),
-
         debug: {
-            debugIsVisible: false, // initially, debugger is not visible
+            debugIsVisible: true,
 
             commandList: [],
             interpreter: null,
@@ -1275,6 +1200,10 @@ function getAppState() {
                 appState.debug.runSpeed = speed;
 
                 appState.notify();
+            }.bind(this),
+
+            getRunSpeed: function () {
+                return appState.debug.runSpeed;
             }.bind(this),
 
             selectBlock: function (block) {
@@ -1469,21 +1398,10 @@ var App = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                {
-                    style: {
-                        width: '100%',
-                        marginBottom: '1vh',
-                        display: 'grid',
-                        gridColumnGap: '1vw',
-                        gridRowGap: '1vh',
-                        gridTemplateColumns: this.props.appState.debug.debugIsVisible ? '375px 300px auto 225px' : '375px 300px auto 25px',
-                        gridTemplateRows: '35px 35px 35px auto',
-                        gridTemplateAreas: this.props.appState.debug.debugIsVisible ? '\'controls1 cpicker . debug\'\n                           \'controls2 cpicker . debug\'\n                           \'controls3 cpicker . debug\'\n                           \'grid grid grid debug\'' : '\'controls1 cpicker . dtab\'\n                           \'controls2 cpicker . dtab\'\n                           \'controls3 cpicker . dtab\'\n\t\t\t   \'grid grid grid grid\'',
-                        alignItems: 'center'
-                    } },
+                null,
                 _react2.default.createElement(_controls2.default, _extends({ isInterpreting: isInterpreting }, this.props.appState)),
                 _react2.default.createElement(_grid2.default, this.props.appState),
-                this.props.appState.debug.debugIsVisible ? _react2.default.createElement(_debugger2.default, _extends({ isInterpreting: isInterpreting }, this.props.appState)) : _react2.default.createElement(_debugTab.DebugTab, this.props.appState)
+                _react2.default.createElement(_debugger2.default, _extends({ isInterpreting: isInterpreting }, this.props.appState))
             );
         }
     }]);

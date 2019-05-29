@@ -12,3 +12,10 @@ textarea {
     border: none;
     resize: none;
 }
+
+.controls {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 50px;
+}

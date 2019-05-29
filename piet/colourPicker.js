@@ -2,7 +2,7 @@ import React from 'react';
 import { colours, WHITE, BLACK } from './colours.js';
 
 const ColourPicker = props => (
-    <table style={{ gridColumn: 'cpicker', gridRow: '1 / 4' }}>
+    <table className="colorPicker">
         <tbody>
             {[
                 colours.slice(0, 6),

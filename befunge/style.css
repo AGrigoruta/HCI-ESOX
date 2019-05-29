@@ -6,17 +6,29 @@
 
 .befunge > div > div {
     display: inline-grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
     grid-row-gap: 5px;
     font-family: "Roboto Mono", monospace;
     width: 100%;
 }
 
+.board-settings {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+}
+
+.board-settings .inline {
+    margin: 5px;
+}
+
 .left {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
     display: inline-grid;
     grid-template-columns: 50% 50%;
     border-right: 1px dashed var(--main-accent-color);
@@ -29,7 +41,7 @@
 }
 
 .program {
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-column-end: 3;
     padding-top: 5px;
 }
@@ -42,7 +54,7 @@
     border: 1px solid var(--main-accent-color);
 }
 
-.program span.current {
+.program span.current input {
     background-color: black;
     color: white;
 }
@@ -50,17 +62,12 @@
 .right {
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
     display: inline-grid;
-    grid-template-columns: 85% 15%;
+    grid-template-columns: auto 100px;
 }
 
-.controls {
-    display: grid;
-    justify-content: space-evenly;
-    flex-direction: column;
-}
 .stats {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -84,8 +91,8 @@
 .output {
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
     border-top: 1px dashed var(--main-accent-color);
     padding: 5px;
 }

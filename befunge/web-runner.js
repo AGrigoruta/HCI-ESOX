@@ -5,6 +5,9 @@ var _ = require('lodash');
 var d = React.DOM;
 
 var Main = React.createClass({
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps);
+    },
     update: function(programState) {
         this.state.prevStates.push(this.state.b.state);
         this.state.b.state = programState;
@@ -75,14 +78,21 @@ var Main = React.createClass({
             null,
             d.div(
                 null,
+                BoardSettings({
+                    width: this.state.b.state.get('width'),
+                    height: this.state.b.state.get('height'),
+                }),
                 d.div(
                     { className: 'left' },
-                    Editor({
+                    /*Editor({
                         program: this.state.b.state.get('program'),
                         reset: this.reset
-                    }),
+                    }),*/
                     Program({
                         program: this.state.b.state.get('program'),
+                        width: this.state.b.state.get('width'),
+                        height: this.state.b.state.get('height'),
+                        reset: this.reset,
                         x: this.state.b.state.get('x'),
                         y: this.state.b.state.get('y')
                     })
@@ -232,10 +242,7 @@ var Stats = React.createClass({
             { className: 'info' },
             d.div(
                 null,
-                'x: ', s.get('x'),
-                ', y: ', s.get('y'),
-                ', tick: ', s.get('tick'),
-                ', delay: ', this._owner.getDelay(),
+                'Delay: ', this._owner.getDelay(),
                 ' Show as Character',
                 d.input({
                     type:'checkbox',
@@ -278,17 +285,36 @@ var Output = React.createClass({
 });
 
 var Program = React.createClass({
+    updateProgram: function(e) {
+        const possitionY = parseInt(e.target.dataset.possitionY),
+            possitionX = parseInt(e.target.dataset.possitionX),
+            oldValue = e.target.dataset.value;
+        let programString = this.props.program.map((line, idx) => {
+            line = line.toArray();
+            if (idx === possitionY) {
+                let containsOldValueIdx = e.target.value.indexOf(oldValue);
+                let value = e.target.value;
+                if (containsOldValueIdx !== -1) {
+                    value = value.substring(0, containsOldValueIdx) + value.substring(containsOldValueIdx + 1, value.length);
+                }
+                line[possitionX] = value !== ""? value : " ";
+            }
+            return line.join('');
+        }).join('\n');
+        this.props.reset(programString);
+    },
     render: function() {
         var self = this;
         return d.div(
             { className: 'program' },
             this.props.program.toArray().map(function(line, y) {
+                line = line.toArray();
                 return d.div(
                     {
                         className: 'program-line',
                         key: 'line-' + y
                     },
-                    line.toArray().map(function(cell, x) {
+                    line.map(function(cell, x) {
                         var current = (self.props.x == x && self.props.y == y);
                         return d.span(
                             {
@@ -296,7 +322,20 @@ var Program = React.createClass({
                                 key: 'cell-' + x
                             },
                             // Replace spaces with non-breaking spaces
-                            (cell == ' ' ? '\u00a0' : cell)
+                            //(cell == ' ' ? '\u00a0' : cell),
+                            (d.input({
+                                key: 'cel-input' + x,
+                                value: cell,
+                                type: 'text',
+                                'data-possition-x': x,
+                                'data-possition-y': y,
+                                'data-value': cell,
+                                style: {
+                                    width: '100%',
+                                    margin: '0px',
+                                },
+                                onChange: self.updateProgram,
+                            })),
                         );
                     })
                 );
@@ -305,6 +344,51 @@ var Program = React.createClass({
     }
 });
 
+var BoardSettings = React.createClass({
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps);
+    },
+    updateProgramBoardWidth: function(e) {
+        let width = e.target.value;
+        console.log(width);
+        this.props.width = width;
+    },
+    updateProgramBoardHeight: function (e) {
+        let height = e.target.valeu;
+        console.log(height);
+        this.props.height = height;
+    },
+    render: function () {
+        var self = this;
+        let width = d.div(
+            {className:"inline"},
+            d.label(
+                d.span("width:"),
+                d.input(
+                    {
+                        value: self.props.width,
+                        onChange: self.updateProgramBoardWidth,
+                    })
+            ),
+        );
+        let height = d.div(
+            {className:"inline"},
+            d.label(
+                d.span("height:"),
+                d.input(
+                    {
+                        value: self.props.height,
+                        onChange: self.updateProgramBoardHeight,
+                    })
+            )
+        );
+        return d.div(
+            {className: 'board-settings'},
+            width,
+            height,
+        );
+    }
+})
 var Editor = React.createClass({
     updateProgram: function(e) {
         this.props.reset(e.target.value);
@@ -320,6 +404,7 @@ var Editor = React.createClass({
         var counter = d.div({
                 className: 'tln-wrapper',
                 ref: 'numbers',
+                key: 'countersTlnWrapper',
             },
             this.props.program.toArray().map((e, i) => {
                 return d.span(
@@ -400,6 +485,7 @@ var SampleList = React.createClass({
         );
     }
 });
+
 Array
 .from(document.getElementsByClassName('befunge'))
 .forEach((element, i) => {

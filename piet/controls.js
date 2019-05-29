@@ -1,7 +1,5 @@
 import React from 'react';
 
-import ColourPicker from './colourPicker.js';
-
 class Controls extends React.Component {
     // manually update input values when dims are changed from appState (eg. when image file
     // is imported)
@@ -17,73 +15,73 @@ class Controls extends React.Component {
 
     render() {
         return [
-            <div
-                key="controls-row-1"
-                className="btn-toolbar"
-                role="toolbar"
-                style={{ gridColumn: 'controls1' }}>
-                <ImportExportMenu {...this.props} />
-                <PaintModeSwitch {...this.props} />
-            </div>,
-            <div
-                key="controls-row-2"
-                style={{
-                    gridColumn: 'controls2',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                }}>
-                <label htmlFor="height" style={{ margin: 'auto 0' }}>
-                    Height
-                </label>
-                <input
-                    ref={input => (this.height = input)}
-                    type="number"
-                    name="height"
-                    className="form-control"
-                    style={{
-                        width: '5em',
-                        display: 'inline-block',
-                    }}
-                    required
-                    defaultValue={this.props.height}
-                />
-                <label htmlFor="width" style={{ margin: 'auto 0 auto 5px' }}>
-                    Width
-                </label>
-                <input
-                    ref={input => (this.width = input)}
-                    type="number"
-                    name="width"
-                    className="form-control"
-                    style={{
-                        width: '5em',
-                        display: 'inline-block',
-                    }}
-                    defaultValue={this.props.width}
-                    required
-                />
-                <input
-                    type="button"
-                    className="btn btn-warning"
-                    value="Resize / Clear"
-                    disabled={this.props.isInterpreting ? 'disabled' : ''}
-                    onClick={() =>
-                        this.props.resize({
-                            height: parseInt(this.height.value),
-                            width: parseInt(this.width.value),
-                        })}
-                />
-            </div>,
-            <div key="controls-row-3" style={{ gridColumn: 'controls3' }}>
-                <BSDisplaySwitch {...this.props} />
-                &emsp;<b>
-                    {this.props.cellInFocus &&
-                        this.props.blockSizes[this.props.cellInFocus[0]][
-                            this.props.cellInFocus[1]
-                        ] + ' pixels in block'}
-                </b>
-            </div>,
-            <ColourPicker key="colour-picker" {...this.props} />,
+            <div className="controls-area" key="controls-area">
+                <div key="controls-row1-col1" className="controls-row1-col1">
+                    <label htmlFor="height" style={{ margin: 'auto 0' }}>
+                        Height
+                    </label>
+                    <input
+                        ref={input => (this.height = input)}
+                        type="number"
+                        name="height"
+                        className="form-control"
+                        style={{
+                            width: '5em',
+                            display: 'inline-block',
+                        }}
+                        required
+                        defaultValue={this.props.height}
+                    />
+                    <label htmlFor="width" style={{ margin: 'auto 0 auto 5px' }}>
+                        Width
+                    </label>
+                    <input
+                        ref={input => (this.width = input)}
+                        type="number"
+                        name="width"
+                        className="form-control"
+                        style={{
+                            width: '5em',
+                            display: 'inline-block',
+                        }}
+                        defaultValue={this.props.width}
+                        required
+                    />
+                    <input
+                        type="button"
+                        className="btn btn-warning"
+                        value="Resize / Clear"
+                        disabled={this.props.isInterpreting ? 'disabled' : ''}
+                        onClick={() =>
+                            this.props.resize({
+                                height: parseInt(this.height.value),
+                                width: parseInt(this.width.value),
+                            })}
+                    />
+                </div>
+                <div key="controls-row1-col2" className="controls-row1-col2">
+                    <ImportExportMenu {...this.props} />
+                </div>
+                <div key="controls-row2-col1" className="controls-row2-col1">
+                    <div>
+                        <BSDisplaySwitch {...this.props} />
+                    </div>
+                    <div>
+                        <strong>Speed {this.props.debug.runSpeed}</strong>
+                    </div>
+                    <div>
+                        <strong>
+                        {this.props.cellInFocus &&
+                            this.props.blockSizes[this.props.cellInFocus[0]][
+                                this.props.cellInFocus[1]
+                            ] + ' pixels in block'}
+                        </strong>
+                    </div>
+                </div>
+                <div key="controls-row2-col2" className="controls-row2-col2">
+                    <PaintModeSwitch {...this.props} />
+                </div>
+            </div>
         ];
     }
 }
@@ -149,7 +147,7 @@ const ImportExportMenu = ({ isInterpreting, importImg, exportPng }) => [
 ];
 
 const PaintModeSwitch = ({ paintMode, selectPaintMode }) => (
-    <div className="btn-group" role="group" style={{ float: 'right' }}>
+    <div className="btn-group" role="group">
         <button
             type="button"
             title="Brush mode (fill single pixel)"

@@ -6,12 +6,34 @@ var interpret = require('./interpreter');
 
 function initState(program) {
     program = program || [[]];
+    try {
+        program = program.toArray();
+    } catch (e) {
+        // do nothing
+    }
+    let width = program.reduce(function(longest, line) { return Math.max(longest, line.length); }, 0);
+
+    for(let i = 0; i < program.length; i++) {
+        let line = program[i];
+
+        try {
+            line = line.toArray();
+        } catch (e) {
+            // do nothing
+        }
+            
+        if (line.length < width) {
+            let extend = (new Array(width - line.length).fill(" "));
+            line = line.concat(extend);
+        }
+        program[i] = line;
+    }
 
     return Immutable.fromJS({
         x: -1,
         y: 0,
         height: program.length,
-        width: program.reduce(function(longest, line) { return Math.max(longest, line.length); }, 0),
+        width: width,
         direction: '>',
         tick: 0,
         stringmode: false,
@@ -56,6 +78,12 @@ var Befunge = function(programString, options) {
             }
             b.state = initState(b.parse(programString));
             return b;
+        },
+        setWidth: function(width) {
+
+        },
+        setHeight: function(height) {
+
         },
         step: function() {
             if (!b.state.get('terminated')) {

@@ -291,18 +291,8 @@ function getAppState () {
 
         return { blockMap, blockSizes };
     }).bind(this),
-
-    // toggle debugger visibility
-    toggleDebugger: (() => {
-        appState.debug.debugIsVisible = !appState.debug.debugIsVisible;
-
-        // update cell dimensions ******
-
-        appState.notify();
-    }).bind(this),
-
     debug: {
-        debugIsVisible: false, // initially, debugger is not visible
+        debugIsVisible: true,
 
         commandList: [],
         interpreter: null,
@@ -325,6 +315,10 @@ function getAppState () {
             appState.debug.runSpeed = speed;
 
             appState.notify();
+        }).bind(this),
+
+        getRunSpeed: ( () => {
+            return appState.debug.runSpeed;
         }).bind(this),
 
         selectBlock: (block => {
@@ -521,35 +515,10 @@ class App extends React.Component {
         let isInterpreting = this.props.appState.debug.interpreter != null;
 
         return (
-            <div
-                style={{
-                    width: '100%',
-                    marginBottom: '1vh',
-                    display: 'grid',
-                    gridColumnGap: '1vw',
-                    gridRowGap: '1vh',
-                    gridTemplateColumns: this.props.appState.debug.debugIsVisible
-                        ? '375px 300px auto 225px'
-                        : '375px 300px auto 25px',
-                    gridTemplateRows: '35px 35px 35px auto',
-                    gridTemplateAreas: this.props.appState.debug.debugIsVisible
-                        ? `'controls1 cpicker . debug'
-                           'controls2 cpicker . debug'
-                           'controls3 cpicker . debug'
-                           'grid grid grid debug'`
-                        : `'controls1 cpicker . dtab'
-                           'controls2 cpicker . dtab'
-                           'controls3 cpicker . dtab'
-			   'grid grid grid grid'`,
-                    alignItems: 'center',
-                }}>
+            <div>
                 <Controls isInterpreting={isInterpreting} {...this.props.appState} />
                 <Grid {...this.props.appState} />
-                {this.props.appState.debug.debugIsVisible ? (
-                    <Debugger isInterpreting={isInterpreting} {...this.props.appState} />
-                ) : (
-                    <DebugTab {...this.props.appState} />
-                )}
+                <Debugger isInterpreting={isInterpreting} {...this.props.appState} />
             </div>
         );
     }
