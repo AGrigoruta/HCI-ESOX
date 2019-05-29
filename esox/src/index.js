@@ -5,11 +5,7 @@ import { ConnectedRouter } from 'react-router-redux';
 import store, { history } from './store';
 import App from './app';
 
-import './befunge/built';
-//import './piet/bundle';
-
 import './style/index.css';
-import './befunge/style.css';
 
 const target = document.querySelector('#root');
 
