@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 import Discover from './containers/DiscoverContainer';
 import Header from './containers/HeaderContainer';
 import Courses from './containers/CoursesContainer';
+import Community from './containers/CommunityContainer';
 
 class App extends React.Component {
     render() {
@@ -17,6 +18,7 @@ class App extends React.Component {
                 <Route exact path="/" render={() => (<Redirect to="/discover" />)} />
                 <Route exact path="/discover" component={Discover} />
                 <Route exact path="/courses" component={Courses} />
+                <Route exact path="/community" component={Community} />
             </main>
         );
     }

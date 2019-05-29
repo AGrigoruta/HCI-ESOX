@@ -305,7 +305,7 @@ h1 {
 }
 
 .ui.list>.item.discover__filter {
-    padding: 0 1rem;
+    padding: 0.3rem 1rem;
 }
 
 .ui.list>.item.discover__filter:hover {
@@ -423,7 +423,7 @@ h1 {
 }
 
 .course__friends {
-    padding: 1rem 0;
+    padding: 1rem 1rem 0;
 }
 
 .friends__divider {
@@ -442,6 +442,7 @@ h1 {
 
 .friends__thumbnail {
     margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 .course__friends-loggedOut {
@@ -483,4 +484,48 @@ h1 {
 .achievement__card_description {
     font-size: 1rem;
     padding-left: 0.5rem;
+}
+
+.guild__friends_wrapper {
+    display: flex;
+}
+
+.guild__friends_divider {
+    -webkit-box-shadow: 2px 1px 4px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 1px 4px -2px rgba(0,0,0,0.75);
+    box-shadow: 2px 1px 4px -2px rgba(0,0,0,0.75);
+    border-right: 1px solid #cacaca;
+    width: 5px;
+}
+
+.guild__members {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    overflow-x: auto;
+}
+
+.guild__friends-loggedOut {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    min-width: 35rem;
+    max-width: 35rem;
+}
+
+.guild__friends {
+    font-size: 1.5rem;
+    padding: 1rem 1rem 0;
+    min-width: 35rem;
+    max-width: 35rem;
+}
+
+.guild__search {
+    width: 100%;
+}
+
+.guild__search_container {
+    padding: 0 1rem;
+    font-size: 1rem;
 }
