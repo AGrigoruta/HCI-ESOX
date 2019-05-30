@@ -59,7 +59,7 @@ var Main = React.createClass({
         };
     },
     componentWillMount: function() {
-        var initialProgram = window.localStorage.getItem('storedProgram') || samples[0].code;
+        var initialProgram = window.localStorage.getItem('storedProgram') || samplesBefunge[0].code;
         var b = Befunge(initialProgram, {
             input: this.input,
             output: this.output,
@@ -88,6 +88,14 @@ var Main = React.createClass({
                         program: this.state.b.state.get('program'),
                         reset: this.reset
                     }),*/
+                    Controls({
+                        b: this.state.b,
+                        run: this.run,
+                        stepBack: this.stepBack,
+                        reset: this.reset,
+                        setDelay: this.setDelay,
+                        getDelay: this.getDelay
+                    }),
                     Program({
                         program: this.state.b.state.get('program'),
                         width: this.state.b.state.get('width'),
@@ -101,14 +109,6 @@ var Main = React.createClass({
                     { className: 'right' },
                     Stats({
                         programState: this.state.b.state
-                    }),
-                    Controls({
-                        b: this.state.b,
-                        run: this.run,
-                        stepBack: this.stepBack,
-                        reset: this.reset,
-                        setDelay: this.setDelay,
-                        getDelay: this.getDelay
                     })
                 ),
                 Output({
@@ -363,27 +363,35 @@ var BoardSettings = React.createClass({
         let width = d.div(
             {className:"inline"},
             d.label(
-                d.span("width:"),
-                d.input(
-                    {
-                        value: self.props.width,
-                        onChange: self.updateProgramBoardWidth,
-                    })
+                {className: "none", for:"width"},
+                d.span({className: "none"}, "Width:"),
             ),
+            d.input(
+                {
+                    className: "form-control",
+                    value: self.props.width,
+                    onChange: self.updateProgramBoardWidth,
+                    type: 'number',
+                    name: "width"
+                })
         );
         let height = d.div(
             {className:"inline"},
             d.label(
-                d.span("height:"),
-                d.input(
-                    {
-                        value: self.props.height,
-                        onChange: self.updateProgramBoardHeight,
-                    })
-            )
+                {className: "none", for:"height"},
+                d.span({className: "none"}, "Height:"),
+            ),
+            d.input(
+                {
+                    className: "form-control",
+                    value: self.props.height,
+                    onChange: self.updateProgramBoardHeight,
+                    type: 'number',
+                    name: "height"
+                })
         );
         return d.div(
-            {className: 'board-settings'},
+            {className: 'board-settings controls-row1-col1'},
             width,
             height,
         );
@@ -486,7 +494,7 @@ var SampleList = React.createClass({
     }
 });
 
-/*
+
 Array
 .from(document.getElementsByClassName('befunge'))
 .forEach((element, i) => {
@@ -499,4 +507,3 @@ Array
         );
     }
 });
-*/

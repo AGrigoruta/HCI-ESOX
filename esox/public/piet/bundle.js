@@ -674,6 +674,7 @@ var Grid = function (_React$Component) {
             return [_react2.default.createElement(
                 'div',
                 { className: 'work-area', key: 'work-area' },
+                _react2.default.createElement(DebugControls, _extends({}, this.props, this.props.debug)),
                 _react2.default.createElement(
                     'table',
                     { key: 'piet-program', className: 'piet-program', onMouseOut: function onMouseOut() {
@@ -722,8 +723,7 @@ var Grid = function (_React$Component) {
                         })
                     )
                 ),
-                _react2.default.createElement(_colourPicker2.default, _extends({ key: 'colour-picker' }, this.props)),
-                _react2.default.createElement(DebugControls, _extends({}, this.props, this.props.debug))
+                _react2.default.createElement(_colourPicker2.default, _extends({ key: 'colour-picker' }, this.props))
             )];
         }
     }]);
@@ -905,9 +905,9 @@ const mapCommandsToColours = baseColour => {
 };
 */
 
-var HEIGHT = 10,
+var HEIGHT = 15,
     // initial height
-WIDTH = 10; // initial width
+WIDTH = 15; // initial width
 
 function getAppState() {
     var appState = {
@@ -1408,16 +1408,13 @@ var AppPiet = function (_React$Component) {
 
     return AppPiet;
 }(_react2.default.Component);
-/*
-document.addEventListener('DOMContentLoaded', () => {
-    Array
-        .from(document.getElementsByClassName('piet'))
-        .forEach((element) => {
-            let appState = getAppState();
-            ReactDOM.render(<AppPiet appState={appState} />, element);
-        })
+
+document.addEventListener('DOMContentLoaded', function () {
+    Array.from(document.getElementsByClassName('piet')).forEach(function (element) {
+        var appState = getAppState();
+        _reactDom2.default.render(_react2.default.createElement(AppPiet, { appState: appState }), element);
+    });
 });
-*/
 
 }).call(this,require("buffer").Buffer)
 },{"./colours.js":2,"./controls.js":3,"./debugTab.js":4,"./debugger.js":5,"./grid.js":6,"./interpreter.js":8,"./orderedCommands.js":359,"babel-polyfill":9,"buffer":11,"react":351,"react-dom":348}],8:[function(require,module,exports){

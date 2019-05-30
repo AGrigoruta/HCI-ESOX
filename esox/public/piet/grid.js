@@ -7,6 +7,7 @@ class Grid extends React.Component {
     render() {
         return [
             <div className="work-area" key="work-area">
+                <DebugControls {...this.props} {...this.props.debug} />                
                 <table key="piet-program" className="piet-program" onMouseOut={() => this.props.setCellInFocus(null)}>
                     <tbody>
                         {this.props.grid.map((row, i) => (
@@ -50,7 +51,6 @@ class Grid extends React.Component {
                     </tbody>
                 </table>
                 <ColourPicker key="colour-picker" {...this.props} />
-                <DebugControls {...this.props} {...this.props.debug} />
             </div>
         ]
     }

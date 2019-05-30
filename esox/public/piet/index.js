@@ -32,8 +32,8 @@ const mapCommandsToColours = baseColour => {
 };
 */
 
-const HEIGHT = 10, // initial height
-    WIDTH = 10; // initial width
+const HEIGHT = 15, // initial height
+    WIDTH = 15; // initial width
 
 function getAppState () {
     const appState = {
@@ -523,7 +523,7 @@ class AppPiet extends React.Component {
         );
     }
 }
-/*
+
 document.addEventListener('DOMContentLoaded', () => {
     Array
         .from(document.getElementsByClassName('piet'))
@@ -532,4 +532,3 @@ document.addEventListener('DOMContentLoaded', () => {
             ReactDOM.render(<AppPiet appState={appState} />, element);
         })
 });
-*/

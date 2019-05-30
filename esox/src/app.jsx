@@ -9,8 +9,8 @@ import Discover from './containers/DiscoverContainer';
 import Header from './containers/HeaderContainer';
 import Courses from './containers/CoursesContainer';
 import Community from './containers/CommunityContainer';
-import TutorialBefunge from './components/TutorialBefunge';
-import TutorialPiet from './components/TutorialPiet';
+import TutorialBefunge from './containers/TutorialBefungeContainer';
+import TutorialPiet from './containers/TutorialPietContainer';
 
 class App extends React.Component {
     render() {
