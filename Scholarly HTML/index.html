@@ -1,122 +1,143 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html property="http://scholarly-html.org/schtml">
-    <head>
-        <title>HCI - Esox</title>
-        <link href="https://fonts.googleapis.com/css?family=Audiowide|Share+Tech" rel="stylesheet">
-        <style>
-        
+
+<head>
+    <title>HCI - Esox</title>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Share+Tech" rel="stylesheet">
+    <style>
         img {
             max-width: 200px;
         }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./Personas Template_files/style.css">
+    <link rel="stylesheet" type="text/css" href="./style/scholarly.css">
+    <link rel="stylesheet" id="coToolbarStyle" href="chrome-extension://cjabmdjcfcfdmffimndhafhblfmpjdpe/toolbar/styles/placeholder.css"
+        type="text/css">
+    <script type="text/javascript" id="cosymantecbfw_removeToolbar">(function () { var toolbarElement = {}, parent = {}, interval = 0, retryCount = 0, isRemoved = false; if (window.location.protocol === 'file:') { interval = window.setInterval(function () { toolbarElement = document.getElementById('coFrameDiv'); if (toolbarElement) { parent = toolbarElement.parentNode; if (parent) { parent.removeChild(toolbarElement); isRemoved = true; if (document.body && document.body.style) { document.body.style.setProperty('margin-top', '0px', 'important'); } } } retryCount += 1; if (retryCount > 10 || isRemoved) { window.clearInterval(interval); } }, 10); } })();</script>
+    <link type="text/css" rel="stylesheet" href="chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content.css">
+    <script src="./js/scholarly.min.js"></script>
+</head>
 
-        </style>
-        <link rel="stylesheet" type="text/css" href="./Personas Template_files/style.css">        
-        <link rel="stylesheet" type="text/css" href="./style/scholarly.css">
-        <link rel="stylesheet" id="coToolbarStyle" href="chrome-extension://cjabmdjcfcfdmffimndhafhblfmpjdpe/toolbar/styles/placeholder.css" type="text/css">
-        <script type="text/javascript" id="cosymantecbfw_removeToolbar">(function () {				var toolbarElement = {},					parent = {},					interval = 0,					retryCount = 0,					isRemoved = false;				if (window.location.protocol === 'file:') {					interval = window.setInterval(function () {						toolbarElement = document.getElementById('coFrameDiv');						if (toolbarElement) {							parent = toolbarElement.parentNode;							if (parent) {								parent.removeChild(toolbarElement);								isRemoved = true;								if (document.body && document.body.style) {									document.body.style.setProperty('margin-top', '0px', 'important');								}							}						}						retryCount += 1;						if (retryCount > 10 || isRemoved) {							window.clearInterval(interval);						}					}, 10);				}			})();</script>
-        <link type="text/css" rel="stylesheet" href="chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/content.css">
-        <script src="./js/scholarly.min.js"></script>
-    </head>
-    <body prefix="schema: http://schema.org">
-        <div role="contentinfo">
-            <h1 property="http://purl.org/dc/terms/title">HCI -Esox</h1>
-            <h2 rel="http://purl.org/dc/terms/creator"
-                  resource="http://identityservice.com/0000001">
-                      <span property="http://xmlns.com/foaf/0.1/Author">Hagiu Stefan Bogdan</span><br>
-                      <span property="http://xmlns.com/foaf/0.1/Author">Cazuc Razvan Constantin</span><br>
-                      <span property="http://xmlns.com/foaf/0.1/Author">Grigoruta Alexandru</span>
-            </h2>
-            <span type=xsd:date>2019-04-18</span>
-        </div>
-        <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
-            <h2>Abstract</h2>
-            <p>
-              This document is is meant to surmise the thought process that took place while implementing the requirements for the HCI homework.
-            </p>
-        </section>
-        <section id="introduction" role="doc-introduction">
-            <!-- review? -->
-            <h2>Introduction</h2>
-            <p>
-                EsoX (Esoteric Language User Experience), is a project that is meant to imagine various user experiences regarding multiple ways of 
-                interaction with an esoteric programming language, plus activities of  (e.g., learning, programming, translating into a general purpose 
-                language, research,...) and related tools like interpreters, compilers, development environments, notable applications, and others. 
-                The developed application will also recommend other (esoteric) programming languages according to user preferences, language categories 
-                (paradigm, usability, computational class, other features), pragmatic usages, etc. 
-            </p>
-            <p>
-                The requirements for the first part of the project presentation are as fallows:
-            </p>
+<body prefix="schema: http://schema.org">
+    <div role="contentinfo">
+        <h1 property="http://purl.org/dc/terms/title">HCI -Esox</h1>
+        <h2 rel="http://purl.org/dc/terms/creator" resource="http://identityservice.com/0000001">
+            <span property="http://xmlns.com/foaf/0.1/Author">Hagiu Stefan Bogdan</span><br>
+            <span property="http://xmlns.com/foaf/0.1/Author">Cazuc Razvan Constantin</span><br>
+            <span property="http://xmlns.com/foaf/0.1/Author">Grigoruta Alexandru</span>
+        </h2>
+        <span type=xsd:date>2019-04-18</span>
+    </div>
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+        <h2>Abstract</h2>
+        <p>
+            This document is is meant to surmise the thought process that took place while implementing the
+            requirements for the HCI homework.
+        </p>
+    </section>
+    <section id="introduction" role="doc-introduction">
+        <!-- review? -->
+        <h2>Introduction</h2>
+        <p>
+            EsoX (Esoteric Language User Experience), is a project that is meant to imagine various user experiences
+            regarding multiple ways of
+            interaction with an esoteric programming language, plus activities of (e.g., learning, programming,
+            translating into a general purpose
+            language, research,...) and related tools like interpreters, compilers, development environments, notable
+            applications, and others.
+            The developed application will also recommend other (esoteric) programming languages according to user
+            preferences, language categories
+            (paradigm, usability, computational class, other features), pragmatic usages, etc.
+        </p>
+        <p>
+            The requirements for the first part of the project presentation are as fallows:
+        </p>
+        <ul>
+            <li>Minimum 3 ideas/concepts regarding the project design (including the sketches, wireframes, storyboards
+                and, optionally, prototypes), plus the intermediary stages of the project development. Also, the team
+                should provide the documentation – as Scholarly HTML – regarding interaction design patterns used in
+                the wireframes/prototypes.</li>
+
+            <li>Minimum 3 real examples concerning the QOC method. These examples could also give the motivation for
+                choosing a certain idea/concept.</li>
+
+            <li>The 4 mandatory HTML5 persona documents, for various personas interacting to the system.</li>
+
+            <li>The project identity and the most significant details regarding the branding process.</li>
+        </ul>
+        <p>
+            Given the short but wide description there is a lot of room to maneuver so first thing we should narrow
+            down the requirmeents to something that can
+            be managed.
+        </p>
+        <img alt="extract requirements">
+        <p>
+            To summarize the content of the image: Esox mission is to offer new ways of interaction in order to learn
+            programming or to program. This will be done
+            by creating new tools or enhancing existing ones and by exploring diffrent "cultures" of giving
+            introduction to machines.
+        </p>
+    </section>
+    <section id="Branding">
+        <h2>Branding</h2>
+        <p>
+            In this section will take a look at logo, color scheme, text font-family and font-size (with scaling).
+        </p>
+        <h3>Idea 1</h3>
+        <img alt="Creation of Logo" src="./img/pg2-l.jpg">
+        <img alt="Creation of Logo" src="./img/pg2-r.jpg">
+        <p>
+            Esoteric languages, are language that have to real use for most of humanity. They are made for fun in order
+            to prove a point or to explore new concepts, but
+            most of the time they are made just because. If we are to look however at the vast majority they are made
+            for fun. As such the logo incorporates a emoji >_
+            plus a slice of a lemon. The use of <strong>>_</strong> will also creat a link to the command line icon.
+        </p>
+        <p>
+            The slice of lemon is a throwback at the logo from <a href="https://esolangs.org/" itemprop="url">Esolang</a>.
+        </p>
+        <img alt="Color scheem" src="./img/pg2-r.jpg">
+        <img alt="Color scheem" src="./img/pg3-l.jpg">
+        <p>
+            For colors we have picked, purble as main color, fallow by hot pink for accent, light green and yellow.
+            Color can be seen at <a href="http://paletton.com/#uid=74H0C0k-et+ksEsm-FhhxshiYoA" itemprop="url">Paletton</a>
+        </p>
+        <img alt="All about font" src="./img/pg3-r.jpg">
+        <p>
+            For easy reading we picked Share Tech. and for titles we picked Audiowide.
+        </p>
+        <p style="font-family: 'Share Tech', sans-serif;">
+            Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had
+            ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on
+            a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense
+            dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a
+            ruddy light streaming through a rift in the clouds.
+        </p>
+        <p>
+            For titles we picked Audiowide.
+        </p>
+        <h1 style="font-family: 'Audiowide', cursive;">A shining crescent far beneath the flying vessel.</h1>
+        <p>For font scale and it can be in the current page but also at <a itemprop="url" href="http://type-scale.com/?size=16&scale=1.618&text=A%20Visual%20Type%20Scale&webfont=Audiowide%2BShare%2BTech&font-family=%27Share%20Tech%27%2C%20sans-serif&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=%23333">type-scale.com</a></p>
+        <h3>Idea 2</h3>
+        <p>
+            For the logo, we'll combine the most popular esoteric languages into one logo: so BrainFuck is a must, and
+            added upon it we have LOLCODE, Shakespeare and Piet:
             <ul>
-                <li>Minimum 3 ideas/concepts regarding the project design (including the sketches, wireframes, storyboards and, optionally, prototypes), plus the intermediary stages of the project development. Also, the team should provide the documentation – as Scholarly HTML – regarding interaction design patterns used in the wireframes/prototypes.</li>
-
-                <li>Minimum 3 real examples concerning the QOC method. These examples could also give the motivation for choosing a certain idea/concept.</li>
-
-                <li>The 4 mandatory HTML5 persona documents, for various personas interacting to the system.</li>
-
-                <li>The project identity and the most significant details regarding the branding process.</li>
+                <li>
+                    BrainFuck is most known for its minimalistic symbol syntax so we could use some of its symbols
+                </li>
+                <li>
+                    LOLCODE is known for cat memes on the internet so we could use cat ears or whiskers or something
+                    that represents a cat
+                </li>
+                <li>
+                    Shakespeare is known for the theatre script-like syntax, so we could use something that represents
+                    theatre and art, perhaps a manuscript or feather
+                </li>
+                <li>
+                    And last but not least, Piet is known for the color-coded blocks, so we could include exactly that
+                </li>
             </ul>
-            <p>
-                Given the short but wide description there is a lot of room to maneuver so first thing we should narrow down the requirmeents to something that can 
-                be managed.
-            </p>
-            <img alt="extract requirements">
-            <p>
-                To summarize the content of the image:  Esox mission is to offer new ways of interaction in order to learn programming or to program. This will be done
-                by creating new tools or enhancing existing ones and by exploring diffrent "cultures" of giving introduction to machines. 
-            </p>
-        </section>
-        <section id="Branding">
-            <h2>Branding</h2>
-            <p>
-                In this section will take a look at logo,  color scheme, text font-family and font-size (with scaling).
-            </p>
-            <h3>Idea 1</h3>
-            <img alt="Creation of Logo" src="./img/pg2-l.jpg">
-            <img alt="Creation of Logo" src="./img/pg2-r.jpg">
-            <p>
-                Esoteric languages, are language that have to real use for most of humanity. They are made for fun in order to prove a point or to explore new concepts, but
-                most of the time they are made just because. If we are to look however at the vast majority they are made for fun. As such the logo incorporates a emoji >_ 
-                plus a slice of a lemon. The use of <strong>>_</strong> will also creat a link to the command line icon.
-            </p>
-            <p>
-                The slice of lemon is a throwback at the logo from <a href="https://esolangs.org/" itemprop="url">Esolang</a>.
-            </p>
-            <img alt="Color scheem" src="./img/pg2-r.jpg">
-            <img alt="Color scheem" src="./img/pg3-l.jpg">
-            <p>
-                For colors we have picked, purble as main color, fallow by hot pink for accent, light green and yellow.
-                Color can be seen at <a href="http://paletton.com/#uid=74H0C0k-et+ksEsm-FhhxshiYoA" itemprop="url">Paletton</a>
-            </p>
-            <img alt="All about font" src="./img/pg3-r.jpg">
-            <p>
-                For easy reading we picked Share Tech. and for titles we picked Audiowide.
-            </p>
-            <p style="font-family: 'Share Tech', sans-serif;">
-                Apparently we had reached a great height in the atmosphere, for the sky was a dead black, and the stars had ceased to twinkle. By the same illusion which lifts the horizon of the sea to the level of the spectator on a hillside, the sable cloud beneath was dished out, and the car seemed to float in the middle of an immense dark sphere, whose upper half was strewn with silver. Looking down into the dark gulf below, I could see a ruddy light streaming through a rift in the clouds.
-            </p>
-            <p>
-                For titles we picked Audiowide.
-            </p>
-            <h1 style="font-family: 'Audiowide', cursive;">A shining crescent far beneath the flying vessel.</h1>
-            <p>For font scale and it can be in the current page but also at <a itemprop="url" href="http://type-scale.com/?size=16&scale=1.618&text=A%20Visual%20Type%20Scale&webfont=Audiowide%2BShare%2BTech&font-family=%27Share%20Tech%27%2C%20sans-serif&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=%23333">type-scale.com</a></p>
-            <h3>Idea 2</h3>
-            <p>
-                For the logo, we'll combine the most popular esoteric languages into one logo: so BrainFuck is a must, and added upon it we have LOLCODE, Shakespeare and Piet:
-                <ul>
-                    <li>
-                        BrainFuck is most known for its minimalistic symbol syntax so we could use some of its symbols
-                    </li>
-                    <li>
-	                    LOLCODE is known for cat memes on the internet so we could use cat ears or whiskers or something that represents a cat
-                    </li>
-                    <li>
-                        Shakespeare is known for the theatre script-like syntax, so we could use something that represents theatre and art, perhaps a manuscript or feather
-                    </li>
-                    <li>
-                        And last but not least, Piet is known for the color-coded blocks, so we could include exactly that
-                    </li>
-                </ul>
             The process of creating the final logo was the following:
             <img style="display:block" alt="Creation of Logo" src="./img/logoGrigi1.png">
             <img style="display:block" alt="Creation of Logo" src="./img/logoGrigi2.png">
@@ -124,661 +145,1059 @@
             <img style="display:block" alt="Creation of Logo" src="./img/logoGrigi4.png">
             <img style="display:block" alt="Creation of Logo" src="./img/logoGrigi5.png">
             <img style="display:block" alt="Creation of Logo" src="./img/logoGrigi6.png">
-            </p>
-            <p>
-                As for colors, we have to inspire the user to learn, be creative and get curious.
+        </p>
+        <p>
+            As for colors, we have to inspire the user to learn, be creative and get curious.
             <ul>
                 <li>
-                    Orange  - inspires optimism, adventure, creativity and fun and it can be used in products to stimulate, express freedom and fascinate which is exactly what we want to achieve with EsoX 
+                    Orange - inspires optimism, adventure, creativity and fun and it can be used in products to
+                    stimulate, express freedom and fascinate which is exactly what we want to achieve with EsoX
                 </li>
                 <li>
-                    Lime Green  - inspires growth, harmony and kindness and it can be used to encourage the user to learn in his own way, creating his own personal balance with the knowledge he will assimilate, everything in a friendly environment
+                    Lime Green - inspires growth, harmony and kindness and it can be used to encourage the user to
+                    learn in his own way, creating his own personal balance with the knowledge he will assimilate,
+                    everything in a friendly environment
                 </li>
                 <li>
-                    Yellow  - inspires enthusiasm, happiness, opportunity and curiosity. It can be used to stimulate the user in getting curious with the app, and explore freely the service we will offer to him with full enthusiasm and energy
+                    Yellow - inspires enthusiasm, happiness, opportunity and curiosity. It can be used to stimulate the
+                    user in getting curious with the app, and explore freely the service we will offer to him with full
+                    enthusiasm and energy
                 </li>
                 <li>
-                    Dark Grey  - contrast with all these warm colours
+                    Dark Grey - contrast with all these warm colours
                 </li>
             </ul>
-            Used <a href="https://graf1x.com/wp-content/uploads/2014/09/color-psychology-meaning-emotion-poster.jpg">this picture from a color theory article</a>for reference<br>
+            Used <a href="https://graf1x.com/wp-content/uploads/2014/09/color-psychology-meaning-emotion-poster.jpg">this
+                picture from a color theory article</a>for reference<br>
             This <a href="http://paletton.com/#uid=51G0H0kw0w0+ZHOPwFqlhnUakg7">color palette</a> can be found here
-            </p>
-            <p>
-                The fonts we use should be friendly, easy to read and have support for i18n, since we aim for accesibility and ease of use by most users from all around the world.<br>
-                The primary font is PT Sans, it has support for other languages like cyrilic and greek so i18n would work for the majority of the users in the Americas, Europe, Australia and most of Africa. PT Sans does not have support for Asian languages but we could have different font families for these specific unicodes.<br>
-                The secondary font is Raleway. According to Google’s Pairing functionality, it works together with PT Sans. It does not have support for special unicode characters but we could have a fallback with other similar fonts for those exact unicode ranges, like Comfortaa<br>
-                For the code snippets we must use a monospace font to have a clear and readable text, and Inconsolata is a widely used font for code snippets world wide.<br>
-                For the font scaling, perhaps the golden ratio would work here: The Perfect Fourth Scale, which is basically a multiplier of 1.333 starting from 16 px. So the paragraph would have 16 px, h6 -> 21.33px, h5 -> 28.43px, h4 -> 37.90 px, h3 -> 50.52px, h2 -> 67.34px, h1 -> 89.76px
-            </p>
-        </section>
-        <section id="Personas">
-            <h2>Personas</h2>
-            <div>            
-                <img alt="Persona relevant people" src="./img/pg4-l.jpg">
-                <img alt="Persona pain points" src="./img/pg4-r.jpg">
+        </p>
+        <p>
+            The fonts we use should be friendly, easy to read and have support for i18n, since we aim for accesibility
+            and ease of use by most users from all around the world.<br>
+            The primary font is PT Sans, it has support for other languages like cyrilic and greek so i18n would work
+            for the majority of the users in the Americas, Europe, Australia and most of Africa. PT Sans does not have
+            support for Asian languages but we could have different font families for these specific unicodes.<br>
+            The secondary font is Raleway. According to Google’s Pairing functionality, it works together with PT Sans.
+            It does not have support for special unicode characters but we could have a fallback with other similar
+            fonts for those exact unicode ranges, like Comfortaa<br>
+            For the code snippets we must use a monospace font to have a clear and readable text, and Inconsolata is a
+            widely used font for code snippets world wide.<br>
+            For the font scaling, perhaps the golden ratio would work here: The Perfect Fourth Scale, which is
+            basically a multiplier of 1.333 starting from 16 px. So the paragraph would have 16 px, h6 -> 21.33px, h5
+            -> 28.43px, h4 -> 37.90 px, h3 -> 50.52px, h2 -> 67.34px, h1 -> 89.76px
+        </p>
+    </section>
+    <section id="Personas">
+        <h2>Personas</h2>
+        <div>
+            <img alt="Persona relevant people" src="./img/pg4-l.jpg">
+            <img alt="Persona pain points" src="./img/pg4-r.jpg">
+        </div>
+        <article itemscope="Primary" itemtype="http://schema.org/Person" class="persona">
+            <div class="personaInfo">
+                <h3>Type: Primary</h3>
+                <figure>
+                    <img itemprop="image" src="./img/Stefan.jpeg" alt="persona image">
+                </figure>
+                <div class="personaBackground">
+                    <h4>Name: <span itemprop="givenName">Stefan</span> <span itemprop="familyName">Great</span></h4>
+                    <h5>Background</h5>
+                    <ul>
+                        <li><strong>Date of Birth:</strong> <time itemprop="birthDate" datetime="1990-10-23">10/23/1990</time></li>
+                        <li><strong>Gender:</strong> <span itemprop="gender">Male</span></li>
+                        <li itemprop="location" itemscope="" itemtype="http://schema.org/Place"><strong>Location:</strong>
+                            <span itemprop="name">Iasi, Romania</span></li>
+                        <li itemprop="worksFor" itemscope="" itemtype="http://schema.org/Organization"><strong>Work
+                                place:</strong> <span itemprop="name">Yonder</span>, <span itemprop="jobTitle">Software
+                                Developer</span></li>
+                        <li itemprop="alumniOf" itemscope="" itemtype="http://schema.org/EducationalOrganization"><strong>School:</strong>
+                            <span itemprop="name">Faculty of Informatics A. I. Cuza</span></li>
+                        <li><strong>Exposure to different programming paradigms: strong (more then 5)</strong></li>
+                        <li><strong>Willingess to experiment / curiosity level: 4 out of 4</strong></li>
+                        <li><strong>Grit: low</strong></li>
+                    </ul>
+                </div>
             </div>
-            <article itemscope="Primary" itemtype="http://schema.org/Person" class="persona">
-                <div class="personaInfo">
-                    <h3>Type: Primary</h3>
-                    <figure>
-                        <img itemprop="image" src="./img/Stefan.jpeg" alt="persona image">
-                    </figure>
-                    <div class="personaBackground">				
-                        <h4>Name: <span itemprop="givenName">Stefan</span> <span itemprop="familyName">Great</span></h4>
-                            <h5>Background</h5>
-                            <ul>
-                                <li><strong>Date of Birth:</strong> <time itemprop="birthDate" datetime="1990-10-23">10/23/1990</time></li>
-                                <li><strong>Gender:</strong> <span itemprop="gender">Male</span></li>
-                                <li itemprop="location" itemscope="" itemtype="http://schema.org/Place"><strong>Location:</strong> <span itemprop="name">Iasi, Romania</span></li>
-                                <li itemprop="worksFor" itemscope="" itemtype="http://schema.org/Organization"><strong>Work place:</strong> <span itemprop="name">Yonder</span>, <span itemprop="jobTitle">Software Developer</span></li>
-                                <li itemprop="alumniOf" itemscope="" itemtype="http://schema.org/EducationalOrganization"><strong>School:</strong>  <span itemprop="name">Faculty of Informatics A. I. Cuza</span></li>
-                                <li><strong>Exposure to different programming paradigms: strong (more then 5)</strong></li>
-                                <li><strong>Willingess to experiment / curiosity level: 4 out of 4</strong></li>
-                                <li><strong>Grit: low</strong></li>
-                            </ul>
-                    </div>
-                </div>
-                <div class="personaDetails">
-                    <div class="detailsLeft">
-                        <div class="leftGroup">
-                            <h5>Main Points</h5>
-                            <ul>
-                                <li>Staying curious is a habit.</li>
-                                <li>I'm always looking for new things.</li>
-                                <li>Hard problems can energise me.</li>
-                                <li>If I can't make progress I can get demoralized.</li>
-                                <li>How come in 60+ years of existence we could not come up with more then one way of making machine do what we want ?</li>
-                            </ul>
-                        </div>
-                        <div class="leftGroup">
-                            <h5>Goals</h5>
-                            <ul>
-                                <li>I look for other ways of "writing" code, what is out there ?</li>
-                                <li>Coding is fun but repetition kills passion, i need to keep mysefl motivated and up to date</li>
-                                <li>Further my understanding of the programming paradigms is a must. Be like water, flexible</li>
-                            </ul>
-                        </div>
-                        <div class="leftGroup">
-                            <h5>Frustrations and Pain Points</h5>
-                            <ul>
-                                <li>When there are many files of code it is hard to reason about the program state</li>
-                                <li>Long, dead, times between writing code and seeing the actual result</li>
-                                <li>Can't find good resources on all the different ways code can be "written"</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div itemprop="description" class="detailsRight">
-                        <h5>Detailed Description</h5>
-                        <p>Every day Stefan interacts with code, through IDE's or white boards or pen and paper. He has already established a process of
-                            writing each feature he will deliver for the customers. Each time he has a small session of looking up in the existing code,
-                            he says this is a must in order to understand the current state and logic of the code, where he wants, needs, to implement the 
-                            new functionality. After that he will write a small flow diagram to check what components are need it and how the "data" flows.
-                            Then he writes the code and after all is done he tests. 
-                        </p>
-                        <p>All that process dose not guarantee success but, Stefan says, it increases the chances of not having bugs in the code. If there are bugs
-                            he will have to manualy check each state of code to see what happens (most of the times this is done mentally).
-                        </p>
-                        <p>He enjoys trying to write in different paradigmes, if the code is more data diven he will write it functionaly, if the functionality is simple
-                            and the code needs to be delivered fast or is a prototype most of the time procedural will be the way to go. To add structure to data OOP is 
-                            the way to go. He also likes to toy with should i use "composition or inheritance".
-                        </p>
-                        <p>Stefan said he has multiple accounts to sites like FrontendMasters and Brilliant or Egghead. He says that is the only way he can keep up with the 
-                            changes in his field. At the same time he feels that most of the changes that come are just "more of the same with small nuances".
-                        </p>
-                        <p></p>
-                    </div>
-                </div>
-            </article>
-            <article itemscope itemtype="http://schema.org/Person" class="persona">
-                <div class="personaInfo">
-                    <h3>Type: Primary</h3>
-                    <figure>
-                        <img width="185" itemprop="image" src="https://static.wixstatic.com/media/1bfda4_6f8ae00a346644a89245f331fc6c6b8e~mv2_d_3476_5214_s_4_2.jpeg?dn=" alt="persona image" />
-                    </figure>
-                    <div class="personaBackground">
-                        <h4>Name: <span itemprop="givenName">Mircea</span> <span itemprop="familyName">Grozavu</span>
-                        </h4>
-                        <h5>Background</h5>
+            <div class="personaDetails">
+                <div class="detailsLeft">
+                    <div class="leftGroup">
+                        <h5>Main Points</h5>
                         <ul>
-                            <li><strong>Date of Birth:</strong> <time itemprop="birthDate"
-                                    datetime="1995-04-25">25-04-1995</time></li>
-                            <li><strong>Gender:</strong> <span itemprop="gender">Male</span></li>
-                            <li itemprop="location" itemscope itemtype="http://schema.org/Place"><strong>Location:</strong>
-                                <span itemprop="name">Iasi, Romania</span></li>
-                            <li itemprop="worksFor" itemscope itemtype="http://schema.org/Organization"><strong>Work
-                                    place:</strong> <span itemprop="name">Yonder</span>, <span
-                                    itemprop="jobTitle">Software Developer</span></li>
-                            <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-                                <strong>School:</strong> <span itemprop="name">Faculty of Computer Science - Al. I. Cuza University</span>
-                            </li>
-                            <li><strong>Technology Level: </strong>High</li>
-                            <li><strong>Excitement To New Things: </strong>Very High</li>
+                            <li>Staying curious is a habit.</li>
+                            <li>I'm always looking for new things.</li>
+                            <li>Hard problems can energise me.</li>
+                            <li>If I can't make progress I can get demoralized.</li>
+                            <li>How come in 60+ years of existence we could not come up with more then one way of
+                                making machine do what we want ?</li>
+                        </ul>
+                    </div>
+                    <div class="leftGroup">
+                        <h5>Goals</h5>
+                        <ul>
+                            <li>I look for other ways of "writing" code, what is out there ?</li>
+                            <li>Coding is fun but repetition kills passion, i need to keep mysefl motivated and up to
+                                date</li>
+                            <li>Further my understanding of the programming paradigms is a must. Be like water,
+                                flexible</li>
+                        </ul>
+                    </div>
+                    <div class="leftGroup">
+                        <h5>Frustrations and Pain Points</h5>
+                        <ul>
+                            <li>When there are many files of code it is hard to reason about the program state</li>
+                            <li>Long, dead, times between writing code and seeing the actual result</li>
+                            <li>Can't find good resources on all the different ways code can be "written"</li>
                         </ul>
                     </div>
                 </div>
-                <div class="personaDetails">
-                    <div class="detailsLeft">
-                        <div class="leftGroup">
-                            <h5>Main Points</h5>
-                            <ul>
-                                <li>Curiosity is my key strength;</li>
-                                <li>Wherever people see an issue, I see an oportunity;</li>
-                                <li>I get involved in everything that reflects in my personal growth;</li>
-                                <li>I am enthusiastic and optimistic about the future;</li>
-                                <li>I dislike rudimentary boring tasks;</li>
-                                <li>My colleagues are open-minded and creative;</li>
-                            </ul>
-                        </div>
-                        <div class="leftGroup">
-                            <h5>Goals</h5>
-                            <ul>
-                                <li>Trying to find ways to integrate all the new cool tech in my projects;</li>
-                                <li>I am inclined to show others and eventually teach students about alternatives when it comes to programming;</li>
-                                <li>I want to learn new stuff and experience as much as possible when it comes to paradigms and technology</li>
-                            </ul>
-                        </div>
-                        <div class="leftGroup">
-                            <h5>Frustrations and Pain Points</h5>
-                            <ul>
-                                <li>The mindless use of mainstream technology and the fixation on it by many, without considering alternatives or understanding why is it used;</li>
-                                <li>I don't like it when people do things just to be done. I prefer creativity, involvement and enthusiasm. These are the traits I appreciate;</li>
-                                <li>Obscure technology is so interesting, especially since it was made for fun, so we should also have fun while using it. The problem is that they are poorly documented and I would like to be able to learn and use them more easily;</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div itemprop="description" class="detailsRight">
-                        <h5>Detailed Description</h5>
-                        <p>
-                            Mircea is a fresh MSc graduate with a thirst for knowledge and thrill for new. He has been in the IT industry for about 3 years, and since then he has been involved in many activities that helped him grow both professionally and personally. He doesn't like strict rules, and considers that every issue has at least 3 or more ways of being solved. He is curious on a daily basis and likes to fiddle around with technology to further understand how does it work and why is it used. 
-                        </p>
-                        <br>
-                        <p>
-                            He has worked with different paradigms along the way, including OOP, Functional, Logical, and Reactive. His thirst does not stop here, and he is willing to learn about more and more pardigms, and eventually integrate them in new modules in his project or create his own personal projects with them. Lately he has caught interest in Esoteric Programming Languages and he thought they are quite fun to use. The issue is that most of them are cryptic and documentation is chaotic and spread all around the internet. Since he uses Udacity and Pluralsight really often, he would like to have a similar experience when it comes to learning Esoteric Languages, such as LOLCODE, Piet, Shakespeare or even Brainf*ck. 
-                        </p>
-                        <br> 
-                        <p>
-                            He never backs down from a challenge, and he considers that he should learn as much as he can while he is young, so later as he ages, he could pass down all of his knowledge and share of enthusiasm to future generations of programmers and computer scientists. Time wasted is his biggest nemesis, and he can't stand when he doesn't have any tasks available at work, or he is blocked by something. During these moments, he changes his focus to something else, that still adds value towards his growth, like reading books, getting informed about new tech or working for something else. Beside Udacity and Pluralsight, he is subscribed to Tech newsletters, and he gets weekly, on his email the latest news about various technologies.
-                        </p>
-                    </div>
+                <div itemprop="description" class="detailsRight">
+                    <h5>Detailed Description</h5>
+                    <p>Every day Stefan interacts with code, through IDE's or white boards or pen and paper. He has
+                        already established a process of
+                        writing each feature he will deliver for the customers. Each time he has a small session of
+                        looking up in the existing code,
+                        he says this is a must in order to understand the current state and logic of the code, where he
+                        wants, needs, to implement the
+                        new functionality. After that he will write a small flow diagram to check what components are
+                        need it and how the "data" flows.
+                        Then he writes the code and after all is done he tests.
+                    </p>
+                    <p>All that process dose not guarantee success but, Stefan says, it increases the chances of not
+                        having bugs in the code. If there are bugs
+                        he will have to manualy check each state of code to see what happens (most of the times this is
+                        done mentally).
+                    </p>
+                    <p>He enjoys trying to write in different paradigmes, if the code is more data diven he will write
+                        it functionaly, if the functionality is simple
+                        and the code needs to be delivered fast or is a prototype most of the time procedural will be
+                        the way to go. To add structure to data OOP is
+                        the way to go. He also likes to toy with should i use "composition or inheritance".
+                    </p>
+                    <p>Stefan said he has multiple accounts to sites like FrontendMasters and Brilliant or Egghead. He
+                        says that is the only way he can keep up with the
+                        changes in his field. At the same time he feels that most of the changes that come are just
+                        "more of the same with small nuances".
+                    </p>
+                    <p></p>
                 </div>
-            </article>
-            <article itemscope="Secondary" itemtype="http://schema.org/Person" class="persona">
-                <div class="personaInfo">
-                    <h3>Type: Secondary</h3>
-                    <figure>
-                        <img itemprop="image" src="./img/Iulia.jpeg" alt="persona image">
-                    </figure>
-                    <div class="personaBackground">				
-                        <h4>Name: <span itemprop="givenName">Iulia</span> <span itemprop="familyName">Steluta</span></h4>
-                            <h5>Background</h5>
-                            <ul>
-                                <li><strong>Date of Birth:</strong> <time itemprop="birthDate" datetime="1970-11-20">1970-11-20</time></li>
-                                <li><strong>Gender:</strong> <span itemprop="gender">Female</span></li>
-                                <li itemprop="location" itemscope="" itemtype="http://schema.org/Place"><strong>Location:</strong> <span itemprop="name">Suceava, Romania</span></li>
-                                <li itemprop="worksFor" itemscope="" itemtype="http://schema.org/Organization"><strong>Work place:</strong> <span itemprop="name">Dimitre Cantemir High School</span>, <span itemprop="jobTitle">Teacher</span></li>
-                                <li itemprop="alumniOf" itemscope="" itemtype="http://schema.org/EducationalOrganization"><strong>School:</strong>  <span itemprop="name">Palo Alto High School</span></li>
-                                <li><strong>Exposure to different programming paradigms: low (less then 2)</strong></li>
-                                <li><strong>Willingess to experiment / curiosity level: 3 out of 4</strong></li>
-                                <li><strong>Grit: High</strong></li>
-                            </ul>
-                    </div>
+            </div>
+        </article>
+        <article itemscope itemtype="http://schema.org/Person" class="persona">
+            <div class="personaInfo">
+                <h3>Type: Primary</h3>
+                <figure>
+                    <img width="185" itemprop="image" src="https://static.wixstatic.com/media/1bfda4_6f8ae00a346644a89245f331fc6c6b8e~mv2_d_3476_5214_s_4_2.jpeg?dn="
+                        alt="persona image" />
+                </figure>
+                <div class="personaBackground">
+                    <h4>Name: <span itemprop="givenName">Mircea</span> <span itemprop="familyName">Grozavu</span>
+                    </h4>
+                    <h5>Background</h5>
+                    <ul>
+                        <li><strong>Date of Birth:</strong> <time itemprop="birthDate" datetime="1995-04-25">25-04-1995</time></li>
+                        <li><strong>Gender:</strong> <span itemprop="gender">Male</span></li>
+                        <li itemprop="location" itemscope itemtype="http://schema.org/Place"><strong>Location:</strong>
+                            <span itemprop="name">Iasi, Romania</span></li>
+                        <li itemprop="worksFor" itemscope itemtype="http://schema.org/Organization"><strong>Work
+                                place:</strong> <span itemprop="name">Yonder</span>, <span itemprop="jobTitle">Software
+                                Developer</span></li>
+                        <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+                            <strong>School:</strong> <span itemprop="name">Faculty of Computer Science - Al. I. Cuza
+                                University</span>
+                        </li>
+                        <li><strong>Technology Level: </strong>High</li>
+                        <li><strong>Excitement To New Things: </strong>Very High</li>
+                    </ul>
                 </div>
-                <div class="personaDetails">
-                    <div class="detailsLeft">
-                        <div class="leftGroup">
-                            <h5>Main Points</h5>
-                            <ul>
-                                <li>I like to teach, and in doing so I like to show to my students new and exciting ways to make machine do what they want.</li>
-                                <li>A young mind need to be constantly stretched.</li>
-                                <li>As a teacher I want to offer my students a glimpse into the future.</li>
-                                <li>Programming should be fun and interactive, all this code on paper can be fustrating</li>
-                                <li>Have no experience with other languages other then C and C++ but would wellcome a change</li>
-                            </ul>
-                        </div>
-                        <div class="leftGroup">
-                            <h5>Goals</h5>
-                            <ul>
-                                <li>Want to help the students get a more broader view of what programming is and to stretch their mind </li>
-                                <li>She, herself would like to learn other languages</li>
-                                <li>Looks to escape the paper and pen explenations</li>
-                            </ul>
-                        </div>
-                        <div class="leftGroup">
-                            <h5>Frustrations and Pain Points</h5>
-                            <ul>
-                                <li>Almost all the problems she explains in class are at the blackboard using C or C++ with little to no graphical/visual explenation</li>
-                                <li>She can't find a way to make the students to abstract the problem from her simple example.</li>
-                                <li>She would like to learn languages that are different then the usual C-like language family</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div itemprop="description" class="detailsRight">
-                        <h5>Detailed Description</h5>
-                        <p>A day in Iulia life is like a sprint with obstacles, a sprint within a maraton (1 year cycle) in which she has to deliver the condensed curriculum
-                        while keeping the students intrested and answering all the question that are throw her way. Her students are very different in the way they understand 
-                        the content so it's always challenging  to try and fit the content such that everyone understands.</p>
-                        <p>Over the years she has found out that having more then one way to solve a problem and to represent it is the best way to go in teaching it to the kids.
-                            For example in order to solve recursion they use a state table where each state of the recursion is marked and removed once the cycle is done. Or for
-                            representing the swapping between 2 values they use actual objects like 3 cans and so own.
-                        </p>
-                        <p>She says she always looks to teach the students to experimet, "they need to have a flexible and agile mind and I have to come up with ways to help them".
-                            In previous years she added, even if it's not in the curriculum C# and F# and they proved to be really fun and intriguing for the students and herself.
-                            "The fact that they were able to visualise what they build. Not just some text on the screen but buttons and icons and such made the students really happy".
-                            And the intresting part is that Iulia didn't had any prior knowlged of C# or F# but she did it for her students.
-                        </p>
-                        <p>Even if C# and F# had some good results they are close to C languages and now she hopes she can find something different to continue her experiment.</p>
-                    </div>
-                </div>
-                <div class="personaScenarios">
-                    <h5>Scenarios - with bullet points</h5>
-                    <p>• have the students play with a new language and try to solve a simple problem that they already solved in C</p>
-                    <p>• when explaining a new problem to use the application to showcase the stages of the algorithm</p>
-                    <p>• fun is the best way to learn - have all the group explore a new way of "writing" code (PIET)</p>
-                </div>
-            </article>
-            <article itemscope="Negative" itemtype="http://schema.org/Person" class="persona">
-                <div class="personaInfo">
-                    <h3>Type: Negative</h3>
-                    <figure>
-                        <img itemprop="image" src="./img/Bogdan.jpeg" alt="persona image">
-                    </figure>
-                    <div class="personaBackground">				
-                        <h4>Name: <span itemprop="givenName">Bogdan</span> <span itemprop="familyName">Opar</span></h4>
-                            <h5>Background</h5>
-                            <ul>
-                                <li><strong>Date of Birth:</strong> <time itemprop="birthDate" datetime="1990-10-23">23/10/1980</time></li>
-                                <li><strong>Gender:</strong> <span itemprop="gender">Male</span></li>
-                                <li itemprop="location" itemscope="" itemtype="http://schema.org/Place"><strong>Location:</strong> <span itemprop="name">Piatra Neamt, Romania</span></li>
-                                <li itemprop="worksFor" itemscope="" itemtype="http://schema.org/Organization"><strong>Work place:</strong> <span itemprop="name">Bytex</span>, <span itemprop="jobTitle">Senior Software Develop</span></li>
-                                <li itemprop="alumniOf" itemscope="" itemtype="http://schema.org/EducationalOrganization"><strong>School:</strong>  <span itemprop="name">Faculty of Economics A. I. Cuza</span> </li>
-                                <li><strong>Experience programming: seniority (more then 15 years)</strong></li>
-                                <li><strong>Exposure to different programming paradigms: low ( 2)</strong></li>
-                                <li><strong>Willingess to experiment / curiosity level: 1 out of 4</strong></li>
-                                <li><strong>Grit: medium</strong></li>
-                            </ul>
-                    </div>
-                </div>
-                <div class="personaDetails">
-                    <div class="detailsLeft">
-                        <div class="leftGroup">
-                            <h5>Main Points</h5>
-                            <ul>
-                                <li>I solve all of my customers problem using well refined and tested patterns.</li>
-                                <li>Most of the problems out there have been solved and that is why we have programming patterns</li>
-                                <li>The world is a hierarchy of classes, we should model programs as such</li>
-                                <li>Writing a program is like building a puzzle to fit the problem you are trying to solve</li>
-                                <li>Raw data should be model into the code and not the other way arownd.</li>
-                                <li>I like to read about new trends in programming, but from my experience they all die because they solve already solved problems</li>
-                            </ul>
-                        </div>
-                        <div class="leftGroup">
-                            <h5>Goals</h5>
-                            <p>Goals are the reasons users perform tasks, not the tasks.</p>
-                            <ul>
-                                <li>Write the best product that I can for my customers.</li>
-                                <li>Clean and maintainable code is a must, just like a cook keeps his workspace clean so should we.</li>
-                                <li>Imbue my junior with good, healthy programming habits.</li>
-                            </ul>
-                        </div>
-                        <div class="leftGroup">
-                            <h5>Frustrations and Pain Points</h5>
-                            <p>Some of the difficulties the user has with the product.</p>
-                            <ul>
-                                <li>It annoys me when I have to write interfaces, there are so many frameworks and they don't even solve the problems proprely.</li>
-                                <li>The fact that the Web works as it does it's a miracle and a curse - it's like an ongoing experiment with no though for sustainability & maintainability</li>
-                                <li>I can't get the people which try to model the world for what it's not. A action is a series of procedures but the action is made by something and it is apply to/by an object</li>
-                                <li>Well written code is hard to come by this days</li>						
-                            </ul>
-                        </div>
-                    </div>
-                    <div itemprop="description" class="detailsRight">
-                        <h5>Detailed Description</h5>
-                        <p>Bogdan day starts usualy by reading his email, and answering to most urgent issues. Then he check with the project owner to see if the priorities are still the same. He then
-                            moves on to his assigned tasks. To solve this he consults with the business analyst, in order to have a good grasp on the subject, "this helps me to make design decisions
-                            that will help further down the line". On his desk you can find 2 books, one is Design Patterns: Elements of Reusable Object-Oriented Software and Introduction to Algorithms (MIT Press).
-                            He said he read them multiple times over the time of his career and it always helped him when he head to solve a though problem.
-                        </p>
-                        <p>
-                            As my career progressed I've always tryed to help my peers to better understand how to structure the code in a natural way. "For me this always came easy, and so I want to share
-                            my knowlged in the hopes that it will help my peers write better code, and in doing so having a better product". When he was younger Bogdan experimented with multiple paradigmes of
-                            writing code, but as his senior, back then, advised him," I came to see that modeling the world should be in a 1 to 1 relation with the code it's only natural that we think in objects".
-                            Paradigmes like Functional programming or Procedural or Logic are not natural, in his opinion, "They are intresting and a real brain workout but they don't solve with grace real world problems".
-                        </p>
-                        <p> As a professional Bogdan alawyas tries to stay on top of things so he reads about the advances in industry, any new book or accredited (form well established entities) workshop is wellcome. "I have 
-                            to keep up with the changes in order to better solve the tasks that come my way. It is funny how ever how hard is to find something trully new - the older I get the harder is to not find patterns when
-                            a new 'technology', somehow I can see the shorcomes almost immediately. I'm not going to say OOP is purfect but it's the best thing we have at the moment that is why I'm still looking".
-                        </p>
-                    </div>
-                </div>
-            </article>
-            <article itemscope itemtype="http://schema.org/Person" class="persona">
-                <div class="personaInfo">
-                    <h3>Type: Negative</h3>
-                    <figure>
-                        <img width="185" itemprop="image" src="https://previews.123rf.com/images/goodluz/goodluz1512/goodluz151200203/48978981-portrait-of-handsome-middle-aged-man-with-eyeglasses.jpg" alt="persona image" />
-                    </figure>
-                    <div class="personaBackground">
-                        <h4>Name: <span itemprop="givenName">Silviu</span> <span itemprop="familyName">Popescu</span>
-                        </h4>
-                        <h5>Background</h5>
+            </div>
+            <div class="personaDetails">
+                <div class="detailsLeft">
+                    <div class="leftGroup">
+                        <h5>Main Points</h5>
                         <ul>
-                            <li><strong>Date of Birth:</strong> <time itemprop="birthDate"
-                                    datetime="1988-04-18">18-04-1988</time></li>
-                            <li><strong>Gender:</strong> <span itemprop="gender">Male</span></li>
-                            <li itemprop="location" itemscope itemtype="http://schema.org/Place"><strong>Location:</strong>
-                                <span itemprop="name">Bucuresti, Romania</span></li>
-                            <li itemprop="worksFor" itemscope itemtype="http://schema.org/Organization"><strong>Work
-                                    place:</strong> <span itemprop="name">Microsoft</span>, <span
-                                    itemprop="jobTitle">Senior Software Arhitect</span></li>
-                            <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-                                <strong>School:</strong> <span itemprop="name">Faculty of Computer Science - Al. I. Cuza University</span>
-                            </li>
-                            <li><strong>Technology Level: </strong>Very High</li>
-                            <li><strong>Excitement To New Things: </strong>Moderate</li>
+                            <li>Curiosity is my key strength;</li>
+                            <li>Wherever people see an issue, I see an oportunity;</li>
+                            <li>I get involved in everything that reflects in my personal growth;</li>
+                            <li>I am enthusiastic and optimistic about the future;</li>
+                            <li>I dislike rudimentary boring tasks;</li>
+                            <li>My colleagues are open-minded and creative;</li>
+                        </ul>
+                    </div>
+                    <div class="leftGroup">
+                        <h5>Goals</h5>
+                        <ul>
+                            <li>Trying to find ways to integrate all the new cool tech in my projects;</li>
+                            <li>I am inclined to show others and eventually teach students about alternatives when it
+                                comes to programming;</li>
+                            <li>I want to learn new stuff and experience as much as possible when it comes to paradigms
+                                and technology</li>
+                        </ul>
+                    </div>
+                    <div class="leftGroup">
+                        <h5>Frustrations and Pain Points</h5>
+                        <ul>
+                            <li>The mindless use of mainstream technology and the fixation on it by many, without
+                                considering alternatives or understanding why is it used;</li>
+                            <li>I don't like it when people do things just to be done. I prefer creativity, involvement
+                                and enthusiasm. These are the traits I appreciate;</li>
+                            <li>Obscure technology is so interesting, especially since it was made for fun, so we
+                                should also have fun while using it. The problem is that they are poorly documented and
+                                I would like to be able to learn and use them more easily;</li>
                         </ul>
                     </div>
                 </div>
-                <div class="personaDetails">
-                    <div class="detailsLeft">
-                        <div class="leftGroup">
-                            <h5>Main Points</h5>
-                            <ul>
-                                <li>Stability is my main concern;</li>
-                                <li>Writing a program is like building a puzzle to fit the problem you are trying to solve;</li>
-                                <li>I like to read about new trends in programming, but from my experience they all die because they solve already solved problems;</li>
-                                <li>My main worry is the functionality of the application;</li>
-                                <li>I like to use well researched and documented solutions;</li>
-                            </ul>
-                        </div>
-                        <div class="leftGroup">
-                            <h5>Goals</h5>
-                            <ul>
-                                <li>Always provide the best solutions for problems that appear during the developement process;</li>
-                                <li>Always used well known coding languages and paradigms to ensure the stability of the applications;</li>
-                                <li>Ensure functionality over estetic aspect</li>
-                            </ul>
-                        </div>
-                        <div class="leftGroup">
-                            <h5>Frustrations and Pain Points</h5>
-                            <ul>
-                                <li>New technology that does the same thing as an already existing one annoys me;</li>
-                                <li>People should focus on mastering a single coding language at a time so there aren't any problems during the developement and things go smoothly;</li>
-                                <li>I don't care for gimmicky paradigms and coding languages as they do not add anything of value but only complicate things;</li>
-                            </ul>
-                        </div>
+                <div itemprop="description" class="detailsRight">
+                    <h5>Detailed Description</h5>
+                    <p>
+                        Mircea is a fresh MSc graduate with a thirst for knowledge and thrill for new. He has been in
+                        the IT industry for about 3 years, and since then he has been involved in many activities that
+                        helped him grow both professionally and personally. He doesn't like strict rules, and considers
+                        that every issue has at least 3 or more ways of being solved. He is curious on a daily basis
+                        and likes to fiddle around with technology to further understand how does it work and why is it
+                        used.
+                    </p>
+                    <br>
+                    <p>
+                        He has worked with different paradigms along the way, including OOP, Functional, Logical, and
+                        Reactive. His thirst does not stop here, and he is willing to learn about more and more
+                        pardigms, and eventually integrate them in new modules in his project or create his own
+                        personal projects with them. Lately he has caught interest in Esoteric Programming Languages
+                        and he thought they are quite fun to use. The issue is that most of them are cryptic and
+                        documentation is chaotic and spread all around the internet. Since he uses Udacity and
+                        Pluralsight really often, he would like to have a similar experience when it comes to learning
+                        Esoteric Languages, such as LOLCODE, Piet, Shakespeare or even Brainf*ck.
+                    </p>
+                    <br>
+                    <p>
+                        He never backs down from a challenge, and he considers that he should learn as much as he can
+                        while he is young, so later as he ages, he could pass down all of his knowledge and share of
+                        enthusiasm to future generations of programmers and computer scientists. Time wasted is his
+                        biggest nemesis, and he can't stand when he doesn't have any tasks available at work, or he is
+                        blocked by something. During these moments, he changes his focus to something else, that still
+                        adds value towards his growth, like reading books, getting informed about new tech or working
+                        for something else. Beside Udacity and Pluralsight, he is subscribed to Tech newsletters, and
+                        he gets weekly, on his email the latest news about various technologies.
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article itemscope="Secondary" itemtype="http://schema.org/Person" class="persona">
+            <div class="personaInfo">
+                <h3>Type: Secondary</h3>
+                <figure>
+                    <img itemprop="image" src="./img/Iulia.jpeg" alt="persona image">
+                </figure>
+                <div class="personaBackground">
+                    <h4>Name: <span itemprop="givenName">Iulia</span> <span itemprop="familyName">Steluta</span></h4>
+                    <h5>Background</h5>
+                    <ul>
+                        <li><strong>Date of Birth:</strong> <time itemprop="birthDate" datetime="1970-11-20">1970-11-20</time></li>
+                        <li><strong>Gender:</strong> <span itemprop="gender">Female</span></li>
+                        <li itemprop="location" itemscope="" itemtype="http://schema.org/Place"><strong>Location:</strong>
+                            <span itemprop="name">Suceava, Romania</span></li>
+                        <li itemprop="worksFor" itemscope="" itemtype="http://schema.org/Organization"><strong>Work
+                                place:</strong> <span itemprop="name">Dimitre Cantemir High School</span>, <span
+                                itemprop="jobTitle">Teacher</span></li>
+                        <li itemprop="alumniOf" itemscope="" itemtype="http://schema.org/EducationalOrganization"><strong>School:</strong>
+                            <span itemprop="name">Palo Alto High School</span></li>
+                        <li><strong>Exposure to different programming paradigms: low (less then 2)</strong></li>
+                        <li><strong>Willingess to experiment / curiosity level: 3 out of 4</strong></li>
+                        <li><strong>Grit: High</strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="personaDetails">
+                <div class="detailsLeft">
+                    <div class="leftGroup">
+                        <h5>Main Points</h5>
+                        <ul>
+                            <li>I like to teach, and in doing so I like to show to my students new and exciting ways to
+                                make machine do what they want.</li>
+                            <li>A young mind need to be constantly stretched.</li>
+                            <li>As a teacher I want to offer my students a glimpse into the future.</li>
+                            <li>Programming should be fun and interactive, all this code on paper can be fustrating</li>
+                            <li>Have no experience with other languages other then C and C++ but would wellcome a
+                                change</li>
+                        </ul>
                     </div>
-                    <div itemprop="description" class="detailsRight">
-                        <h5>Detailed Description</h5>
-                        <p>
-                            Silviu's started as a software developer focusing mostly on the functionality of the application without much interest in graphical design and graphical interfaces. He cares only for the algorithms and the coding standards that already exist. He prides himself on learning the ins and outs of a single coding language at a time so that he isn't taken by surprise no matter what is thrown at him. 
-                        </p>
-                        <br>
-                        <p>
-                            After multiple years in the field he decided to switch over to being a software arhitect because of his thrist for stability in software developement and the rigurous conventions that govern this step of software developement. He made this change because he was tired of clients asking for certain coding languages even though the same features could be achieved using a stable and widely used one. 
-                        </p>
-                        <br> 
-                        <p>
-                            These days he focuses solely on the foundation of the applications without caring about the language used for the implementation as he finds those boring and pointless. With his new career path he finds enjoyment in what he does, focusing on just making the application work and not how this is achieved through the actual coding. 
-                        </p>
+                    <div class="leftGroup">
+                        <h5>Goals</h5>
+                        <ul>
+                            <li>Want to help the students get a more broader view of what programming is and to stretch
+                                their mind </li>
+                            <li>She, herself would like to learn other languages</li>
+                            <li>Looks to escape the paper and pen explenations</li>
+                        </ul>
+                    </div>
+                    <div class="leftGroup">
+                        <h5>Frustrations and Pain Points</h5>
+                        <ul>
+                            <li>Almost all the problems she explains in class are at the blackboard using C or C++ with
+                                little to no graphical/visual explenation</li>
+                            <li>She can't find a way to make the students to abstract the problem from her simple
+                                example.</li>
+                            <li>She would like to learn languages that are different then the usual C-like language
+                                family</li>
+                        </ul>
                     </div>
                 </div>
-            </article>
-            <article itemscope="Served" itemtype="http://schema.org/Person" class="persona">
-                <div class="personaInfo">
-                    <h3>Type: Served</h3>
-                    <figure>
-                        <img itemprop="image" src="./img/Irina.jpeg" alt="persona image">
-                    </figure>
-                    <div class="personaBackground">				
-                        <h4>Name: <span itemprop="givenName">Irina</span> <span itemprop="familyName">Alexandru</span></h4>
-                            <h5>Background</h5>
-                            <ul>
-                                <li><strong>Date of Birth:</strong> <time itemprop="birthDate" datetime="2005-10-23">10/04/2000</time></li>
-                                <li><strong>Gender:</strong> <span itemprop="gender">Female</span></li>
-                                <li itemprop="location" itemscope="" itemtype="http://schema.org/Place"><strong>Location:</strong> <span itemprop="name">Timisoara, Romania</span></li>
-                                <li itemprop="worksFor" itemscope="" itemtype="http://schema.org/Organization"><strong>Work place:</strong> <span itemprop="name"></span>Grigore Moisil<span itemprop="jobTitle">Student</span></li>
-                                <li itemprop="alumniOf" itemscope="" itemtype="http://schema.org/EducationalOrganization"><strong>School:</strong>  <span itemprop="name">High School</span> </li>
-                                <li><strong>Experience programming: none (0 years)</strong></li>
-                                <li><strong>Exposure to different programming paradigms: low (1)</strong></li>
-                                <li><strong>Willingess to experiment / curiosity level: 3 out of 4</strong></li>
-                                <li><strong>Grit: medium</strong></li>
-                            </ul>
+                <div itemprop="description" class="detailsRight">
+                    <h5>Detailed Description</h5>
+                    <p>A day in Iulia life is like a sprint with obstacles, a sprint within a maraton (1 year cycle) in
+                        which she has to deliver the condensed curriculum
+                        while keeping the students intrested and answering all the question that are throw her way. Her
+                        students are very different in the way they understand
+                        the content so it's always challenging to try and fit the content such that everyone
+                        understands.</p>
+                    <p>Over the years she has found out that having more then one way to solve a problem and to
+                        represent it is the best way to go in teaching it to the kids.
+                        For example in order to solve recursion they use a state table where each state of the
+                        recursion is marked and removed once the cycle is done. Or for
+                        representing the swapping between 2 values they use actual objects like 3 cans and so own.
+                    </p>
+                    <p>She says she always looks to teach the students to experimet, "they need to have a flexible and
+                        agile mind and I have to come up with ways to help them".
+                        In previous years she added, even if it's not in the curriculum C# and F# and they proved to be
+                        really fun and intriguing for the students and herself.
+                        "The fact that they were able to visualise what they build. Not just some text on the screen
+                        but buttons and icons and such made the students really happy".
+                        And the intresting part is that Iulia didn't had any prior knowlged of C# or F# but she did it
+                        for her students.
+                    </p>
+                    <p>Even if C# and F# had some good results they are close to C languages and now she hopes she can
+                        find something different to continue her experiment.</p>
+                </div>
+            </div>
+            <div class="personaScenarios">
+                <h5>Scenarios - with bullet points</h5>
+                <p>• have the students play with a new language and try to solve a simple problem that they already
+                    solved in C</p>
+                <p>• when explaining a new problem to use the application to showcase the stages of the algorithm</p>
+                <p>• fun is the best way to learn - have all the group explore a new way of "writing" code (PIET)</p>
+            </div>
+        </article>
+        <article itemscope="Negative" itemtype="http://schema.org/Person" class="persona">
+            <div class="personaInfo">
+                <h3>Type: Negative</h3>
+                <figure>
+                    <img itemprop="image" src="./img/Bogdan.jpeg" alt="persona image">
+                </figure>
+                <div class="personaBackground">
+                    <h4>Name: <span itemprop="givenName">Bogdan</span> <span itemprop="familyName">Opar</span></h4>
+                    <h5>Background</h5>
+                    <ul>
+                        <li><strong>Date of Birth:</strong> <time itemprop="birthDate" datetime="1990-10-23">23/10/1980</time></li>
+                        <li><strong>Gender:</strong> <span itemprop="gender">Male</span></li>
+                        <li itemprop="location" itemscope="" itemtype="http://schema.org/Place"><strong>Location:</strong>
+                            <span itemprop="name">Piatra Neamt, Romania</span></li>
+                        <li itemprop="worksFor" itemscope="" itemtype="http://schema.org/Organization"><strong>Work
+                                place:</strong> <span itemprop="name">Bytex</span>, <span itemprop="jobTitle">Senior
+                                Software Develop</span></li>
+                        <li itemprop="alumniOf" itemscope="" itemtype="http://schema.org/EducationalOrganization"><strong>School:</strong>
+                            <span itemprop="name">Faculty of Economics A. I. Cuza</span> </li>
+                        <li><strong>Experience programming: seniority (more then 15 years)</strong></li>
+                        <li><strong>Exposure to different programming paradigms: low ( 2)</strong></li>
+                        <li><strong>Willingess to experiment / curiosity level: 1 out of 4</strong></li>
+                        <li><strong>Grit: medium</strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="personaDetails">
+                <div class="detailsLeft">
+                    <div class="leftGroup">
+                        <h5>Main Points</h5>
+                        <ul>
+                            <li>I solve all of my customers problem using well refined and tested patterns.</li>
+                            <li>Most of the problems out there have been solved and that is why we have programming
+                                patterns</li>
+                            <li>The world is a hierarchy of classes, we should model programs as such</li>
+                            <li>Writing a program is like building a puzzle to fit the problem you are trying to solve</li>
+                            <li>Raw data should be model into the code and not the other way arownd.</li>
+                            <li>I like to read about new trends in programming, but from my experience they all die
+                                because they solve already solved problems</li>
+                        </ul>
+                    </div>
+                    <div class="leftGroup">
+                        <h5>Goals</h5>
+                        <p>Goals are the reasons users perform tasks, not the tasks.</p>
+                        <ul>
+                            <li>Write the best product that I can for my customers.</li>
+                            <li>Clean and maintainable code is a must, just like a cook keeps his workspace clean so
+                                should we.</li>
+                            <li>Imbue my junior with good, healthy programming habits.</li>
+                        </ul>
+                    </div>
+                    <div class="leftGroup">
+                        <h5>Frustrations and Pain Points</h5>
+                        <p>Some of the difficulties the user has with the product.</p>
+                        <ul>
+                            <li>It annoys me when I have to write interfaces, there are so many frameworks and they
+                                don't even solve the problems proprely.</li>
+                            <li>The fact that the Web works as it does it's a miracle and a curse - it's like an
+                                ongoing experiment with no though for sustainability & maintainability</li>
+                            <li>I can't get the people which try to model the world for what it's not. A action is a
+                                series of procedures but the action is made by something and it is apply to/by an
+                                object</li>
+                            <li>Well written code is hard to come by this days</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="personaDetails">
-                    <div class="detailsLeft">
-                        <div class="leftGroup">
-                            <h5>Main Points</h5>
-                            <ul>
-                                <li>Enjoy to experiment with diffrent ways to solve a problem.</li>
-                                <li>"The harder the problem the more satisfaction it brings"</li>
-                                <li>"Colors, shapes and sizes help me reason better"</li>
-                            </ul>
-                        </div>
-                        <div class="leftGroup">
-                            <h5>Goals</h5>
-                            <ul>
-                                <li>Find unusual ways of solving and finding answers to hard question</li>
-                                <li>Try to find as many engels to view a problem</li>
-                            </ul>
-                        </div>
-                        <div class="leftGroup">
-                            <h5>Frustrations and Pain Points</h5>
-                            <p>Some of the difficulties the user has with the product.</p>
-                            <ul>
-                                <li>"It is really annoying that not all the teacher have the same passion for teaching".</li>
-                                <li>Not all the problems can be solved by using real tangible objects.</li>
-                            </ul>
-                        </div>
+                <div itemprop="description" class="detailsRight">
+                    <h5>Detailed Description</h5>
+                    <p>Bogdan day starts usualy by reading his email, and answering to most urgent issues. Then he
+                        check with the project owner to see if the priorities are still the same. He then
+                        moves on to his assigned tasks. To solve this he consults with the business analyst, in order
+                        to have a good grasp on the subject, "this helps me to make design decisions
+                        that will help further down the line". On his desk you can find 2 books, one is Design
+                        Patterns: Elements of Reusable Object-Oriented Software and Introduction to Algorithms (MIT
+                        Press).
+                        He said he read them multiple times over the time of his career and it always helped him when
+                        he head to solve a though problem.
+                    </p>
+                    <p>
+                        As my career progressed I've always tryed to help my peers to better understand how to
+                        structure the code in a natural way. "For me this always came easy, and so I want to share
+                        my knowlged in the hopes that it will help my peers write better code, and in doing so having a
+                        better product". When he was younger Bogdan experimented with multiple paradigmes of
+                        writing code, but as his senior, back then, advised him," I came to see that modeling the world
+                        should be in a 1 to 1 relation with the code it's only natural that we think in objects".
+                        Paradigmes like Functional programming or Procedural or Logic are not natural, in his opinion,
+                        "They are intresting and a real brain workout but they don't solve with grace real world
+                        problems".
+                    </p>
+                    <p> As a professional Bogdan alawyas tries to stay on top of things so he reads about the advances
+                        in industry, any new book or accredited (form well established entities) workshop is wellcome.
+                        "I have
+                        to keep up with the changes in order to better solve the tasks that come my way. It is funny
+                        how ever how hard is to find something trully new - the older I get the harder is to not find
+                        patterns when
+                        a new 'technology', somehow I can see the shorcomes almost immediately. I'm not going to say
+                        OOP is purfect but it's the best thing we have at the moment that is why I'm still looking".
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article itemscope itemtype="http://schema.org/Person" class="persona">
+            <div class="personaInfo">
+                <h3>Type: Negative</h3>
+                <figure>
+                    <img width="185" itemprop="image" src="https://previews.123rf.com/images/goodluz/goodluz1512/goodluz151200203/48978981-portrait-of-handsome-middle-aged-man-with-eyeglasses.jpg"
+                        alt="persona image" />
+                </figure>
+                <div class="personaBackground">
+                    <h4>Name: <span itemprop="givenName">Silviu</span> <span itemprop="familyName">Popescu</span>
+                    </h4>
+                    <h5>Background</h5>
+                    <ul>
+                        <li><strong>Date of Birth:</strong> <time itemprop="birthDate" datetime="1988-04-18">18-04-1988</time></li>
+                        <li><strong>Gender:</strong> <span itemprop="gender">Male</span></li>
+                        <li itemprop="location" itemscope itemtype="http://schema.org/Place"><strong>Location:</strong>
+                            <span itemprop="name">Bucuresti, Romania</span></li>
+                        <li itemprop="worksFor" itemscope itemtype="http://schema.org/Organization"><strong>Work
+                                place:</strong> <span itemprop="name">Microsoft</span>, <span itemprop="jobTitle">Senior
+                                Software Arhitect</span></li>
+                        <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+                            <strong>School:</strong> <span itemprop="name">Faculty of Computer Science - Al. I. Cuza
+                                University</span>
+                        </li>
+                        <li><strong>Technology Level: </strong>Very High</li>
+                        <li><strong>Excitement To New Things: </strong>Moderate</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="personaDetails">
+                <div class="detailsLeft">
+                    <div class="leftGroup">
+                        <h5>Main Points</h5>
+                        <ul>
+                            <li>Stability is my main concern;</li>
+                            <li>Writing a program is like building a puzzle to fit the problem you are trying to solve;</li>
+                            <li>I like to read about new trends in programming, but from my experience they all die
+                                because they solve already solved problems;</li>
+                            <li>My main worry is the functionality of the application;</li>
+                            <li>I like to use well researched and documented solutions;</li>
+                        </ul>
                     </div>
-                    <div itemprop="description" class="detailsRight">
-                        <h5>Detailed Description</h5>
-                        <p>Iulia is a student at High School Grigore Moisil, as such her schedule is from 8 to 13 each day, 5 days a week. She enjoys the practical side
-                            of things, she likes anything that has to do with actual real life experimentation. In her own words "if it's visual then I can reason about it".
-                        </p>
-                        <p>One of the best places, she says, is the High School lab of Informatics. Her teacher has an unusal way of teaching the curriculum, he uses real life objects,
-                            like small cubs of different sizes and colors and applys most of the algorithms. Most of the curriculum materials will be created by the students, and that 
-                            is the part Iulia likes the most. "It's the fact that you can see how and where each pice goes - you don't have to keep that in your head, we even creat shapes 
-                            and arrows to draw logical diagrams".
-                        </p>
-                        <p>
-                            She likes to apply the things she learns in the informatic class in other class also, it can help her to understand better the subject. It also helped her solve
-                            problems she though she had no idead how to solve, because it gave her courage to try new ways of solving the issue without thinking that she "might fail". "It is
-                            really hard to explain the feeling of joy when you solve a problem that you had no idea how to approach initially".
-                        </p>
+                    <div class="leftGroup">
+                        <h5>Goals</h5>
+                        <ul>
+                            <li>Always provide the best solutions for problems that appear during the developement
+                                process;</li>
+                            <li>Always used well known coding languages and paradigms to ensure the stability of the
+                                applications;</li>
+                            <li>Ensure functionality over estetic aspect</li>
+                        </ul>
+                    </div>
+                    <div class="leftGroup">
+                        <h5>Frustrations and Pain Points</h5>
+                        <ul>
+                            <li>New technology that does the same thing as an already existing one annoys me;</li>
+                            <li>People should focus on mastering a single coding language at a time so there aren't any
+                                problems during the developement and things go smoothly;</li>
+                            <li>I don't care for gimmicky paradigms and coding languages as they do not add anything of
+                                value but only complicate things;</li>
+                        </ul>
+                    </div>
+                </div>
+                <div itemprop="description" class="detailsRight">
+                    <h5>Detailed Description</h5>
+                    <p>
+                        Silviu's started as a software developer focusing mostly on the functionality of the
+                        application without much interest in graphical design and graphical interfaces. He cares only
+                        for the algorithms and the coding standards that already exist. He prides himself on learning
+                        the ins and outs of a single coding language at a time so that he isn't taken by surprise no
+                        matter what is thrown at him.
+                    </p>
+                    <br>
+                    <p>
+                        After multiple years in the field he decided to switch over to being a software arhitect
+                        because of his thrist for stability in software developement and the rigurous conventions that
+                        govern this step of software developement. He made this change because he was tired of clients
+                        asking for certain coding languages even though the same features could be achieved using a
+                        stable and widely used one.
+                    </p>
+                    <br>
+                    <p>
+                        These days he focuses solely on the foundation of the applications without caring about the
+                        language used for the implementation as he finds those boring and pointless. With his new
+                        career path he finds enjoyment in what he does, focusing on just making the application work
+                        and not how this is achieved through the actual coding.
+                    </p>
+                </div>
+            </div>
+        </article>
+        <article itemscope="Served" itemtype="http://schema.org/Person" class="persona">
+            <div class="personaInfo">
+                <h3>Type: Served</h3>
+                <figure>
+                    <img itemprop="image" src="./img/Irina.jpeg" alt="persona image">
+                </figure>
+                <div class="personaBackground">
+                    <h4>Name: <span itemprop="givenName">Irina</span> <span itemprop="familyName">Alexandru</span></h4>
+                    <h5>Background</h5>
+                    <ul>
+                        <li><strong>Date of Birth:</strong> <time itemprop="birthDate" datetime="2005-10-23">10/04/2000</time></li>
+                        <li><strong>Gender:</strong> <span itemprop="gender">Female</span></li>
+                        <li itemprop="location" itemscope="" itemtype="http://schema.org/Place"><strong>Location:</strong>
+                            <span itemprop="name">Timisoara, Romania</span></li>
+                        <li itemprop="worksFor" itemscope="" itemtype="http://schema.org/Organization"><strong>Work
+                                place:</strong> <span itemprop="name"></span>Grigore Moisil<span itemprop="jobTitle">Student</span></li>
+                        <li itemprop="alumniOf" itemscope="" itemtype="http://schema.org/EducationalOrganization"><strong>School:</strong>
+                            <span itemprop="name">High School</span> </li>
+                        <li><strong>Experience programming: none (0 years)</strong></li>
+                        <li><strong>Exposure to different programming paradigms: low (1)</strong></li>
+                        <li><strong>Willingess to experiment / curiosity level: 3 out of 4</strong></li>
+                        <li><strong>Grit: medium</strong></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="personaDetails">
+                <div class="detailsLeft">
+                    <div class="leftGroup">
+                        <h5>Main Points</h5>
+                        <ul>
+                            <li>Enjoy to experiment with diffrent ways to solve a problem.</li>
+                            <li>"The harder the problem the more satisfaction it brings"</li>
+                            <li>"Colors, shapes and sizes help me reason better"</li>
+                        </ul>
+                    </div>
+                    <div class="leftGroup">
+                        <h5>Goals</h5>
+                        <ul>
+                            <li>Find unusual ways of solving and finding answers to hard question</li>
+                            <li>Try to find as many engels to view a problem</li>
+                        </ul>
+                    </div>
+                    <div class="leftGroup">
+                        <h5>Frustrations and Pain Points</h5>
+                        <p>Some of the difficulties the user has with the product.</p>
+                        <ul>
+                            <li>"It is really annoying that not all the teacher have the same passion for teaching".</li>
+                            <li>Not all the problems can be solved by using real tangible objects.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div itemprop="description" class="detailsRight">
+                    <h5>Detailed Description</h5>
+                    <p>Iulia is a student at High School Grigore Moisil, as such her schedule is from 8 to 13 each day,
+                        5 days a week. She enjoys the practical side
+                        of things, she likes anything that has to do with actual real life experimentation. In her own
+                        words "if it's visual then I can reason about it".
+                    </p>
+                    <p>One of the best places, she says, is the High School lab of Informatics. Her teacher has an
+                        unusal way of teaching the curriculum, he uses real life objects,
+                        like small cubs of different sizes and colors and applys most of the algorithms. Most of the
+                        curriculum materials will be created by the students, and that
+                        is the part Iulia likes the most. "It's the fact that you can see how and where each pice goes
+                        - you don't have to keep that in your head, we even creat shapes
+                        and arrows to draw logical diagrams".
+                    </p>
+                    <p>
+                        She likes to apply the things she learns in the informatic class in other class also, it can
+                        help her to understand better the subject. It also helped her solve
+                        problems she though she had no idead how to solve, because it gave her courage to try new ways
+                        of solving the issue without thinking that she "might fail". "It is
+                        really hard to explain the feeling of joy when you solve a problem that you had no idea how to
+                        approach initially".
+                    </p>
                 </div>
                 <div class="personaScenarios">
                     <h5>Scenarios</h5>
-                    <p>• she might not use the product direcly but her teacher might use the produc to explore/explain/showcase an example ?</p>
+                    <p>• she might not use the product direcly but her teacher might use the produc to
+                        explore/explain/showcase an example ?</p>
                 </div>
-            </article>
-            
-            <article itemscope itemtype="http://schema.org/Person" class="persona">
-                <div class="personaInfo">
-                    <h3>Type: Customer</h3>
-                    <figure>
-                        <img width="185" itemprop="image" src="https://static.wixstatic.com/media/1bfda4_8050d83d51da47a1be2c48deb251c82c~mv2_d_2832_3706_s_4_2.jpg?dn=" alt="persona image" />
-                    </figure>
-                    <div class="personaBackground">
-                        <h4>Name: <span itemprop="givenName">Julie</span> <span itemprop="familyName">Eisenhower</span>
-                        </h4>
-                        <h5>Background</h5>
+        </article>
+
+        <article itemscope itemtype="http://schema.org/Person" class="persona">
+            <div class="personaInfo">
+                <h3>Type: Customer</h3>
+                <figure>
+                    <img width="185" itemprop="image" src="https://static.wixstatic.com/media/1bfda4_8050d83d51da47a1be2c48deb251c82c~mv2_d_2832_3706_s_4_2.jpg?dn="
+                        alt="persona image" />
+                </figure>
+                <div class="personaBackground">
+                    <h4>Name: <span itemprop="givenName">Julie</span> <span itemprop="familyName">Eisenhower</span>
+                    </h4>
+                    <h5>Background</h5>
+                    <ul>
+                        <li><strong>Date of Birth:</strong> <time itemprop="birthDate" datetime="1995-04-25">09-07-1989</time></li>
+                        <li><strong>Gender:</strong> <span itemprop="gender">Female</span></li>
+                        <li itemprop="location" itemscope itemtype="http://schema.org/Place"><strong>Location:</strong>
+                            <span itemprop="name">Ontario, Canada</span></li>
+                        <li itemprop="worksFor" itemscope itemtype="http://schema.org/Organization"><strong>Work
+                                place:</strong> <span itemprop="name">Typhoon Digital</span>, <span itemprop="jobTitle">Entrepreneur</span></li>
+                        <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+                            <strong>School:</strong> <span itemprop="name">Royal Holloway - University of London</span>
+                        </li>
+                        <li><strong>Technology Level: </strong>Medium</li>
+                        <li><strong>Excitement To New Things: </strong>Medium</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="personaDetails">
+                <div class="detailsLeft">
+                    <div class="leftGroup">
+                        <h5>Main Points</h5>
                         <ul>
-                            <li><strong>Date of Birth:</strong> <time itemprop="birthDate"
-                                    datetime="1995-04-25">09-07-1989</time></li>
-                            <li><strong>Gender:</strong> <span itemprop="gender">Female</span></li>
-                            <li itemprop="location" itemscope itemtype="http://schema.org/Place"><strong>Location:</strong>
-                                <span itemprop="name">Ontario, Canada</span></li>
-                            <li itemprop="worksFor" itemscope itemtype="http://schema.org/Organization"><strong>Work
-                                    place:</strong> <span itemprop="name">Typhoon Digital</span>, <span
-                                    itemprop="jobTitle">Entrepreneur</span></li>
-                            <li itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-                                <strong>School:</strong> <span itemprop="name">Royal Holloway - University of London</span>
-                            </li>
-                            <li><strong>Technology Level: </strong>Medium</li>
-                            <li><strong>Excitement To New Things: </strong>Medium</li>
+                            <li>I am always there to support new businesses that sound innovative and have a great shot
+                                at success;</li>
+                            <li>I am not a technical person, but I do think my feedback is important when it comes to
+                                the functional side;</li>
+                            <li>I like to invest in products that have a great impact on the lives of many;</li>
+                            <li>Money is not a problem, as long as my needs as a customer are fullfilled;</li>
+                        </ul>
+                    </div>
+                    <div class="leftGroup">
+                        <h5>Goals</h5>
+                        <ul>
+                            <li>I would like to contribute as much as I can to the development of the products I invest
+                                in;</li>
+                            <li>The biggest goal for every entrepreneur is to have successful businesses and products.
+                                I tend to that philosophy as well;</li>
+                            <li>Beside the impact on the people, the application should generate great profit and
+                                revenue overall;</li>
+                        </ul>
+                    </div>
+                    <div class="leftGroup">
+                        <h5>Frustrations and Pain Points</h5>
+                        <ul>
+                            <li>People that don't hold up to their commitments;</li>
+                            <li>The greed of bad investors, publishers and corporations;</li>
+                            <li>I don't stand when my input is not taken seriously, and I usually step up hard when
+                                this happens;</li>
+                            <li>The technology is getting more advanced with every day, but that does not have to mean
+                                that it gets more complex to use. I like apps that are intuitive and easy to use, and I
+                                make sure of that for the products I invest in;</li>
                         </ul>
                     </div>
                 </div>
-                <div class="personaDetails">
-                    <div class="detailsLeft">
-                        <div class="leftGroup">
-                            <h5>Main Points</h5>
-                            <ul>
-                                <li>I am always there to support new businesses that sound innovative and have a great shot at success;</li>
-                                <li>I am not a technical person, but I do think my feedback is important when it comes to the functional side;</li>
-                                <li>I like to invest in products that have a great impact on the lives of many;</li>
-                                <li>Money is not a problem, as long as my needs as a customer are fullfilled;</li>
-                            </ul>
-                        </div>
-                        <div class="leftGroup">
-                            <h5>Goals</h5>
-                            <ul>
-                                <li>I would like to contribute as much as I can to the development of the products I invest in;</li>
-                                <li>The biggest goal for every entrepreneur is to have successful businesses and products. I tend to that philosophy as well;</li>
-                                <li>Beside the impact on the people, the application should generate great profit and revenue overall;</li>
-                            </ul>
-                        </div>
-                        <div class="leftGroup">
-                            <h5>Frustrations and Pain Points</h5>
-                            <ul>
-                                <li>People that don't hold up to their commitments;</li>
-                                <li>The greed of bad investors, publishers and corporations;</li>
-                                <li>I don't stand when my input is not taken seriously, and I usually step up hard when this happens;</li>
-                                <li>The technology is getting more advanced with every day, but that does not have to mean that it gets more complex to use. I like apps that are intuitive and easy to use, and I make sure of that for the products I invest in;</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div itemprop="description" class="detailsRight">
-                        <h5>Detailed Description</h5>
-                        <p>
-                            Julie comes from a family of business people: his father is one of the most influencial investors in the IT industry from Canada, contributing both financially and with functional ideas to big apps from all over the world, including Slack, Instagram and Udacity. Based on her parents' ideas, she started being interested in helping developers and companies develop applications that have a positive impact in the lives of many people. She has always been supported by her parents in her education and career, so she has travelled all around the world and studied at top schools. She rarely heard no from the people surrounding her, and she got used to getting whatever she wants most of the time. 
-                        </p>
-                        <br>
-                        <p>
-                            She's still remotely at the beginning of her career, with about 6 years in the industry, and she aims for the executive role anytime in the future. In the past she invested in applications from the vertical market of E-Health and Social Networking, now catching up some interest in the Educational market. She believes that the investments from the past have been a good call, with good reasons, since the applications have caught quite some success in Canada for the E-Health one and all over the world for the Social Network one. Having such a success in the former investments, she got a confidence boost and believes that her decisions in the functional side of the applications had a positive impact in their growth. She will be influenced by these past decisions, especially since they were aimed towards the usability and minimalism of the UI.
-                        </p>
-                    </div>
+                <div itemprop="description" class="detailsRight">
+                    <h5>Detailed Description</h5>
+                    <p>
+                        Julie comes from a family of business people: his father is one of the most influencial
+                        investors in the IT industry from Canada, contributing both financially and with functional
+                        ideas to big apps from all over the world, including Slack, Instagram and Udacity. Based on her
+                        parents' ideas, she started being interested in helping developers and companies develop
+                        applications that have a positive impact in the lives of many people. She has always been
+                        supported by her parents in her education and career, so she has travelled all around the world
+                        and studied at top schools. She rarely heard no from the people surrounding her, and she got
+                        used to getting whatever she wants most of the time.
+                    </p>
+                    <br>
+                    <p>
+                        She's still remotely at the beginning of her career, with about 6 years in the industry, and
+                        she aims for the executive role anytime in the future. In the past she invested in applications
+                        from the vertical market of E-Health and Social Networking, now catching up some interest in
+                        the Educational market. She believes that the investments from the past have been a good call,
+                        with good reasons, since the applications have caught quite some success in Canada for the
+                        E-Health one and all over the world for the Social Network one. Having such a success in the
+                        former investments, she got a confidence boost and believes that her decisions in the
+                        functional side of the applications had a positive impact in their growth. She will be
+                        influenced by these past decisions, especially since they were aimed towards the usability and
+                        minimalism of the UI.
+                    </p>
                 </div>
-            </article>
-            
-            <div style="clear:both;"></div>
-        </section>
-        <section id="Sketches">
-            <h2>Sketches</h2>
-            <h3>Idea 1</h3>
-            <img alt="Sketches warmup" src="./img/pg5.jpg">
-            <img alt="Sketches requirements" src="./img/pg6-l.jpg">
-            <img alt="Sketches the frame" src="./img/pg6-r.jpg">
-            <img alt="Sketches iPython 0" src="./img/pg7-l.jpg">
-            <img alt="Sketches iPython 1" src="./img/pg7-r.jpg">
-            <img alt="Sketches storyteller 0" src="./img/pg8-l.jpg">
-            <img alt="Sketches storyteller 1" src="./img/pg8-r.jpg">
-            <img alt="Sketches storyteller 2" src="./img/pg8-c.jpg">
-            <h3>Idea 2</h3>
-            <img alt="Sketches Grigi 1" src="./img/Sketch 1.jpg">
-            <img alt="Sketches Grigi 2" src="./img/Sketch 2.jpg">
-            <img alt="Sketches Grigi 3" src="./img/Sketch 3.jpg">
-            <img alt="Sketches Grigi 4" src="./img/Sketch 4.jpg">
-            <img alt="Sketches Grigi 5" src="./img/Sketch 5.jpg">
-            <img alt="Sketches Grigi 6" src="./img/Sketch 6.jpg">
-            <h3>Idea 3</h3>
-            <img alt="Sketches Razvan 1" src="./img/Sketch Razvan 1.jpg">
-            <img alt="Sketches Razvan 2" src="./img/Sketch Razvan 2.jpg">
-        </section>
-        <section id="Wireframes">
-            <h2>Wireframes</h2>
-            <h3>Idea 1</h3>
-            <img alt="Wireframes wiki 0" src="./img/pg9-l.jpg">
-            <img alt="Wireframes wiki 1" src="./img/pg9-r.jpg">
-            <img alt="Wireframes iPython 0" src="./img/pg10-l.jpg">
-            <img alt="Wireframes iPython 1" src="./img/pg10-l1.jpg">
-            <img alt="Wireframes iPython 2" src="./img/pg10-l2.jpg">
-            <img alt="Wireframes iPython 3" src="./img/pg10-r1.jpg">
-            <img alt="Wireframes iPython 4" src="./img/pg10-r2.jpg">
-            <img alt="Wireframes iPython 5" src="./img/pg10-r3.jpg">
-            <img alt="Wireframes StoryTeller 0" src="./img/pg11-l.jpg">
-            <img alt="Wireframes StoryTeller 1" src="./img/pg11-r1.jpg">
-            <img alt="Wireframes StoryTeller 2" src="./img/pg11-r2.jpg">
-            <img alt="Wireframes StoryTeller 3" src="./img/pg11-r3.jpg">
-            <h3>Idea 2</h3>
-            <img alt="Wireframes Grigi 1" src="./img/Wireframe 1.jpg">
-            <img alt="Wireframes Grigi 2" src="./img/Wireframe 2.jpg">
-            <img alt="Wireframes Grigi 3" src="./img/Wireframe 3.jpg">
-            <img alt="Wireframes Grigi 4" src="./img/Wireframe 4.jpg">
-            <img alt="Wireframes Grigi 5" src="./img/Wireframe 5.jpg">
-            <img alt="Wireframes Grigi 6" src="./img/Wireframe 6.jpg">
-        </section>
-        <section id="StoryBoards">
-            <h2>StoryBoards</h2>
-            <h3>Idea 1</h3>
-            <img alt="StoryBoards 1.0"  src="./img/pg12-1.jpg">
-            <img alt="StoryBoards 1.1"  src="./img/pg12-2.jpg">
-            <img alt="StoryBoards 2.0"  src="./img/pg13-1.jpg">
-            <img alt="StoryBoards 2.1"  src="./img/pg13-2.jpg">
-            <h3>Idea 2</h3>
-            <img alt="Storyboards Grigi 1" src="./img/Storyboard 1.jpg">
-            <img alt="Storyboards Grigi 2" src="./img/Storyboard 2.jpg">
-            <img alt="Storyboards Grigi 3" src="./img/Storyboard 3.jpg">
-            <img alt="Storyboards Grigi 4" src="./img/Storyboard 4.jpg">
-            <img alt="Storyboards Grigi 5" src="./img/Storyboard 5.jpg">
-            <img alt="Storyboards Grigi 6" src="./img/Storyboard 6.jpg">
-            <h3>Idea 3</h3>
-            <img alt="Storyboards Razvan" src="./img/Storyboard Razvan.jpg">
-        </section>
-        <section id="QOC">
-            <h2>QOC</h2>
-            <h3>Idea 1</h3>
-            <img alt="QO 12 " src="./img/pg14-1.jpg">
-            <img alt="C 12 " src="./img/pg14-2.jpg">
-            <img alt="QOC 3" src="./img/pg-15.jpg">
-            <h3>Idea 2</h3>
-            <p><b>Q1: How do we gratify the user’s progress and motivate him to learn more?</b></p>
-            <img alt="QOC Grigi 1 " style="max-width: 600px" src="./img/QOC 1.png">
-            <p>As a solution, we could implement both achievements/badges in the user profile and also progress bars on every Esoteric Language. The incentives could be a great idea to motivate and reward, but for digital incentives we depend on third party providers (like having Amazon/any other e-store wallet credit) and for physical incentives we have to manage user addresses and deliveries, and issues could arise from the delivery process itself so big exclamation mark in the feasibility criteria.</p>
-            <p><b>Q2: How will the user navigate through the application?</b></p>
-            <img alt="QOC Grigi 2 " style="max-width: 600px" src="./img/QOC 2.png">
-            <p>We could either implement the breadcrumbs and menus to navigate back and forward which will be rather static on the dashboard, so the user will always know his navigation location, and have a screen which changes the content according to the clicks (easier to navigate with the mouse), or we could implement tabs and cards and have a more game-like dashboard (easier to navigate with the game controller). For the speech navigation, this also enables the use of the app for people without an available mouse/keyboard, so they could use it with their voice and perhaps integrate it with their smart speakers (Alexa, Google Home, etc.)</p>
-            <p><b>Q3: How will the application form a community and create some level of competitivity between users?</b></p>
-            <img alt="QOC Grigi 3" style="max-width: 600px" src="./img/QOC 3.png">
-            <p>In order to motivate and instigate comptetitiveness between users, we could organise monthly/quarterly challenges and competitions, with a form of reward for the winners. If we want them to collaborate together, we could implement learning groups. This way they could learn faster from one another, while also competing to be the best group/ guild from the application, like in a MMORPG game. The leaderboards are also in the equation, and they would display the most hard-working users in the app, for the user to see and strive to take their place.</p>
-            <h3>Idea 3</h3>
-            <img alt="QOC Razvan" src="./img/QOC Razvan.jpg">
-        </section>
+            </div>
+        </article>
+
+        <div style="clear:both;"></div>
+    </section>
+    <section id="Sketches">
+        <h2>Sketches</h2>
+        <h3>Idea 1</h3>
+        <img alt="Sketches warmup" src="./img/pg5.jpg">
+        <img alt="Sketches requirements" src="./img/pg6-l.jpg">
+        <img alt="Sketches the frame" src="./img/pg6-r.jpg">
+        <img alt="Sketches iPython 0" src="./img/pg7-l.jpg">
+        <img alt="Sketches iPython 1" src="./img/pg7-r.jpg">
+        <img alt="Sketches storyteller 0" src="./img/pg8-l.jpg">
+        <img alt="Sketches storyteller 1" src="./img/pg8-r.jpg">
+        <img alt="Sketches storyteller 2" src="./img/pg8-c.jpg">
+        <h3>Idea 2</h3>
+        <img alt="Sketches Grigi 1" src="./img/Sketch 1.jpg">
+        <img alt="Sketches Grigi 2" src="./img/Sketch 2.jpg">
+        <img alt="Sketches Grigi 3" src="./img/Sketch 3.jpg">
+        <img alt="Sketches Grigi 4" src="./img/Sketch 4.jpg">
+        <img alt="Sketches Grigi 5" src="./img/Sketch 5.jpg">
+        <img alt="Sketches Grigi 6" src="./img/Sketch 6.jpg">
+        <h3>Idea 3</h3>
+        <img alt="Sketches Razvan 1" src="./img/Sketch Razvan 1.jpg">
+        <img alt="Sketches Razvan 2" src="./img/Sketch Razvan 2.jpg">
+    </section>
+    <section id="Wireframes">
+        <h2>Wireframes</h2>
+        <h3>Idea 1</h3>
+        <img alt="Wireframes wiki 0" src="./img/pg9-l.jpg">
+        <img alt="Wireframes wiki 1" src="./img/pg9-r.jpg">
+        <img alt="Wireframes iPython 0" src="./img/pg10-l.jpg">
+        <img alt="Wireframes iPython 1" src="./img/pg10-l1.jpg">
+        <img alt="Wireframes iPython 2" src="./img/pg10-l2.jpg">
+        <img alt="Wireframes iPython 3" src="./img/pg10-r1.jpg">
+        <img alt="Wireframes iPython 4" src="./img/pg10-r2.jpg">
+        <img alt="Wireframes iPython 5" src="./img/pg10-r3.jpg">
+        <img alt="Wireframes StoryTeller 0" src="./img/pg11-l.jpg">
+        <img alt="Wireframes StoryTeller 1" src="./img/pg11-r1.jpg">
+        <img alt="Wireframes StoryTeller 2" src="./img/pg11-r2.jpg">
+        <img alt="Wireframes StoryTeller 3" src="./img/pg11-r3.jpg">
+        <h3>Idea 2</h3>
+        <img alt="Wireframes Grigi 1" src="./img/Wireframe 1.jpg">
+        <img alt="Wireframes Grigi 2" src="./img/Wireframe 2.jpg">
+        <img alt="Wireframes Grigi 3" src="./img/Wireframe 3.jpg">
+        <img alt="Wireframes Grigi 4" src="./img/Wireframe 4.jpg">
+        <img alt="Wireframes Grigi 5" src="./img/Wireframe 5.jpg">
+        <img alt="Wireframes Grigi 6" src="./img/Wireframe 6.jpg">
+    </section>
+    <section id="StoryBoards">
+        <h2>StoryBoards</h2>
+        <h3>Idea 1</h3>
+        <img alt="StoryBoards 1.0" src="./img/pg12-1.jpg">
+        <img alt="StoryBoards 1.1" src="./img/pg12-2.jpg">
+        <img alt="StoryBoards 2.0" src="./img/pg13-1.jpg">
+        <img alt="StoryBoards 2.1" src="./img/pg13-2.jpg">
+        <h3>Idea 2</h3>
+        <img alt="Storyboards Grigi 1" src="./img/Storyboard 1.jpg">
+        <img alt="Storyboards Grigi 2" src="./img/Storyboard 2.jpg">
+        <img alt="Storyboards Grigi 3" src="./img/Storyboard 3.jpg">
+        <img alt="Storyboards Grigi 4" src="./img/Storyboard 4.jpg">
+        <img alt="Storyboards Grigi 5" src="./img/Storyboard 5.jpg">
+        <img alt="Storyboards Grigi 6" src="./img/Storyboard 6.jpg">
+        <h3>Idea 3</h3>
+        <img alt="Storyboards Razvan" src="./img/Storyboard Razvan.jpg">
+    </section>
+    <section id="QOC">
+        <h2>QOC</h2>
+        <h3>Idea 1</h3>
+        <img alt="QO 12 " src="./img/pg14-1.jpg">
+        <img alt="C 12 " src="./img/pg14-2.jpg">
+        <img alt="QOC 3" src="./img/pg-15.jpg">
+        <h3>Idea 2</h3>
+        <p><b>Q1: How do we gratify the user’s progress and motivate him to learn more?</b></p>
+        <img alt="QOC Grigi 1 " style="max-width: 600px" src="./img/QOC 1.png">
+        <p>As a solution, we could implement both achievements/badges in the user profile and also progress bars on
+            every Esoteric Language. The incentives could be a great idea to motivate and reward, but for digital
+            incentives we depend on third party providers (like having Amazon/any other e-store wallet credit) and for
+            physical incentives we have to manage user addresses and deliveries, and issues could arise from the
+            delivery process itself so big exclamation mark in the feasibility criteria.</p>
+        <p><b>Q2: How will the user navigate through the application?</b></p>
+        <img alt="QOC Grigi 2 " style="max-width: 600px" src="./img/QOC 2.png">
+        <p>We could either implement the breadcrumbs and menus to navigate back and forward which will be rather static
+            on the dashboard, so the user will always know his navigation location, and have a screen which changes the
+            content according to the clicks (easier to navigate with the mouse), or we could implement tabs and cards
+            and have a more game-like dashboard (easier to navigate with the game controller). For the speech
+            navigation, this also enables the use of the app for people without an available mouse/keyboard, so they
+            could use it with their voice and perhaps integrate it with their smart speakers (Alexa, Google Home, etc.)</p>
+        <p><b>Q3: How will the application form a community and create some level of competitivity between users?</b></p>
+        <img alt="QOC Grigi 3" style="max-width: 600px" src="./img/QOC 3.png">
+        <p>In order to motivate and instigate comptetitiveness between users, we could organise monthly/quarterly
+            challenges and competitions, with a form of reward for the winners. If we want them to collaborate
+            together, we could implement learning groups. This way they could learn faster from one another, while also
+            competing to be the best group/ guild from the application, like in a MMORPG game. The leaderboards are
+            also in the equation, and they would display the most hard-working users in the app, for the user to see
+            and strive to take their place.</p>
+        <h3>Idea 3</h3>
+        <img alt="QOC Razvan" src="./img/QOC Razvan.jpg">
+    </section>
 
 
-            <section id="QOC">
-            	<h2>User Guide</h2>
-            	<h3>Use Case 1</h3>
+    <section id="UserGuide">
+        <h2>User Guide</h2>
+        <h3>Use Case 1</h3>
 
-            	<p>The first use case will present how to navigate through the website and start working on a course.First you will be greeted on the homepage where you can see and sort all the courses available.</p>
+        <p>The first use case will present how to navigate through the website and start working on a course.First you
+            will be greeted on the homepage where you can see and sort all the courses available.</p>
 
-	            <img alt="homepage " src="./img/userguide_homepage.png">
-	            <img alt="colors " src="./img/userguide_colors.png">
-	            <img alt="difficulty" src="./img/userguide_difficulty.png">
+        <img alt="homepage " src="./img/userguide_homepage.png">
+        <img alt="colors " src="./img/userguide_colors.png">
+        <img alt="difficulty" src="./img/userguide_difficulty.png">
 
-            	<p>Before selecting a course though you should login. You can do this by clicking the "Login" button on the top right. You have the option to login through Facebook, Google, Git or with a website specific account.</p>  
+        <p>Before selecting a course though you should login. You can do this by clicking the "Login" button on the top
+            right. You have the option to login through Facebook, Google, Git or with a website specific account.</p>
 
-	            <img alt="login " src="./img/userguide_login.png">
-	            <img alt="progress " src="./img/userguide_progress.png">
-
-
-            	<p>After selecting a course you can opt to participate in it. The page will show you your time spent on the course, the achievements you unlocked and your friends that also participated in this course. By clicking the green "play" button you will be redirected to the lesson page that also includes the coding language interpretor, with examples.</p>
-
-
-            	<img alt="courses" src="./img/userguide_courses.png">
-	            <img alt="piet1 " src="./img/userguide_piet1.png">
-	            <img alt="piet2 " src="./img/userguide_piet2.png">
+        <img alt="login " src="./img/userguide_login.png">
+        <img alt="progress " src="./img/userguide_progress.png">
 
 
-	            <h3>Use Case 2</h3>
-	            
-	            <p>The second use case will present how a client can join a guild. As in case 1 the user will have to login to access the guild features. Upon entering the "Community" tab you will be presented with multiple available guilds on the left side. Each guild's page will show you your friends that are part of it, the guild's achievements and competitions that they took part in or will take part in. To join a guild simply press the blue "+" button under the guilds name.You can quit the guild the same way. You can only be part of a single guild at a time.</p>   
+        <p>After selecting a course you can opt to participate in it. The page will show you your time spent on the
+            course, the achievements you unlocked and your friends that also participated in this course. By clicking
+            the green "play" button you will be redirected to the lesson page that also includes the coding language
+            interpretor, with examples.</p>
 
-	             <img alt="homepage " src="./img/userguide_homepage.png"> 
-	             <img alt="login " src="./img/userguide_login.png">
-	             <img alt="guild " src="./img/userguide_community.png">
-	        </section>
-    </body>
+
+        <img alt="courses" src="./img/userguide_courses.png">
+        <img alt="piet1 " src="./img/userguide_piet1.png">
+        <img alt="piet2 " src="./img/userguide_piet2.png">
+
+
+        <h3>Use Case 2</h3>
+
+        <p>The second use case will present how a client can join a guild. As in case 1 the user will have to login to
+            access the guild features. Upon entering the "Community" tab you will be presented with multiple available
+            guilds on the left side. Each guild's page will show you your friends that are part of it, the guild's
+            achievements and competitions that they took part in or will take part in. To join a guild simply press the
+            blue "+" button under the guilds name.You can quit the guild the same way. You can only be part of a single
+            guild at a time.</p>
+
+        <img alt="homepage " src="./img/userguide_homepage.png">
+        <img alt="login " src="./img/userguide_login.png">
+        <img alt="guild " src="./img/userguide_community.png">
+    </section>
+    <section id="UserTesting">
+        <h2>User Testing</h2>
+        <h1 class="hidden">Usability Test Plan Section</h1>
+        <article class="usabilityTest">
+            <div class="usabilityTestInfo">
+                <h3>Test Plan for: <span>EsoX</span></h3>
+
+                <div class="usabilityTestBackground">
+                    <h4>Persona Type Tested: <span>Primary/Secondary/Served</span></h4>
+                    <h5>Context: <span>A meeting room from the office</span> </h5>
+                    <h5>Duration: <span>10 minutes</span></h5>
+                </div>
+            </div>
+            <div class="usabilityTestObjectives">
+                <h5>Overall Objectives</h5>
+                <ul>
+                    <li>Assess the effectiveness of Esox by having users perform the main flows</li>
+                    <li>Identify obstacles to completing <strong>a certain task or using a certain component</strong>;</li>
+                    <li>Evaluate consistency and standards;</li>
+                    <li>Evaluate accessibility features</li>
+                    <li>Assess the user experience while using EsoX</li>
+                </ul>
+            </div>
+            <div class="usabilityTestScenarios">
+                <h5>Scenario</h5>
+                <p>The user gets familiarized with a new application for educational purposes, EsoX, an application for
+                    learning Esoteric Programming Languages in a user friendly way, having all of these tutorials
+                    centralized in one place. They either want to learn something new and exciting, or they are just
+                    curious about what EsoX is all about. They will start navigating the application.</p>
+            </div>
+            <div class="usabilityTestDetails">
+                <div class="detailsLeft">
+                    <h5>Tasks</h5>
+                    <ul>
+                        <li><strong>Task 1:</strong> <span>Log in the application, save an intermediate course and join
+                                a guild.</span> - <span>Estimated time: 3 minutes</span>;</li>
+                        <li><strong>Task 2:</strong> <span>Start a Piet tutorial and run a program.</span> - <span>Estimated
+                                time: 6 minutes</span>;</li>
+                        <li><strong>Task 3:</strong> <span>Start a Befunge tutorial, have a 500ms delay on, and run a
+                                program.</span> - <span>Estimated time: 5 minutes</span>;</li>
+                    </ul>
+                    <h5>Post-test Questions</h5>
+                    <ul>
+                        <li>How easy was the application to navigate through?</li>
+                        <li>How good were the tutorials explained?</li>
+                        <li>What would you improve to the overall functionality of the application?</li>
+                    </ul>
+                </div>
+                <div class="detailsRight">
+                    <h5>Notes for Test Coordinator</h5>
+                    <ul>
+                        <li>Remind the user that you would like them to 'think aloud' so that you can understand what
+                            they are thinking, about the task or the product/application;</li>
+                        <li>Read the user the scenario for the test;</li>
+                        <li>Read the user the tasks he has to complete. If the tasks are complex, you may want to put a
+                            sheet of paper in front of the user with each task written out;</li>
+                        <li>Record the user's actions, comments, questions, and body language (write them in the Test
+                            Observations section accompanied by video/audio).</li>
+                        <li>Don't offer help; let the user attempt to perform the task. If they ask for help reply
+                            with: "What do you think you/that would do?" "What do you think that means?".</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+        <article class="usabilityTestResults">
+            <div class="usabilityTestResultsInfo">
+                <h3>Test Results for: EsoX</h3>
+                <h4>Success Criteria</h4>
+                <p>A successful design has been achieved when:</p>
+                <ul>
+                    <li>1 out of 3 users managed to complete a task in both Befunge and Piet tutorials.</li>
+                    <li>2 out of 3 users managed to save a course and join a guild</li>
+                    <li>3 out of 3 users managed to log in the application</li>
+                    <li>3 out of 3 users managed to filter the courses</li>
+                </ul>
+            </div>
+            <div class="usabilityTestResultsInfo">
+                <h4>Summary</h4>
+                <ul>
+                    <li>Two users went to the Community tab and used the search functionality</li>
+                    <li>A user didn't notice the example in Piet and navigated through the tutorial for 2 minutes
+                        without direction</li>
+                    <li>A user played with Befunge's delay function and enjoyed the runtime animation</li>
+                    <li>A user tried to break the application by running all the programs in a tutorial</li>
+                    <li>Two users used the import picture functionality in Piet</li>
+                </ul>
+            </div>
+            <div class="usabilityTestResultsInfo">
+                <h5>Demographics</h5>
+                <table class='testTable'>
+                    <tbody>
+                        <tr>
+                            <th class='testTableTh'> User Number </th>
+                            <th class='testTableTh'> Gender </th>
+                            <th class='testTableTh'> Age Range </th>
+                            <th class='testTableTh'> Persona Type </th>
+                            <th class='testTableTh'> Technical Level </th>
+                            <th class='testTableTh'> Background questions answers </th>
+                        </tr>
+                        <tr>
+                            <td class='testTableTd'> User 1 </td>
+                            <td class='testTableTd'>Male</td>
+                            <td class='testTableTd'>25-35</td>
+                            <td class='testTableTd'>Secondary</td>
+                            <td class='testTableTd'>Intermediate</td>
+                            <td class='testTableTd'>1. 2 paradigms, 2. Once a month, 3. Really Excited</td>
+                        </tr>
+                        <tr>
+                            <td class='testTableTd'> User 2 </td>
+                            <td class='testTableTd'>Female</td>
+                            <td class='testTableTd'>25-35</td>
+                            <td class='testTableTd'>Negative</td>
+                            <td class='testTableTd'>Advanced</td>
+                            <td class='testTableTd'>1. 2 paradigms, 2. Once every 3 months, 3. Not very</td>
+                        </tr>
+                        <tr>
+                            <td class='testTableTd'> User 3 </td>
+                            <td class='testTableTd'>Female</td>
+                            <td class='testTableTd'>18-24</td>
+                            <td class='testTableTd'>Primary</td>
+                            <td class='testTableTd'>Intermediate</td>
+                            <td class='testTableTd'>1. 3 paradigms, 2. Once every 1-2 weeks, 3. Very Excited</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="usabilityTestResultsInfo">
+                <h5>Interaction Notes</h5>
+                <table class='testTable'>
+                    <tbody>
+                        <tr>
+                            <th class='testTableTh'>User</th>
+                            <th class='testTableTh'>Task 1</th>
+                            <th class='testTableTh'>Task 2</th>
+                            <th class='testTableTh'>Task 2</th>
+                        </tr>
+                        <tr>
+                            <td class='testTableTd'>Stefan Saramet </td>
+                            <td class='testTableTd'>The user found the login button fast, logged in, navigated through
+                                all the tabs, went back to discovery, filtered to Colors, Selected Piet Beginner, saved
+                                it, clicked play, went to community, selected a guild and saved it. Time to completion:
+                                2 minutes</td>
+                            <td class='testTableTd'>The user started the Piet tutorial because he had it saved,
+                                scrolled through it, saw the example and replicated the image with a bit of struggle
+                                because of the color similarities. Time to completion: 3 minutes</td>
+                            <td class='testTableTd'>The user went to discovery, saved the Begunge Beginner Course,
+                                started it, scrolled through the tutorial, and the Hello World code. Time to
+                                completion: 2 minutes</td>
+                        </tr>
+                        <tr>
+                            <td class='testTableTd'>Irina Glodeanu </td>
+                            <td class='testTableTd'>The user found the login button fast, didn't log in, went through
+                                all the pages, tried to save courses and guilds, couldn't save any, logged in and then
+                                saved both. Time to completion: 4 minutes</td>
+                            <td class='testTableTd'>The user went to Discovery, saved the Piet Advanced Course, started
+                                it, scrolled through the entire tutorial, saw the example, saw the import image,
+                                imported that example image to the piet interpreter, and ran it. Time to completion: 2
+                                minutes</td>
+                            <td class='testTableTd'>The user went to Discovery, saved the Befunge Intermediate Course,
+                                started it, navigated through the tutorial, read a bit and ran the self replicating
+                                code. He played around with the delay functionality and liked the visualization of the
+                                runtime along with the stack. Time to completion: 4 minutes</td>
+                        </tr>
+                        <tr>
+                            <td class='testTableTd'>Ralu Mihordea </td>
+                            <td class='testTableTd'>The user found the login button fast, logged in, selected Fun,
+                                clicked Pikachu course, saved it, went back, clicked Shakespeare course, saved it, went
+                                to Community and saved a guild. Time to completion: 3 minutes</td>
+                            <td class='testTableTd'>The user went to Discovery, saved the Piet Beginner Course, started
+                                it, scrolled through the tutorial, read a bit the guide, saw the example and started to
+                                color the grid. Time to completion: 5 minutes</td>
+                            <td class='testTableTd'>The user went to Discovery, saved the Befunge Beginner Course,
+                                started it and immediately started reading bits of the tutorial. He ran all the code
+                                snippets, and played around with all the functionalities. Time to completion: 5 minutes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="usabilityTestResultsInfo">
+                <h5>Post-test Questions Answers</h5>
+                <table class='testTable'>
+                    <tbody>
+                        <tr>
+                            <th class='testTableTh'> User </th>
+                            <th class='testTableTh'> How easy was the application to navigate through? </th>
+                            <th class='testTableTh'> How good were the tutorials explained? </th>
+                            <th class='testTableTh'> What would you improve to the overall functionality of the
+                                application? </th>
+                        </tr>
+                        <tr>
+                            <td class='testTableTd'> Stefan Saramet </td>
+                            <td class='testTableTd'>Pretty intuitive, would have appreciated a help section</td>
+                            <td class='testTableTd'>They were informative, I actually made things work</td>
+                            <td class='testTableTd'>Tracking of the tutorial progress inside the actual tutorial</td>
+                        </tr>
+                        <tr>
+                            <td class='testTableTd'> Irina Glodeanu </td>
+                            <td class='testTableTd'>Intuitive, I like the fact that you couldn't interact with user
+                                related things while logged out</td>
+                            <td class='testTableTd'>A bit unorganized, I got lost in them at some point, they could be
+                                improved in the future</td>
+                            <td class='testTableTd'>Better tab navigation, Better functionality of the import image in
+                                Piet, Structure of the tutorials</td>
+                        </tr>
+                        <tr>
+                            <td class='testTableTd'> Ralu Mihordea </td>
+                            <td class='testTableTd'>It was rather intuitive, I liked how pages were linked one to
+                                another</td>
+                            <td class='testTableTd'>I like them, I actually understood a bit of Piet and Befunge, I am
+                                looking forward for more</td>
+                            <td class='testTableTd'>The possibility of answering questions, and also asking questions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </section>
+</body>
+
 </html>
