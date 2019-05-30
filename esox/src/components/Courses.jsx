@@ -74,6 +74,14 @@ class CoursesComponent extends React.Component {
         console.log(item);
     }
 
+    openTutorial = () => {
+        if (this.state.selectedCourse.name.includes('Piet')) {
+            this.props.history.push('/tutorialPiet');
+        } else if (this.state.selectedCourse.name.includes('Befunge')) {
+            this.props.history.push('/tutorialBefunge');
+        }
+    }
+
     render() {
         return (
             <div className="esox-content__wrapper">
@@ -107,7 +115,7 @@ class CoursesComponent extends React.Component {
                                 <div>
                                     {this.courseIsSaved() ? (
                                         <div className="course__action_play">
-                                            <Button circular icon='play' color='green' />
+                                            <Button onClick={this.openTutorial} circular icon='play' color='green' />
                                             <div className="course__action_play-title">{`${this.state.selectedCourse ? this.state.selectedCourse.hoursInvested : ''} hours invested`}</div>
                                         </div>
                                     ) : ''}
