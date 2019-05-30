@@ -1,4 +1,0 @@
-{
-    "presets": ["react", "env"],
-    "plugins": ["transform-regenerator", "transform-es2015-parameters"]
-}

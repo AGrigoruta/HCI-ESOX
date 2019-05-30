@@ -17,7 +17,7 @@
     
         <h6>Introduction</h6>
     
-        <p>Piet is a so-called esotheric programming language (esolang). A program in Piet differs from a program in a conventional programming language since it is a colourful picture. The specifications of the Piet language can be found <a href="http://www.dangermouse.net/esoteric/piet.html" target="_blank">here</a>.</p>
+        <p>Piet is a so-called esotheric programming language (esolang). A program in Piet differs from a program in a conventional programming language since it is a colourful picture. The specifications of the Piet language can be found <a href="http://www.dangermouse.net/esoteric/piet.html" target="_blank" aria-label="Read more about Piet specirication">here</a>.</p>
         <p>When programming in Piet the following tables are the essential refence.
             <br>
             <br>
@@ -130,7 +130,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <img src="./img/sqr-art-cs20.png">
+                            <img alt="Piet Program" src="./img/sqr-art-cs20.png">
                         </td>
                         <td>
                             <ul>
@@ -157,7 +157,7 @@
     
         </p>
         <div class="piet"></div>
-        <p>As said before, the colours are not important, the transitions are. Hence the above program could also be given as <img src="./img/sqr-eff-cs20.png">, wich is clearly much more compact, but less artistic ...
+        <p>As said before, the colours are not important, the transitions are. Hence the above program could also be given as <img alt="Piet Program" src="./img/sqr-eff-cs20.png">, wich is clearly much more compact, but less artistic ...
     
         </p>
         <p>Either way the programs are fine, but not quite readable for a human. To solve this (with the hope of writing longer programs) we choose to insert white codels, so as to breakdown the picture in recognisable codepieces. Moreover we will start any <b>stack-changing code</b> with <b>red</b> and any <b>flow-changing code</b> with <b>green</b>. Our program becomes:
@@ -165,19 +165,19 @@
                 <tbody>
                     <tr>
                         <td>
-                            <img src="./img/sqr-cs20.png">
+                            <img alt="Piet Program" src="./img/sqr-cs20.png">
                         </td>
                         <td>
                             <ul>
-                                <li><img src="./img/in-number.png">: <b>in(number)</b>
+                                <li><img alt="Piet Program" src="./img/in-number.png">: <b>in(number)</b>
                                 </li>
-                                <li><img src="./img/duplicate.png">: <b>duplicate</b>
+                                <li><img alt="Piet Program" src="./img/duplicate.png">: <b>duplicate</b>
                                 </li>
-                                <li><img src="./img/multiply.png">: <b>multiply</b>
+                                <li><img alt="Piet Program" src="./img/multiply.png">: <b>multiply</b>
                                 </li>
-                                <li><img src="./img/out-number.png">: <b>out(number)</b>
+                                <li><img alt="Piet Program" src="./img/out-number.png">: <b>out(number)</b>
                                 </li>
-                                <li><img src="./img/end.png">: <b>end program</b>
+                                <li><img alt="Piet Program" src="./img/end.png">: <b>end program</b>
                                 </li>
                             </ul>
                         </td>
@@ -195,31 +195,31 @@
         <ul>
             <li>input/output:
                 <ul>
-                    <li><img src="./img/in-number.png">: <b>in(number)</b>
+                    <li><img alt="Piet Program" src="./img/in-number.png">: <b>in(number)</b>
                     </li>
-                    <li><img src="./img/out-number.png">: <b>out(number)</b>
+                    <li><img alt="Piet Program" src="./img/out-number.png">: <b>out(number)</b>
                     </li>
                 </ul>
             </li>
             <li>stack operations:
                 <ul>
-                    <li><img src="./img/duplicate.png">: <b>duplicate</b>
+                    <li><img alt="Piet Program" src="./img/duplicate.png">: <b>duplicate</b>
                     </li>
-                    <li><img src="./img/pop.png">: <b>pop</b> (forget)
+                    <li><img alt="Piet Program" src="./img/pop.png">: <b>pop</b> (forget)
                     </li>
                 </ul>
             </li>
             <li>math operations:
                 <ul>
-                    <li><img src="./img/add.png">: <b>add</b>
+                    <li><img alt="Piet Program" src="./img/add.png">: <b>add</b>
                     </li>
-                    <li><img src="./img/substract.png">: <b>substract</b>
+                    <li><img alt="Piet Program" src="./img/substract.png">: <b>substract</b>
                     </li>
-                    <li><img src="./img/multiply.png">: <b>multiply</b>
+                    <li><img alt="Piet Program" src="./img/multiply.png">: <b>multiply</b>
                     </li>
-                    <li><img src="./img/divide.png">: <b>divide</b>
+                    <li><img alt="Piet Program" src="./img/divide.png">: <b>divide</b>
                     </li>
-                    <li><img src="./img/mod.png">: <b>mod</b>
+                    <li><img alt="Piet Program" src="./img/mod.png">: <b>mod</b>
                     </li>
                 </ul>
             </li>
@@ -230,33 +230,33 @@
         <p>Now that we've managed to code somewhat clearly in Piet, we're going to use the stack for more complicated things. Lets try to put a number on the stack. Numbers in Piet are surfaces of the same color. They are pushed on the stack by means of the <b>push</b> command which is a darkness shift 1. Pushing 6 on the stack is coded as
         </p>
         <center>
-            <img src="./img/number-1.png"> or <img src="./img/number-2.png">
+            <img alt="Piet Program" src="./img/number-1.png"> or <img alt="Piet Program" src="./img/number-2.png">
         </center>
         <p>Often we want to put several numbers on the stack. This can be done by alternating shades of different surfaces. For instance the sequence of even numbers 2,4,6,8 is put on the stack as follows
         </p>
         <center>
-            <img src="./img/numbers.png">
+            <img alt="Piet Program" src="./img/numbers.png">
         </center>
-        <p>A special case is when we want to put 0 on the stack. This is achieved by <b>push 1-not</b>: <img src="./img/pushzero.png">.
+        <p>A special case is when we want to put 0 on the stack. This is achieved by <b>push 1-not</b>: <img alt="Piet Program" src="./img/pushzero.png">.
         </p>
         <p>Once we have numbers on a stack, we'd like to use them as counters. In order to increment a number we add 1. Hence we get
         </p>
         <ul>
             <li>numbers:
                 <ul>
-                    <li><img src="./img/number-2.png" align="top">: <b>push 6</b>
+                    <li><img alt="Piet Program" src="./img/number-2.png" align="top">: <b>push 6</b>
                         <br>
                         <br>
                     </li>
-                    <li><img src="./img/pushzero.png">: <b>pushzero</b>
+                    <li><img alt="Piet Program" src="./img/pushzero.png">: <b>pushzero</b>
                     </li>
                 </ul>
             </li>
             <li>counters:
                 <ul>
-                    <li><img src="./img/incr.png">: <b>increment</b>
+                    <li><img alt="Piet Program" src="./img/incr.png">: <b>increment</b>
                     </li>
-                    <li><img src="./img/decr.png">: <b>decrement</b>
+                    <li><img alt="Piet Program" src="./img/decr.png">: <b>decrement</b>
                     </li>
                 </ul>
             </li>
@@ -270,7 +270,7 @@
         <p>Conditional statements are achieved by means of the <b>pointer</b> command, which changes the flow of the program clockwise, according to the top value on the stack. Following codepiece describes <b>duplicate-not-not-pointer</b>
         </p>
         <center>
-            <img src="./img/ifzero.png">
+            <img alt="Piet Program" src="./img/ifzero.png">
         </center>
     
         <p>The top value is duplicated and, by means of the double negation, replaced by 1 if it is non-zero or by 0 if it was zero. The pointer command follows. Hence if the top value is 0 the flow goes straight ahead, else it is turned clockwise and goes downwards. This gives us an <b>ifzero</b> codepiece.
@@ -279,26 +279,26 @@
         <p>An infinite loop is easily created.
         </p>
         <center>
-            <img src="./img/loop.png">
+            <img alt="Piet Program" src="./img/loop.png">
         </center>
         <br> Combining this with the above conditional branching we can make a loop until the top value is 0.
         <br>
         <br>
         <center>
-            <img src="./img/loopuntilzero.png">
+            <img alt="Piet Program" src="./img/loopuntilzero.png">
         </center>
         <ul>
             <li>flow-control:
                 <ul>
-                    <li><img src="./img/ifzero.png" align="top">: <b>ifzero</b>
+                    <li><img alt="Piet Program" src="./img/ifzero.png" align="top">: <b>ifzero</b>
                         <br>
                         <br>
                     </li>
-                    <li><img src="./img/loopuntilzero.png" align="top">: <b>loop until zero</b>
+                    <li><img alt="Piet Program" src="./img/loopuntilzero.png" align="top">: <b>loop until zero</b>
                         <br>
                         <br>
                     </li>
-                    <li><img src="./img/end.png" align="top">: <b>end program</b>
+                    <li><img alt="Piet Program" src="./img/end.png" align="top">: <b>end program</b>
                     </li>
                 </ul>
             </li>
@@ -311,7 +311,7 @@
                 <b>in(number)-push 2-mod-ifzero { push 1-out(number)-end program } -pushzero-out(number)-end program</b>
                 <br>
                 <br>
-                <img src="./img/iseven-cs20.png">
+                <img alt="Piet Program" src="./img/iseven-cs20.png">
                 <div class="piet"></div>
             </li>
             <li><u>A countdown</u>. The codepieces are:
@@ -319,7 +319,7 @@
                 <b>push 10-start loop-duplicate-out(number)-decr-ifzero { end program } -next loop</b>
                 <br>
                 <br>
-                <img src="./img/countdown-cs20.png">
+                <img alt="Piet Program" src="./img/countdown-cs20.png">
                 <div class="piet"></div>
             </li>
         </ul>
@@ -370,7 +370,7 @@
                             <br>
                         </td>
                         <td>
-                            <img src="./img/put-example.png">
+                            <img alt="Piet Program" src="./img/put-example.png">
                         </td>
                     </tr>
                 </tbody>
@@ -422,7 +422,7 @@
                             <br>
                         </td>
                         <td>
-                            <img src="./img/get-example.png">
+                            <img alt="Piet Program" src="./img/get-example.png">
                         </td>
                     </tr>
                 </tbody>
@@ -435,11 +435,11 @@
         <ul>
             <li>stack access:
                 <ul>
-                    <li><img src="./img/put.png" align="top">: <b>put 3</b>
+                    <li><img alt="Piet Program" src="./img/put.png" align="top">: <b>put 3</b>
                         <br>
                         <br>
                     </li>
-                    <li><img src="./img/get.png" align="top">: <b>get 3</b>
+                    <li><img alt="Piet Program" src="./img/get.png" align="top">: <b>get 3</b>
                     </li>
                 </ul>
             </li>
@@ -455,7 +455,7 @@
                 <table border="0">
                     <tbody>
                         <tr>
-                            <td><img src="./img/fac-cs20.png">
+                            <td><img alt="Piet Program" src="./img/fac-cs20.png">
                             </td>
                             <td><b>
             <ul>
@@ -481,7 +481,7 @@
                 <p>Once the program is done and working, you can add artwork in the remaining white space, keeping in mind that the flow must not be changed.
                     <br>
                     <br>
-                    <img src="./img/fac-art-cs20.png">
+                    <img alt="Piet Program" src="./img/fac-art-cs20.png">
     
                 </p>
                 <div class="piet"></div>
@@ -493,7 +493,7 @@
                 <table border="0">
                     <tbody>
                         <tr>
-                            <td><img src="./img/isprime-cs20.png">
+                            <td><img alt="Piet Program" src="./img/isprime-cs20.png">
                             </td>
                             <td><b>
             <ul>
@@ -519,7 +519,7 @@
                 <p>Arty version:
                     <br>
                     <br>
-                    <img src="./img/isprime-art-cs20.png">
+                    <img alt="Piet Program" src="./img/isprime-art-cs20.png">
     
                 </p>
             <div class="piet"></div>
@@ -531,7 +531,7 @@
                 <table border="0">
                     <tbody>
                         <tr>
-                            <td><img src="./img/fib-cs20.png">
+                            <td><img alt="Piet Program" src="./img/fib-cs20.png">
                             </td>
                             <td><b>
             <ul>
@@ -567,45 +567,45 @@
                 <tr>
                     <td valign="top">input/output:
                         <ul>
-                            <li><img src="./img/in-number.png">: <b>in(number)</b>
+                            <li><img alt="Piet Program" src="./img/in-number.png">: <b>in(number)</b>
                             </li>
-                            <li><img src="./img/out-number.png">: <b>out(number)</b>
+                            <li><img alt="Piet Program" src="./img/out-number.png">: <b>out(number)</b>
                             </li>
                         </ul>
                     </td>
                     <td valign="top">stack operations:
                         <ul>
-                            <li><img src="./img/duplicate.png">: <b>duplicate</b>
+                            <li><img alt="Piet Program" src="./img/duplicate.png">: <b>duplicate</b>
                             </li>
-                            <li><img src="./img/pop.png">: <b>pop</b>
+                            <li><img alt="Piet Program" src="./img/pop.png">: <b>pop</b>
                             </li>
                         </ul>
                     </td>
                     <td valign="top">math operations:
                         <ul>
-                            <li><img src="./img/add.png">: <b>add</b>
+                            <li><img alt="Piet Program" src="./img/add.png">: <b>add</b>
                             </li>
-                            <li><img src="./img/substract.png">: <b>substract</b>
+                            <li><img alt="Piet Program" src="./img/substract.png">: <b>substract</b>
                             </li>
-                            <li><img src="./img/multiply.png">: <b>multiply</b>
+                            <li><img alt="Piet Program" src="./img/multiply.png">: <b>multiply</b>
                             </li>
-                            <li><img src="./img/divide.png">: <b>divide</b>
+                            <li><img alt="Piet Program" src="./img/divide.png">: <b>divide</b>
                             </li>
-                            <li><img src="./img/mod.png">: <b>mod</b>
+                            <li><img alt="Piet Program" src="./img/mod.png">: <b>mod</b>
                             </li>
                         </ul>
                     </td>
                     <td valign="top" rowspan="2">flow-control:
                         <ul>
-                            <li><img src="./img/ifzero.png" align="top">: <b>ifzero</b>
+                            <li><img alt="Piet Program" src="./img/ifzero.png" align="top">: <b>ifzero</b>
                                 <br>
                                 <br>
                             </li>
-                            <li><img src="./img/loopuntilzero.png" align="top">: <b>loop until zero</b>
+                            <li><img alt="Piet Program" src="./img/loopuntilzero.png" align="top">: <b>loop until zero</b>
                                 <br>
                                 <br>
                             </li>
-                            <li><img src="./img/end.png" align="top">: <b>end program</b>
+                            <li><img alt="Piet Program" src="./img/end.png" align="top">: <b>end program</b>
                             </li>
                         </ul>
                     </td>
@@ -613,29 +613,29 @@
                 <tr>
                     <td valign="top">numbers:
                         <ul>
-                            <li><img src="./img/number-2.png" align="top">: <b>push 6</b>
+                            <li><img alt="Piet Program" src="./img/number-2.png" align="top">: <b>push 6</b>
                                 <br>
                                 <br>
                             </li>
-                            <li><img src="./img/pushzero.png">: <b>pushzero</b>
+                            <li><img alt="Piet Program" src="./img/pushzero.png">: <b>pushzero</b>
                             </li>
                         </ul>
                     </td>
                     <td valign="top">counters:
                         <ul>
-                            <li><img src="./img/incr.png">: <b>increment</b>
+                            <li><img alt="Piet Program" src="./img/incr.png">: <b>increment</b>
                             </li>
-                            <li><img src="./img/decr.png">: <b>decrement</b>
+                            <li><img alt="Piet Program" src="./img/decr.png">: <b>decrement</b>
                             </li>
                         </ul>
                     </td>
                     <td valign="top">stack access:
                         <ul>
-                            <li><img src="./img/put.png" align="top">: <b>put 3</b>
+                            <li><img alt="Piet Program" src="./img/put.png" align="top">: <b>put 3</b>
                                 <br>
                                 <br>
                             </li>
-                            <li><img src="./img/get.png" align="top">: <b>get 3</b>
+                            <li><img alt="Piet Program" src="./img/get.png" align="top">: <b>get 3</b>
                             </li>
                         </ul>
                     </td>

@@ -243,10 +243,11 @@ var Stats = React.createClass({
             d.div(
                 null,
                 'Delay: ', this._owner.getDelay(),
-                ' Show as Character',
+                'Show as Character',
                 d.input({
                     type:'checkbox',
                     ref: 'show as character',
+                    'aria-label': 'Show as Character',
                     value: this.state.show,
                     onClick: this.setShow
                 })
@@ -330,6 +331,7 @@ var Program = React.createClass({
                                 'data-possition-x': x,
                                 'data-possition-y': y,
                                 'data-value': cell,
+                                'aria-label': `${cell}, X:${x}, Y:${y}`,
                                 style: {
                                     width: '100%',
                                     margin: '0px',
@@ -371,6 +373,7 @@ var BoardSettings = React.createClass({
                     className: "form-control",
                     value: self.props.width,
                     onChange: self.updateProgramBoardWidth,
+                    'aria-label': 'Program Width',
                     type: 'number',
                     name: "width"
                 })
@@ -386,6 +389,7 @@ var BoardSettings = React.createClass({
                     className: "form-control",
                     value: self.props.height,
                     onChange: self.updateProgramBoardHeight,
+                    'aria-label': 'Program Height',
                     type: 'number',
                     name: "height"
                 })

@@ -61,7 +61,7 @@ class TutorialBefunge extends React.Component {
                     </List>
                 </aside>
                 <main className="tutorial__frame">
-                    <iframe className="frame" src="befunge/index.html"></iframe>
+                    <iframe className="frame" src="befunge/index.html" title="Befunge tutorial"></iframe>
                 </main>
             </div>
         );

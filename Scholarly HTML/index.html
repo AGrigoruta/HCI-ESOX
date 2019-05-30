@@ -1201,3 +1201,35 @@
 </body>
 
 </html>
+            </article>
+            
+            <div style="clear:both;"></div>
+        </section>
+        <section id="W3C/WAI Web Accessibility Evaluation and Testing">
+            <h2>W3C/WAI Web Accessibility Evaluation and Testing - Lighthouse</h2>
+            <p>Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, and more.</p>
+            <p>You can run Lighthouse in Chrome DevTools, from the command line, or as a Node module. You give Lighthouse a URL to audit, it runs a series of audits against the page, and then it generates a report on how well the page did. From there, use the failing audits as indicators on how to improve the page. Each audit has a reference doc explaining why the audit is important, as well as how to fix it.</p>
+            <p>The tool was be run for each rout of the application. Once the tool is done a report can be downloaded as JSON format - to view it we can use <a href="https://googlechrome.github.io/lighthouse/viewer/"> the online viewer.</a></p>
+            <ul>
+                <li><a href="http://localhost:3000/discover
+">/Discovery- localhost_3000-20190530T095909</a></li>
+                <li><a href="http://localhost:3000/courses
+">/Courses - localhost_3000-20190530T100359</a></li>
+                <li><a href="http://localhost:3000/tutorialBefunge
+">/BefungeBeginer - localhost_3000-20190530T102503</a></li>
+                <li><a href="http://localhost:3000/tutorialPiet
+">/PietBeginer - localhost_3000-20190530T102625</a></li>
+            </ul>
+            <p>We saw that the reports are incomplet as they don't run inside the iframe on the page so we dived deeper.</p>
+            <ul>
+                <li><a href="http://192.168.43.179:5000 ">/BefungeBeginer - 192.168.43.179_5000-20190530T111819</a></li>
+                <li><a href="http://localhost:5000">/PietBeginer - 192.168.43.179_5000-20190530T114153</a></li>
+            </ul>
+            <p>After fixing the big issues on the ifreames:</p>
+            <ul>
+                <li><a href="http://192.168.43.179:5000 ">/BefungeBeginer - 192.168.43.179_5000-20190530T113933</a></li>
+                <li><a href="http://localhost:5000">/PietBeginer - 192.168.43.179_5000-20190530T115008</a></li>
+            </ul>
+        </section>
+    </body>
+</html>

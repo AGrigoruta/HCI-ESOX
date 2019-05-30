@@ -62,7 +62,7 @@ class TutorialPiet extends React.Component {
                     </List>
                 </aside>
                 <main className="tutorial__frame">
-                    <iframe className="frame" src="piet/index.html"></iframe>
+                    <iframe className="frame" src="piet/index.html" title="Piet Tutorial"></iframe>
                 </main>
             </div>
         );

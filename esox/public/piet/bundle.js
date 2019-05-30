@@ -170,6 +170,7 @@ var Controls = function (_React$Component) {
                         type: "number",
                         name: "height",
                         className: "form-control",
+                        "aria-label": "Program Height",
                         style: {
                             width: '5em',
                             display: 'inline-block'
@@ -188,6 +189,7 @@ var Controls = function (_React$Component) {
                         },
                         type: "number",
                         name: "width",
+                        "aria-label": "Program Width",
                         className: "form-control",
                         style: {
                             width: '5em',
@@ -541,6 +543,7 @@ var IO = function IO(_ref2) {
         { key: 'input-label' },
         'Input'
     ), _react2.default.createElement('br', { key: 'br-1' }), _react2.default.createElement('textarea', {
+        'aria-label': 'Piet input arguments',
         key: 'in',
         id: 'in',
         placeholder: 'Enter input before running program',
@@ -551,6 +554,7 @@ var IO = function IO(_ref2) {
         { key: 'output-label' },
         'Output'
     ), _react2.default.createElement('br', { key: 'br-3' }), _react2.default.createElement('textarea', {
+        'aria-label': 'Piet output arguments',
         key: 'out',
         id: 'out',
         readOnly: true,

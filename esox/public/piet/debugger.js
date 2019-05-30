@@ -64,6 +64,7 @@ const IO = ({ output, isInterpreting }) => [
     <b key="input-label">Input</b>,
     <br key="br-1" />,
     <textarea
+        aria-label="Piet input arguments"
         key="in"
         id="in"
         placeholder="Enter input before running program"
@@ -74,6 +75,7 @@ const IO = ({ output, isInterpreting }) => [
     <b key="output-label">Output</b>,
     <br key="br-3" />,
     <textarea
+        aria-label="Piet output arguments"
         key="out"
         id="out"
         readOnly

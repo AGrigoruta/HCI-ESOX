@@ -25,6 +25,7 @@ class Controls extends React.Component {
                         type="number"
                         name="height"
                         className="form-control"
+                        aria-label="Program Height"
                         style={{
                             width: '5em',
                             display: 'inline-block',
@@ -39,6 +40,7 @@ class Controls extends React.Component {
                         ref={input => (this.width = input)}
                         type="number"
                         name="width"
+                        aria-label="Program Width"
                         className="form-control"
                         style={{
                             width: '5em',
