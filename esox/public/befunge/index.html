@@ -12,11 +12,152 @@
     <link href="../piet/css/piet.css" rel="stylesheet">
   </head>
   <body>
-    <div class="befunge"></div>
-    <div class="befunge"></div>
-    <div class="befunge"></div>
-    <div class="befunge"></div>
-    <div class="befunge"></div>
+    <article>
+      <h5>Preamble</h5>
+      <p>You may ask why someone should learn such a esoteric language as Befunge-93 ? 
+          It has close to no real world application and is far away from every other language you may already know.</p>
+      <p>But wait, Befunge has one really neat property (at least in my opinion) its really fun to write in it. And that because it’s totally different from every other language. Writing code in Befunge has a lot to do with planning and laying out your code.</p>
+      <p>Yes physically planning how your code will look and where you have to write specific subroutines. 
+          But enough, let’s go look at some code.</p>
+      <h5>A whole new Dimension</h5>
+      <p>You have to understand that Befunge operates in an 2-dimensional space - like in normal programming you have a PC (Programm Counter) that describes your current position.</p>
+      <p>In normal programs (you know, C, Phyton, Java etc) this PC is 1dimensional, in Befunge it’s 2dimensional. At the begining its positioned in the top-left corner and with every tick its moving one field to the left. 
+          So every Character in your text-document is a command - the most simple command is a space. The space is the NOP Command - the No operation</p>
+      <p><strong>NOTE:</strong></p>
+      <ul>
+        <li><p>Befunge operates in a 2-dimensional Grid</p></li>
+        <li><p>The programm-counter starts topleft and initially moves right</p></li>
+        <li><p>Every character in your document is then an individual command</p></li>
+      </ul>
+      <h6>And it loops around</h6>
+      <p>You see correct - an empty file is indeed a valid Befunge Program. 
+          You may ask what it does. That’s kinda simple, it just executes NOP over and over again. 
+          A Befunge-93 program has the size of 80x25, and when the PC reaches the right edge it just wraps around and comes back in on the left edge.</p>
+      <p><strong>NOTE:</strong></p>
+      <ul>
+        <li><p>Befunge-93 programs have a fixed size of 80x25</p></li>
+        <li><p>The Befunge space is infinity - it wraps around its edges</p></li>
+      </ul>
+      <p>OK, but now we want to write real commands to our file - there are 4 basic commands ( v , > , ^ and < ). With these “arrows” you are able to change the direction of the PC. So with these commands we are now able to write a rather simple endless-loop program.</p>
+      <div class="befunge"></div>
+      <h6>Stack it up</h6>
+      <p>We now have a Grid where we can layout our program and a PC that runs through this grid to execute our precious programm. Isn’t that wonderful?</p>
+      <p>But wait! There’s more</p>
+      <p>In fact Befunge has one more element you should know about: The stack.</p>
+      <p>Every Befunge Command has a Stack you can manipulate in your program, you can do all the normal stackoperations on it, push, pop, peek etc.</p>
+      <p>The Commands to push something on the stack are 0 - 9. So if you write 0 1 9 9 it will push a zero, a one, and two nines on the stack.</p>
+      <div class="befunge"></div>
+      <p>If you want to end the program after that you can use the @ Command.</p>
+      <p><strong>NOTE:</strong></p>
+      <ul>
+        <li><p>You can push a digit to the stack with the commands 1, 2, 3, 4, 5, 6, 7, 8, 9, 0</p></li>
+        <li><p>The Command @ stops the program</p></li>
+      </ul>
+      <div class="befunge"></div>
+      <p>You also easily push values to the stack with the so called stringmode 
+          With the command " you start the stringmode and with the same command " you can also end it again. 
+          While the stringmode is active every Character the PC encounters will be pushed as an ASCII-Value to the stack.</p>
+      <p>The Program <code>abc @</code> will so leave the stack in the following state after completion <strong>99 | 98| 97</strong></p>
+      <div class="befunge"></div>
+      <p><strong>NOTE:</strong></p>
+      <ul>
+        <li><p>A " starts and ends the stringmode</p></li>
+        <li><p>While in stringmode every Command will be pushed as its ASCII Value to the stack</p></li>
+      </ul>
+      <h6>Finally a real program</h6>
+      <p>Okay, okay - I highly appreciate it that you are still following me. I know i promised you a Hello-World program. And I’m happy to announce that we are finally at the point where we can write it. 
+          Only one last command is missing, the character-output (,) command. This command takes one value of the stack - interprets it as an ASCII-Value, and outputs it to wherever the interpreter show the output.</p>
+      <p>So now - lets write this program: "dlroW olleH" ,,,,,,,,,,, @</p>
+      <div class="befunge"></div>
+        <p>And thats it - a really simple Hello World. As you can see the program has two parts, first we fill the stack with the ASCII values for the two words “Hello World”, and then we print each char to the output. </p>
+        <p>You may ask why Hello World is written backwards - that’s rather simple, because we work with a stack the last pushed value is the first popped value (LI-FO principle ). And so - to output something in the correct order - we have to input it in the reversed order</p>
+      <h5>Let’s golf</h5>
+        <h6>What we did wrong</h6>
+          <p>Some of you probably know Codegolf . These are programming challenges with the target, to write programm-code with the least amount of bytes.</p>
+          <p>Because of the limited amount of space in Befunge, this is here more important than ever. In our last example you saw how to output a string, but as you can imagine the longer the string gets the more commas you have to write and faster than you can imagine you have filled the whole space.</p>
+        <h6>Decision, Decisions, Decisions</6>
+          <p>So you may ask what is the basic feature of a programming language, what feature can’t be scrapped away without loosing something essentials. </p>
+          <p>One of these basics things is the possibility to do conditional logic. Your program has to react to something and react differently depending on the results.</p>
+          <p>So now it’s time to introduce 2 new commands | and _ . These commands are called “Decision making”. They pop a value from the stack and change the PC direction depending on its value. The value is interpreted as an boolean, the conversion used is the same you probably know from C. If the value is Zero, its false - otherwise its true. </p>
+          <p>The | Command routes the PC to the top if the value is true and to the bottom if the value is false. Respective behaves the _ command with left and right.</p>
+          <p>An other command is the :, what it does is pretty simple - it duplicates the top-stack value. </p>
+          <p>And the last command is $. It’s also a kinda simple command: it pops a value from the stack - nothing more, it justs pops it and then forgets about it. </p>
+          <p>With this knowledge we can now finally optimize our Hello World:</p>
+          <div class="befunge"></div>
+          <p>So what happens here ?</p>
+          <ul>
+              <li><p>First we put “Hello World” reversed on the stack</p></li>
+              <li><p>The we go in a loop, in every loop we do </p></li>
+              <li>
+                <ul>
+                    <li><p>Duplicate the TOS1</p></li>
+                    <li><p>Test if the TOS is != 0 (true for every ASCII Character)</p></li>
+                    <li><p>Output the TOS</p></li>
+                </ul>
+              </li>
+              <li><p>This loop goes on until the stack is empty. When we now try to access the empty stack (with the duplicate command) it results in two zeros on the stack. This is so because an access to an empty stack will always result in a zero</p></li>
+              <li><p>The returned zero is now interpreted as false and we exit the loop, the remaining zero on the stack is removed with the pop command and the program exits on the @ command</p></li>
+          </ul>
+          <p><strong>NOTE:</strong></p>
+          <ul>
+            <li><p>_ and | change the PC direction depending on a value popped from the stack</p></li>
+            <li><p>: duplicates the top-of-stack-value</p></li>
+            <li><p>$ removes the top-of-stack-value</p></li>
+            <li><p>Accessing an empty stack will result in a zero</p></li>
+          </ul>
+          <h6>One step further</h6>
+            <p>So our Hello World is now a lot smaller. Especially if you remove all the unneeded NOPs in the previous example. But our standard shall be to become the very best like no one ever was ….</p>
+            <p>So now I shall introduce you to one of the more interesting commands - <strong>the trampoline # </strong>
+            <p>After your PC encounters the trampoline it “jumps” over the next command, this results in a few very neat tricks you can do in your code.</p>
+            <p>The next Hello World i will show you shall be our last one. This is the standard code to output a string of variable length and i don’t believe that there is a more optimized way to do it.</p>
+            <div class="befunge"></div>
+            <p>Here you can see another neat feature of Befunge - the jump command is used twice, one time from left to right and the second time from right to left, so its used to skip two different commands (: and ,) although only being one command.</p>
+          <h5>Everything is mathematical</h5>
+          <h6>Simple Calculus 101</h6>
+           <p>Our programs are still rather static, we want them to actually do some work, for example calculate something. Luckily Befunge has a few operational commands in its repertoire.</p>
+           <ul>
+              <li><p>+ The ADD command: Pops two values from the stack and pushed the result of the addition</p></li>
+              <li><p>- The SUB command: Pops two values from the stack and pushed the result of the subtraction</p></li>
+              <li><p>* The MULT command: Pops two values from the stack and pushed the result of the multiplication</p></li>
+              <li><p>/ The DIV command: Pops two values from the stack and pushed the result of the division</p></li>
+              <li><p>% The MOD command: Pops two values from the stack and pushed the result of the modulo operation</p></li>
+              <li><p>! The NOT command: Pops one value from the stack, interprets it as a boolean and pushes the negation</p></li>
+              <li><p>´ The COMP command: Pops two values from the stack and pushed the result of the compare “a>b”</p></li>
+            </ul>
+            <p>So if you want to calculate 4+5 just write <code>45+</code></p>
+            <p>speak:</p>
+            <ul>
+              <li><p>Push 4 to stacke</p></li>
+              <li><p>Push 5 to stack</p></li>
+              <li><p>Pop 4 and 5 -> Push (4+5=)9 to the stack</p></li>
+            </ul>
+            <p>And if you want (4+5)*6+7 you write</p>
+            <div class="befunge"></div>
+            <p>Some of you may say that this notation seems familiar. That’s true - it’s the so called postfix2 notation.</p>
+            <p>This is one of Befunge’s very neat “features” writing a mathematical expression will always result in a postfix notation and you can simply write a postfix notation in Befunge.</p>
+            <p><strong>NOTE:</strong></p>
+            <ul>
+              <li><p>+, *, - ,/, %, !, ` are the operator commands</p></li>
+              <li><p>These pop their arguments from the stack and push the result back</p></li>
+              <li><p>You can write mathematical expressions in postfix notation</p></li>
+            </ul>
+            <h5>One small step for a man</h5>
+            <h6>Be the change you want to see</h6>
+            <p>Befunge has one pretty big feature you haven’t even seen now … <strong>self-modification.</strong> </p>
+            <p>Yes you heard right, Befunge is capable of modifying its own code while running.</p>
+            <p>The responsible commands are p and g, namely put and get.</p>
+            <p>With put you can modify a specific command. put gets 3 Values from the stack x, y and value. x and y describe the position of the command and value is the new value of this field.</p>
+            <p>The get command works the other way around, it gets the value of a command at a specific position. get gets 2 values from the stack x and y, these values describe a specific field in the code, the command then gets the ASCII value of this command and pushed is onto the stack.</p>
+            <div class="befunge"></div>
+            <h6>More complex examples</h6>
+            <p>Perhaps you want to try to solve the next task on your own. You already know everything you need and at the bottom of this tutorial you will find a full table of every command.</p>
+            <p>You shall write a program that outputs the fibonacci numbers, one after the other.An example output would look like: </p>
+            <p>1,1,2,3,5,8 ...</p>
+            <p>I write an simple solution that does this task. Note that i didn’t highly optimize it on purpose, so its easier to follow whats actually going on:</p>
+            <div class="befunge"></div>
+            <p>FizzBuzz example:</p>
+            <div class="befunge"></div>
+          </article>
     <div>
       <a href="https://github.com/arnemart/befungius">Github</a> - <a href="http://quadium.net/funge/spec98.html">Befunge spec</a>
     </div>

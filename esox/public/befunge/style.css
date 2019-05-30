@@ -1,6 +1,10 @@
 :root {
     overflow-x: hidden;
 }
+article {
+    width: 80vw;
+    margin: 0 auto;
+}
 textarea {
     font-family: 'Audiowide', cursive;
     box-sizing: border-box;
@@ -88,7 +92,7 @@ textarea {
 
 .stats {
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 3;
 }
 
 .info {
@@ -113,6 +117,7 @@ textarea {
     grid-row-end: 4;
     border-top: 1px dashed var(--main-accent-color);
     padding: 5px;
+    overflow-x: auto;
 }
 
 .output h3 {

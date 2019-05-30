@@ -278,7 +278,7 @@ var Output = React.createClass({
     render: function() {
         return d.div(
             { className: 'output' },
-            d.h3(null, 'Output:'),
+            d.strong(null, 'Output:'),
             this.props.outputString
         );
     }
@@ -436,8 +436,44 @@ var Editor = React.createClass({
 
 var samplesBefunge = [
     {
+        title: 'Endless loop',
+        code: '>      v\n'+
+              '        \n'+
+              '        \n'+
+              '        \n'+
+              '^      <'
+    },
+    {
+        title: 'To The Stack',
+        code: '0 1 9 9',
+    },
+    {
+        title: 'To The Stack',
+        code: '0 1 9 9 @',
+    },
+    {
+        title: 'To The Stack',
+        code: '"abc" @',
+    },
+    {
+        title: 'Hello world 1',
+        code: '"dlroW olleH" ,,,,,,,,,,, @'
+    },
+    {
+        title: 'Hello world 2',
+        code:   'v                 \n'+
+                '                  \n'+
+                '              v ,<\n'+
+                '>"dlroW olleH">: |\n'+
+                '                 >$@'
+    },
+    {
         title: 'Hello world',
         code: '0"!dlrow olleH">:#,_@'
+    },
+    {
+        title: 'Hello world',
+        code: '45+'
     },
     {
         title: 'Count and rewrite',
@@ -447,12 +483,9 @@ var samplesBefunge = [
             '^ 01+*68<'
     },
     {
-        title: 'Quine',
-        code: ':0g:84*-!#@_,1+'
-    },
-    {
-        title: 'Weird recursive quine',
-        code: 'p>n00g1+00p00g00#;g:84*-!#v_\\55*00g*+00gp1+::0;'
+        title: 'Fibonacii',
+        code:   '>> 100p 110p 1. ",",   1.",", > 00g 10g: 00p + :. ",",  10p       v\n'+
+                '                              ^                                   <'
     },
     {
         title: 'Fizzbuzz',
@@ -464,7 +497,15 @@ var samplesBefunge = [
             '"   v"fizz"<         <\n' +
             '^<         $<>:#,_v\n' +
             '    >      #^^#   <'
-    }
+    },
+    {
+        title: 'Quine',
+        code: ':0g:84*-!#@_,1+'
+    },
+    {
+        title: 'Weird recursive quine',
+        code: 'p>n00g1+00p00g00#;g:84*-!#v_\\55*00g*+00gp1+::0;'
+    },
 ];
 
 var SampleList = React.createClass({
