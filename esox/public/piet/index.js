@@ -32,8 +32,8 @@ const mapCommandsToColours = baseColour => {
 };
 */
 
-const HEIGHT = 15, // initial height
-    WIDTH = 15; // initial width
+const HEIGHT = 10, // initial height
+    WIDTH = 10; // initial width
 
 function getAppState () {
     const appState = {

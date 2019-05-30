@@ -1,3 +1,8 @@
+article {
+    width: 80vw;
+    margin: 0 auto;
+}
+
 textarea {
     font-family: 'Audiowide', cursive;
     box-sizing: border-box;

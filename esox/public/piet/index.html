@@ -12,7 +12,637 @@
     <link href="./css/piet.css" rel="stylesheet">
 </head>
 <body>
-    <div class="piet"></div>
+    <article>
+        <h5>Esolang: Piet, an easy tutorial</h5>
+    
+        <h6>Introduction</h6>
+    
+        <p>Piet is a so-called esotheric programming language (esolang). A program in Piet differs from a program in a conventional programming language since it is a colourful picture. The specifications of the Piet language can be found <a href="http://www.dangermouse.net/esoteric/piet.html" target="_blank">here</a>.</p>
+        <p>When programming in Piet the following tables are the essential refence.
+            <br>
+            <br>
+    
+            <table border="0">
+                <tbody>
+                    <tr>
+                        <td valign="center">
+                            <table border="1" cellpadding="3" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td bgcolor="#FFC0C0" align="center">light red</td>
+                                        <td bgcolor="#FFFFC0" align="center">light yellow</td>
+                                        <td bgcolor="#C0FFC0" align="center">light green</td>
+                                        <td bgcolor="#C0FFFF" align="center">light cyan</td>
+                                        <td bgcolor="#C0C0FF" align="center">light blue</td>
+                                        <td bgcolor="#FFC0FF" align="center">light magenta</td>
+                                    </tr>
+                                    <tr>
+                                        <td bgcolor="#FF0000" align="center">red</td>
+                                        <td bgcolor="#FFFF00" align="center">yellow</td>
+                                        <td bgcolor="#00FF00" align="center">green</td>
+                                        <td bgcolor="#00FFFF" align="center">cyan</td>
+                                        <td bgcolor="#0000FF" align="center">blue</td>
+                                        <td bgcolor="#FF00FF" align="center">magenta</td>
+                                    </tr>
+                                    <tr>
+                                        <td bgcolor="#C00000" align="center">dark red</td>
+                                        <td bgcolor="#C0C000" align="center">dark yellow</td>
+                                        <td bgcolor="#00C000" align="center">dark green</td>
+                                        <td bgcolor="#00C0C0" align="center">dark cyan</td>
+                                        <td bgcolor="#0000C0" align="center">dark blue</td>
+                                        <td bgcolor="#C000C0" align="center">dark magenta</td>
+                                    </tr>
+                                    <tr>
+                                        <td bgcolor="#FFFFFF" align="center" colspan="3">white</td>
+                                        <td bgcolor="#000000" align="center" colspan="3"><font color="#FFFFFF">black</font></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td valign="center">
+                            <table border="1" cellpadding="3" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <th colspan="3">darkness change</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Hue change</th>
+                                        <th>None</th>
+                                        <th>1 Darker</th>
+                                        <th>2 Darker</th>
+                                    </tr>
+                                    <tr>
+                                        <th>None</th>
+                                        <td>&nbsp;</td>
+                                        <td>push</td>
+                                        <td>pop</td>
+                                    </tr>
+                                    <tr>
+                                        <th>1 Step</th>
+                                        <td>add</td>
+                                        <td>subtract</td>
+                                        <td>multiply</td>
+                                    </tr>
+                                    <tr>
+                                        <th>2 Steps</th>
+                                        <td>divide</td>
+                                        <td>mod</td>
+                                        <td>not</td>
+                                    </tr>
+                                    <tr>
+                                        <th>3 Steps</th>
+                                        <td>greater</td>
+                                        <td>pointer</td>
+                                        <td>switch</td>
+                                    </tr>
+                                    <tr>
+                                        <th>4 Steps</th>
+                                        <td>duplicate</td>
+                                        <td>roll</td>
+                                        <td>in(number)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>5 Steps</th>
+                                        <td>in(char)</td>
+                                        <td>out(number)</td>
+                                        <td>out(char)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+    
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    
+        </p>
+        <p>In a Piet program the colours themselves do not matter, it's the <b>transitions</b> in hue and darkness that form the code.
+    
+        </p>
+        <h6>An example</h6>
+    
+        <p>The following picture is a Piet program that asks the user for a number and calculates its <u>square</u>.
+    
+        </p>
+        <p>Starting in the top right codel (= enlarged pixel, examples here use codel size 20) and going right we get:
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="./img/sqr-art-cs20.png">
+                        </td>
+                        <td>
+                            <ul>
+                                <li><b>light blue</b> to <b>dark green</b> (darkness shift 2 and hue shift 4): <b>in(number)</b>. So the user is asked for a number and it is put on the stack.
+                                </li>
+                                <li><b>black</b> wall. The direction is changed clockwise, we go down.
+                                </li>
+                                <li><b>dark green</b> to <b>dark red</b> (hue shift 4):<b>duplicate</b>. The number is duplicated and put on the stack.
+                                </li>
+                                <li><b>dark red</b> to <b>yellow</b> (darkness shift 2 and hue shift 1):<b>multiply</b>. So two numbers are taken from the stack and multiplied. Since they're both the same, we've squared the number. It is then put on the stack again (which now contains only the result).
+                                </li>
+                                <li><b>yellow</b> to <b>dark red</b> (darkness shift 1 and hue shift 5):<b>out(number)</b>. The result is written as output.
+                                </li>
+                                <li>over <b>white</b> to <b>blue</b> (jumping over white causes no transitions): <b>noop</b>. Nothing is done.
+                                </li>
+                                <li><b>black</b> walls everywhere, the program terminates.
+                                </li>
+                            </ul>
+                            The program can be summarized as <b>in(number)-duplicate-multiply-out(number)</b>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    
+        </p>
+        <div class="piet"></div>
+        <p>As said before, the colours are not important, the transitions are. Hence the above program could also be given as <img src="./img/sqr-eff-cs20.png">, wich is clearly much more compact, but less artistic ...
+    
+        </p>
+        <p>Either way the programs are fine, but not quite readable for a human. To solve this (with the hope of writing longer programs) we choose to insert white codels, so as to breakdown the picture in recognisable codepieces. Moreover we will start any <b>stack-changing code</b> with <b>red</b> and any <b>flow-changing code</b> with <b>green</b>. Our program becomes:
+            <table border="0">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="./img/sqr-cs20.png">
+                        </td>
+                        <td>
+                            <ul>
+                                <li><img src="./img/in-number.png">: <b>in(number)</b>
+                                </li>
+                                <li><img src="./img/duplicate.png">: <b>duplicate</b>
+                                </li>
+                                <li><img src="./img/multiply.png">: <b>multiply</b>
+                                </li>
+                                <li><img src="./img/out-number.png">: <b>out(number)</b>
+                                </li>
+                                <li><img src="./img/end.png">: <b>end program</b>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    
+        </p>
+        <div class="piet"></div>
+        <h6>Elementary codepieces</h6>
+    
+        <p>Starting any <b>stack-changing code</b> with <b>red</b>, we get the following codepieces.
+    
+        </p>
+        <ul>
+            <li>input/output:
+                <ul>
+                    <li><img src="./img/in-number.png">: <b>in(number)</b>
+                    </li>
+                    <li><img src="./img/out-number.png">: <b>out(number)</b>
+                    </li>
+                </ul>
+            </li>
+            <li>stack operations:
+                <ul>
+                    <li><img src="./img/duplicate.png">: <b>duplicate</b>
+                    </li>
+                    <li><img src="./img/pop.png">: <b>pop</b> (forget)
+                    </li>
+                </ul>
+            </li>
+            <li>math operations:
+                <ul>
+                    <li><img src="./img/add.png">: <b>add</b>
+                    </li>
+                    <li><img src="./img/substract.png">: <b>substract</b>
+                    </li>
+                    <li><img src="./img/multiply.png">: <b>multiply</b>
+                    </li>
+                    <li><img src="./img/divide.png">: <b>divide</b>
+                    </li>
+                    <li><img src="./img/mod.png">: <b>mod</b>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    
+        <h6>Numbers on a stack</h6>
+    
+        <p>Now that we've managed to code somewhat clearly in Piet, we're going to use the stack for more complicated things. Lets try to put a number on the stack. Numbers in Piet are surfaces of the same color. They are pushed on the stack by means of the <b>push</b> command which is a darkness shift 1. Pushing 6 on the stack is coded as
+        </p>
+        <center>
+            <img src="./img/number-1.png"> or <img src="./img/number-2.png">
+        </center>
+        <p>Often we want to put several numbers on the stack. This can be done by alternating shades of different surfaces. For instance the sequence of even numbers 2,4,6,8 is put on the stack as follows
+        </p>
+        <center>
+            <img src="./img/numbers.png">
+        </center>
+        <p>A special case is when we want to put 0 on the stack. This is achieved by <b>push 1-not</b>: <img src="./img/pushzero.png">.
+        </p>
+        <p>Once we have numbers on a stack, we'd like to use them as counters. In order to increment a number we add 1. Hence we get
+        </p>
+        <ul>
+            <li>numbers:
+                <ul>
+                    <li><img src="./img/number-2.png" align="top">: <b>push 6</b>
+                        <br>
+                        <br>
+                    </li>
+                    <li><img src="./img/pushzero.png">: <b>pushzero</b>
+                    </li>
+                </ul>
+            </li>
+            <li>counters:
+                <ul>
+                    <li><img src="./img/incr.png">: <b>increment</b>
+                    </li>
+                    <li><img src="./img/decr.png">: <b>decrement</b>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    
+        <h6>Controlling the flow</h6>
+    
+        <p>Any programming language has the ability to keep values stored (either as variables or in a stack) and the necessary operations on these values (+,-,*,/, ...). Piet does this as described above. Besides this, we'd like to have <b>conditional branching</b> and <b>loops</b>. Any <b>flow-changing code</b> will start with a <b>green</b> codel.
+    
+        </p>
+        <p>Conditional statements are achieved by means of the <b>pointer</b> command, which changes the flow of the program clockwise, according to the top value on the stack. Following codepiece describes <b>duplicate-not-not-pointer</b>
+        </p>
+        <center>
+            <img src="./img/ifzero.png">
+        </center>
+    
+        <p>The top value is duplicated and, by means of the double negation, replaced by 1 if it is non-zero or by 0 if it was zero. The pointer command follows. Hence if the top value is 0 the flow goes straight ahead, else it is turned clockwise and goes downwards. This gives us an <b>ifzero</b> codepiece.
+    
+        </p>
+        <p>An infinite loop is easily created.
+        </p>
+        <center>
+            <img src="./img/loop.png">
+        </center>
+        <br> Combining this with the above conditional branching we can make a loop until the top value is 0.
+        <br>
+        <br>
+        <center>
+            <img src="./img/loopuntilzero.png">
+        </center>
+        <ul>
+            <li>flow-control:
+                <ul>
+                    <li><img src="./img/ifzero.png" align="top">: <b>ifzero</b>
+                        <br>
+                        <br>
+                    </li>
+                    <li><img src="./img/loopuntilzero.png" align="top">: <b>loop until zero</b>
+                        <br>
+                        <br>
+                    </li>
+                    <li><img src="./img/end.png" align="top">: <b>end program</b>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h6>Examples</h6>
+    
+        <ul>
+            <li>The following program uses the above conditional branching to determine if an user input is <u>even or odd</u>. The codepieces are:
+                <br>
+                <b>in(number)-push 2-mod-ifzero { push 1-out(number)-end program } -pushzero-out(number)-end program</b>
+                <br>
+                <br>
+                <img src="./img/iseven-cs20.png">
+                <div class="piet"></div>
+            </li>
+            <li><u>A countdown</u>. The codepieces are:
+                <br>
+                <b>push 10-start loop-duplicate-out(number)-decr-ifzero { end program } -next loop</b>
+                <br>
+                <br>
+                <img src="./img/countdown-cs20.png">
+                <div class="piet"></div>
+            </li>
+        </ul>
+    
+        <h6>Accessing the stack</h6>
+    
+        <p>Using the stack can be somewhat complicated. We'll introduce two codepieces to put and retrieve a value to/from an arbitrary place in the stack. The Piet command needed is <b>roll</b>. <b>roll</b> will bury a value too a certain depth (in the example below 3) in the stack. It is used as follows.
+            <br>
+            <br>
+            <table border="1">
+                <tbody>
+                    <tr>
+                        <th>Stack
+                        </th>
+                        <th>push 3
+                            <br>push 1
+                        </th>
+                        <th>roll
+                        </th>
+                        <th>piet code
+                        </th>
+                    </tr>
+                    <tr>
+                        <td valign="bottom" align="center">
+                            10
+                            <br> 9
+                            <br> 8
+                            <br> 7
+                            <br> 6
+                            <br>
+                        </td>
+                        <td valign="bottom" align="center">
+                            1
+                            <br> 3
+                            <br> 10
+                            <br> 9
+                            <br> 8
+                            <br> 7
+                            <br> 6
+                            <br>
+                        </td>
+                        <td valign="bottom" align="center">
+                            9
+                            <br> 8
+                            <br> 10
+                            <br> 7
+                            <br> 6
+                            <br>
+                        </td>
+                        <td>
+                            <img src="./img/put-example.png">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <div class="piet"></div>
+
+        <p>Using <b>roll</b> with -1 instead of 1 allows to retreive a value from the stack.
+            <br>
+            <br>
+            <table border="1">
+                <tbody>
+                    <tr>
+                        <th>Stack
+                        </th>
+                        <th>push 3
+                            <br>push 1-push 2-substract
+                        </th>
+                        <th>roll
+                        </th>
+                        <th>piet code
+                        </th>
+                    </tr>
+                    <tr>
+                        <td valign="bottom" align="center">
+                            10
+                            <br> 9
+                            <br> 8
+                            <br> 7
+                            <br> 6
+                            <br>
+                        </td>
+                        <td valign="bottom" align="center">
+                            -1
+                            <br> 3
+                            <br> 10
+                            <br> 9
+                            <br> 8
+                            <br> 7
+                            <br> 6
+                            <br>
+                        </td>
+                        <td valign="bottom" align="center">
+                            8
+                            <br> 10
+                            <br> 9
+                            <br> 7
+                            <br> 6
+                            <br>
+                        </td>
+                        <td>
+                            <img src="./img/get-example.png">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    
+        </p>
+        <div class="piet"></div>
+        <p>We now have the codepieces
+        </p>
+        <ul>
+            <li>stack access:
+                <ul>
+                    <li><img src="./img/put.png" align="top">: <b>put 3</b>
+                        <br>
+                        <br>
+                    </li>
+                    <li><img src="./img/get.png" align="top">: <b>get 3</b>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    
+        <h6>Making art</h6>
+    
+        <p>We are now able to write some more example programs in Piet.
+    
+        </p>
+        <ul>
+            <li><u>factorial</u>: The user is asked for a number n and n! is calculated. The codepieces are as follows.
+                <table border="0">
+                    <tbody>
+                        <tr>
+                            <td><img src="./img/fac-cs20.png">
+                            </td>
+                            <td><b>
+            <ul>
+            <li>in(number)
+            </li><li>duplicate
+            </li><li>begin loop (stack: counter, temp result)
+            </li><li>decr 
+            </li><li>duplicate
+            </li><li>put 3 (counter is copied to the bottom of the stack)
+            </li><li>ifzero { pop (forget counter) -out(number)-end program} 
+            </li><li>multiply
+            </li><li>put 2(result is placed on bottom of the stack, counter goes to the top)
+            </li><li>next loop
+            </li></ul>
+            </b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+                <p>After creating the program, the flow must be checked and guided by <b>black</b> codels. In the lower <b>put</b> instruction a <b>black</b> codel has been added in order to control to keep the correct flow.
+                </p>
+                <p>Once the program is done and working, you can add artwork in the remaining white space, keeping in mind that the flow must not be changed.
+                    <br>
+                    <br>
+                    <img src="./img/fac-art-cs20.png">
+    
+                </p>
+                <div class="piet"></div>
+
+            </li>
+            <li><u>isprime</u>: The user is asked for a number. 1 is returned if the number is a prime, else the largest divider is returned.
+                <br>
+                <br>
+                <table border="0">
+                    <tbody>
+                        <tr>
+                            <td><img src="./img/isprime-cs20.png">
+                            </td>
+                            <td><b>
+            <ul>
+            <li>in(number)
+            </li><li>duplicate
+            </li><li>begin loop (stack: counter=possible divider, number)
+            </li><li>decr
+            </li><li>put 2 
+            </li><li>duplicate
+            </li><li>get 3
+            </li><li>put 2
+            </li><li>duplicate
+            </li><li>put 3 (stack: possible divider, number, possible divider, number)
+            </li><li>mod
+            </li><li>ifzero { out(number)-end program } (ends if possible divider is found or equal to 1)
+            </li><li>next loop
+            </li></ul>
+            </b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Arty version:
+                    <br>
+                    <br>
+                    <img src="./img/isprime-art-cs20.png">
+    
+                </p>
+            <div class="piet"></div>
+
+            </li>
+            <li><u>Fibonacci numbers</u>: The user is prompted for number, Fibonacci sequence of length number is returned.
+                <br>
+                <br>
+                <table border="0">
+                    <tbody>
+                        <tr>
+                            <td><img src="./img/fib-cs20.png">
+                            </td>
+                            <td><b>
+            <ul>
+            <li>push 1
+            </li><li>push 1
+            </li><li>in(number) (length of the sequence)
+            </li><li>begin loop (stack: counter,Fn-1,Fn-2)
+            </li><li>put 3
+            </li><li>duplicate
+            </li><li>put 3 (stack: Fn-1,Fn-2,Fn-1,counter)
+            </li><li>add (stack: Fn,Fn-1,counter)
+            </li><li>duplicate
+            </li><li>out(num)
+            </li><li>get 3
+            </li><li>decr (stack: counter,Fn,Fn-1)
+            </li><li>ifzero { end program } (end program if counter equal to 0)
+            </li><li>next loop
+            </li></ul>
+            </b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            <div class="piet"></div>
+                
+            </li>
+        </ul>
+    
+        <h6>Reference</h6>
+    
+        <table border="1">
+            <tbody>
+                <tr>
+                    <td valign="top">input/output:
+                        <ul>
+                            <li><img src="./img/in-number.png">: <b>in(number)</b>
+                            </li>
+                            <li><img src="./img/out-number.png">: <b>out(number)</b>
+                            </li>
+                        </ul>
+                    </td>
+                    <td valign="top">stack operations:
+                        <ul>
+                            <li><img src="./img/duplicate.png">: <b>duplicate</b>
+                            </li>
+                            <li><img src="./img/pop.png">: <b>pop</b>
+                            </li>
+                        </ul>
+                    </td>
+                    <td valign="top">math operations:
+                        <ul>
+                            <li><img src="./img/add.png">: <b>add</b>
+                            </li>
+                            <li><img src="./img/substract.png">: <b>substract</b>
+                            </li>
+                            <li><img src="./img/multiply.png">: <b>multiply</b>
+                            </li>
+                            <li><img src="./img/divide.png">: <b>divide</b>
+                            </li>
+                            <li><img src="./img/mod.png">: <b>mod</b>
+                            </li>
+                        </ul>
+                    </td>
+                    <td valign="top" rowspan="2">flow-control:
+                        <ul>
+                            <li><img src="./img/ifzero.png" align="top">: <b>ifzero</b>
+                                <br>
+                                <br>
+                            </li>
+                            <li><img src="./img/loopuntilzero.png" align="top">: <b>loop until zero</b>
+                                <br>
+                                <br>
+                            </li>
+                            <li><img src="./img/end.png" align="top">: <b>end program</b>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">numbers:
+                        <ul>
+                            <li><img src="./img/number-2.png" align="top">: <b>push 6</b>
+                                <br>
+                                <br>
+                            </li>
+                            <li><img src="./img/pushzero.png">: <b>pushzero</b>
+                            </li>
+                        </ul>
+                    </td>
+                    <td valign="top">counters:
+                        <ul>
+                            <li><img src="./img/incr.png">: <b>increment</b>
+                            </li>
+                            <li><img src="./img/decr.png">: <b>decrement</b>
+                            </li>
+                        </ul>
+                    </td>
+                    <td valign="top">stack access:
+                        <ul>
+                            <li><img src="./img/put.png" align="top">: <b>put 3</b>
+                                <br>
+                                <br>
+                            </li>
+                            <li><img src="./img/get.png" align="top">: <b>get 3</b>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
     <script src="./lib/jquery-min.js"></script>
     <script src="./lib/bootstrap-min.js"></script>
     <script src="https://cdn.rawgit.com/oliver-moran/jimp/a74714f/browser/lib/jimp.min.js"></script>
