@@ -33,6 +33,9 @@ var Main = React.createClass({
     },
     run: function() {
         this.state.b.run();
+        window.setTimeout(() => {
+            this.state.b.pause();
+        }, 600000); // 600000 ms = 10 minutes;
     },
     stepBack: function() {
         if (this.state.prevStates.length) {
